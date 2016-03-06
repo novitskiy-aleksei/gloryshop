@@ -3,6 +3,9 @@
 /upload/config.php
 /upload/admin/config.php
 /upload/system/storage/
+/upload/assets/cache/
+/upload/image/cache/
+/upload/install/
 composer.phar
 .DS_Store
 Thumbs.db
