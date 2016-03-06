@@ -1,10 +1,10 @@
 <?php
 class ModelTotalHandling extends Model {
-	public function getTotal($total) {
+	public function getTotal(&$total_data, &$total, &$taxes) {
 		if (($this->cart->getSubTotal() > $this->config->get('handling_total')) && ($this->cart->getSubTotal() > 0)) {
 			$this->load->language('total/handling');
 
-			$total['totals'][] = array(
+			$total_data[] = array(
 				'code'       => 'handling',
 				'title'      => $this->language->get('text_handling'),
 				'value'      => $this->config->get('handling_fee'),
@@ -15,15 +15,15 @@ class ModelTotalHandling extends Model {
 				$tax_rates = $this->tax->getRates($this->config->get('handling_fee'), $this->config->get('handling_tax_class_id'));
 
 				foreach ($tax_rates as $tax_rate) {
-					if (!isset($total['taxes'][$tax_rate['tax_rate_id']])) {
-						$total['taxes'][$tax_rate['tax_rate_id']] = $tax_rate['amount'];
+					if (!isset($taxes[$tax_rate['tax_rate_id']])) {
+						$taxes[$tax_rate['tax_rate_id']] = $tax_rate['amount'];
 					} else {
-						$total['taxes'][$tax_rate['tax_rate_id']] += $tax_rate['amount'];
+						$taxes[$tax_rate['tax_rate_id']] += $tax_rate['amount'];
 					}
 				}
 			}
 
-			$total['total'] += $this->config->get('handling_fee');
+			$total += $this->config->get('handling_fee');
 		}
 	}
 }

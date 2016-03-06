@@ -12,8 +12,6 @@ class ModelUserApi extends Model {
 				}
 			}
 		}
-		
-		return $api_id;
 	}
 
 	public function editApi($api_id, $data) {

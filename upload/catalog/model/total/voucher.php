@@ -23,13 +23,13 @@ class ModelTotalVoucher extends Model {
 					$implode[] = "'" . (int)$order_status_id . "'";
 				}
 
-				$order_query = $this->db->query("SELECT order_id FROM `" . DB_PREFIX . "order` WHERE order_id = '" . (int)$voucher_query->row['order_id'] . "' AND order_status_id IN(" . implode(",", $implode) . ")");
+				$order_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "order` WHERE order_id = '" . (int)$voucher_query->row['order_id'] . "' AND order_status_id IN(" . implode(",", $implode) . ")");
 
 				if (!$order_query->num_rows) {
 					$status = false;
 				}
 
-				$order_voucher_query = $this->db->query("SELECT order_voucher_id FROM `" . DB_PREFIX . "order_voucher` WHERE order_id = '" . (int)$voucher_query->row['order_id'] . "' AND voucher_id = '" . (int)$voucher_query->row['voucher_id'] . "'");
+				$order_voucher_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "order_voucher` WHERE order_id = '" . (int)$voucher_query->row['order_id'] . "' AND voucher_id = '" . (int)$voucher_query->row['voucher_id'] . "'");
 
 				if (!$order_voucher_query->num_rows) {
 					$status = false;
@@ -70,24 +70,30 @@ class ModelTotalVoucher extends Model {
 		}
 	}
 
-	public function getTotal($total) {
+	public function getTotal(&$total_data, &$total, &$taxes) {
 		if (isset($this->session->data['voucher'])) {
 			$this->load->language('total/voucher');
+
+			$this->load->model('total/coupon');
 
 			$voucher_info = $this->getVoucher($this->session->data['voucher']);
 
 			if ($voucher_info) {
-				$amount = min($voucher_info['amount'], $total['total']);
-				
+				if ($voucher_info['amount'] > $total) {
+					$amount = $total;
+				} else {
+					$amount = $voucher_info['amount'];
+				}
+
 				if ($amount > 0) {
-					$total['totals'][] = array(
+					$total_data[] = array(
 						'code'       => 'voucher',
 						'title'      => sprintf($this->language->get('text_voucher'), $this->session->data['voucher']),
 						'value'      => -$amount,
 						'sort_order' => $this->config->get('voucher_sort_order')
 					);
 
-					$total['total'] -= $amount;
+					$total -= $amount;
 				} else {
 					unset($this->session->data['voucher']);
 				}
@@ -113,8 +119,8 @@ class ModelTotalVoucher extends Model {
 			if ($voucher_info) {
 				$this->db->query("INSERT INTO `" . DB_PREFIX . "voucher_history` SET voucher_id = '" . (int)$voucher_info['voucher_id'] . "', order_id = '" . (int)$order_info['order_id'] . "', amount = '" . (float)$order_total['value'] . "', date_added = NOW()");
 			} else {
-				return $this->config->get('config_fraud_status_id');
-			}
+	            return $this->config->get('config_fraud_status_id');
+	        }
 		}
 	}
 

@@ -2,15 +2,17 @@
 class ModelModulePPLogin extends Model {
 	public function getTokens($code) {
 		if ($this->config->get('pp_login_sandbox')) {
-			$endpoint = 'https://api.sandbox.paypal.com/v1/identity/openidconnect/tokenservice';
+			$endpoint = 'https://api.sandbox.paypal.com/v1/oauth2/token';
 		} else {
-			$endpoint = 'https://api.paypal.com/v1/identity/openidconnect/tokenservice';
+			$endpoint = 'https://api.paypal.com/v1/oauth2/token';
 		}
 
 		$request  = '';
-		$request .= 'grant_type=authorization_code';
+		$request .= 'client_id=' . $this->config->get('pp_login_client_id');
+		$request .= '&client_secret=' . $this->config->get('pp_login_secret');
+		$request .= '&grant_type=authorization_code';
 		$request .= '&code=' . $code;
-		$request .= '&redirect_uri=' . urlencode($this->url->link('module/pp_login/login', '', true));
+		$request .= '&redirect_uri=' . urlencode($this->url->link('module/pp_login/login', '', 'SSL'));
 
 		$additional_opts = array(
 			CURLOPT_USERPWD    => $this->config->get('pp_login_client_id') . ':' . $this->config->get('pp_login_secret'),
@@ -20,7 +22,7 @@ class ModelModulePPLogin extends Model {
 
 		$curl = $this->curl($endpoint, $additional_opts);
 
-		$this->log('cURL Response: ' . print_r($curl, 1), 1);
+		$this->log('cURL Response: ' . print_r($curl, 1));
 
 		return $curl;
 	}
@@ -42,7 +44,7 @@ class ModelModulePPLogin extends Model {
 
 		$curl = $this->curl($endpoint, $additional_opts);
 
-		$this->log('cURL Response: ' . print_r($curl, 1), 1);
+		$this->log('cURL Response: ' . print_r($curl, 1));
 
 		return $curl;
 	}
@@ -71,10 +73,10 @@ class ModelModulePPLogin extends Model {
 		return $response;
 	}
 
-	public function log($data, $class_step = 6) {
+	public function log($data) {
 		if ($this->config->get('pp_login_debug')) {
 			$backtrace = debug_backtrace();
-			$this->log->write('Log In with PayPal debug (' . $backtrace[$class_step]['class'] . '::' . $backtrace[6]['function'] . ') - ' . $data);
+			$this->log->write('Log In with PayPal debug (' . $backtrace[1]['class'] . '::' . $backtrace[1]['function'] . ') - ' . $data);
 		}
 	}
 }

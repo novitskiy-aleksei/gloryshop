@@ -462,7 +462,7 @@
                   </select>
                 </div>
               </div>
-              <div class="form-group" id="entry-tax-listing-preset">
+              <div class="form-group" id="ebay_tax_listing_preset">
                 <label class="col-sm-2 control-label" for="entry-tax"><span data-toggle="tooltip" data-container="#tab-setup" title="<?php echo $help_tax; ?>"><?php echo $entry_tax; ?></span></label>
                 <div class="col-sm-10">
                   <div class="input-group col-xs-2">
@@ -551,10 +551,10 @@
     }
 
     function changeTaxHandler(){
-        if ($('#entry-tax-listing').val() == 1){
-            $('#entry-tax-listing-preset').hide();
+        if ($('#ebay_tax_listing').val() == 1){
+            $('#ebay_tax_listing_preset').hide();
         }else{
-            $('#entry-tax-listing-preset').show();
+            $('#ebay_tax_listing_preset').show();
         }
     }
 
@@ -562,7 +562,7 @@
       checkCredentials();
     });
 
-    $('#entry-tax-listing').change(function() {
+    $('#ebay_tax_listing').change(function() {
       changeTaxHandler();
     });
 

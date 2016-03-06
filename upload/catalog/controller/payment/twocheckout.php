@@ -70,9 +70,13 @@ class ControllerPaymentTwoCheckout extends Controller {
 
 		$data['lang'] = $this->session->data['language'];
 
-		$data['return_url'] = $this->url->link('payment/twocheckout/callback', '', true);
+		$data['return_url'] = $this->url->link('payment/twocheckout/callback', '', 'SSL');
 
-		return $this->load->view('payment/twocheckout', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/twocheckout.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/payment/twocheckout.tpl', $data);
+		} else {
+			return $this->load->view('default/template/payment/twocheckout.tpl', $data);
+		}
 	}
 
 	public function callback() {

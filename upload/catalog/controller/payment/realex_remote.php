@@ -58,7 +58,11 @@ class ControllerPaymentRealexRemote extends Controller {
 			);
 		}
 
-		return $this->load->view('payment/realex_remote', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/realex_remote.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/payment/realex_remote.tpl', $data);
+		} else {
+			return $this->load->view('default/template/payment/realex_remote.tpl', $data);
+		}
 	}
 
 	public function send() {
@@ -91,7 +95,7 @@ class ControllerPaymentRealexRemote extends Controller {
 
 		$order_info = $this->model_checkout_order->getOrder($order_id);
 
-		$amount = round($this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false) * 100);
+		$amount = round($this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false)*100);
 		$currency = $order_info['currency_code'];
 
 		$accounts = $this->config->get('realex_remote_account');
@@ -129,13 +133,13 @@ class ControllerPaymentRealexRemote extends Controller {
 						'cc_issue' => $this->request->post['cc_issue']
 					);
 
-					$md = $this->encryption->encrypt(json_encode($enc_data));
+					$md = $this->encryption->encrypt(serialize($enc_data));
 
 					$json = array();
 					$json['ACSURL'] = (string)$verify_3ds->url;
 					$json['MD'] = $md;
 					$json['PaReq'] = (string)$verify_3ds->pareq;
-					$json['TermUrl'] = $this->url->link('payment/realex_remote/acsReturn', '', true);
+					$json['TermUrl'] = $this->url->link('payment/realex_remote/acsReturn', '', 'SSL');
 
 					$this->response->addHeader('Content-Type: application/json');
 					$this->response->setOutput(json_encode($json));
@@ -238,7 +242,7 @@ class ControllerPaymentRealexRemote extends Controller {
 
 			$post = $this->request->post;
 
-			$md = json_decode($this->encryption->decrypt($post['MD']), true);
+			$md = unserialize($this->encryption->decrypt($post['MD']));
 
 			$signature_result = $this->model_payment_realex_remote->enrollmentSignature($md['account'], $md['amount'], $md['currency'], $md['order_ref'], $md['cc_number'], $md['cc_expire'], $md['cc_type'], $md['cc_name'], $post['PaRes']);
 
@@ -309,7 +313,7 @@ class ControllerPaymentRealexRemote extends Controller {
 
 					$this->session->data['error'] = $this->language->get('error_3d_unsuccessful');
 
-					$this->response->redirect($this->url->link('checkout/checkout', '', true));
+					$this->response->redirect($this->url->link('checkout/checkout', '', 'SSL'));
 					die();
 				}
 			}
@@ -337,12 +341,12 @@ class ControllerPaymentRealexRemote extends Controller {
 			if ($capture_result->result != '00') {
 				$this->session->data['error'] = (string)$capture_result->message . ' (' . (int)$capture_result->result . ')';
 
-				$this->response->redirect($this->url->link('checkout/checkout', '', true));
+				$this->response->redirect($this->url->link('checkout/checkout', '', 'SSL'));
 			} else {
 				$this->response->redirect($this->url->link('checkout/success'));
 			}
 		} else {
-			$this->response->redirect($this->url->link('account/login', '', true));
+			$this->response->redirect($this->url->link('account/login', '', 'SSL'));
 		}
 	}
 }

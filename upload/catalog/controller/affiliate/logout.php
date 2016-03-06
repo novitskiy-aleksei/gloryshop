@@ -4,7 +4,7 @@ class ControllerAffiliateLogout extends Controller {
 		if ($this->affiliate->isLogged()) {
 			$this->affiliate->logout();
 
-			$this->response->redirect($this->url->link('affiliate/logout', '', true));
+			$this->response->redirect($this->url->link('affiliate/logout', '', 'SSL'));
 		}
 
 		$this->load->language('affiliate/logout');
@@ -20,12 +20,12 @@ class ControllerAffiliateLogout extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_account'),
-			'href' => $this->url->link('affiliate/account', '', true)
+			'href' => $this->url->link('affiliate/account', '', 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_logout'),
-			'href' => $this->url->link('affiliate/logout', '', true)
+			'href' => $this->url->link('affiliate/logout', '', 'SSL')
 		);
 
 		$data['heading_title'] = $this->language->get('heading_title');
@@ -43,6 +43,10 @@ class ControllerAffiliateLogout extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		$this->response->setOutput($this->load->view('common/success', $data));
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/success.tpl')) {
+			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/common/success.tpl', $data));
+		} else {
+			$this->response->setOutput($this->load->view('default/template/common/success.tpl', $data));
+		}
 	}
 }

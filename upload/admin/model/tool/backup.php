@@ -29,6 +29,8 @@ class ModelToolBackup extends Model {
 	}
 
 	public function backup($tables) {
+		$this->event->trigger('pre.admin.backup', $tables);
+
 		$output = '';
 
 		foreach ($tables as $table) {
@@ -74,6 +76,8 @@ class ModelToolBackup extends Model {
 				$output .= "\n\n";
 			}
 		}
+
+		$this->event->trigger('post.admin.backup');
 
 		return $output;
 	}

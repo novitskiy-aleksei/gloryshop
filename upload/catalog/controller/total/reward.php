@@ -28,7 +28,11 @@ class ControllerTotalReward extends Controller {
 				$data['reward'] = '';
 			}
 
-			return $this->load->view('total/reward', $data);
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/total/reward.tpl')) {
+				return $this->load->view($this->config->get('config_template') . '/template/total/reward.tpl', $data);
+			} else {
+				return $this->load->view('default/template/total/reward.tpl', $data);
+			}
 		}
 	}
 

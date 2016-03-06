@@ -5,7 +5,7 @@ class ControllerModuleAmazonPay extends Controller {
 	private $error = array();
 
 	public function index() {
-		$this->load->language('module/amazon_pay');
+		$this->language->load('module/amazon_pay');
 
 		$this->load->model('setting/setting');
 		$this->load->model('design/layout');
@@ -17,7 +17,7 @@ class ControllerModuleAmazonPay extends Controller {
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
-			$this->response->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], true));
+			$this->response->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'));
 		}
 
 		$data['heading_title'] = $this->language->get('heading_title');
@@ -62,25 +62,25 @@ class ControllerModuleAmazonPay extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true),
+			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_module'),
-			'href' => $this->url->link('extension/module', 'token=' . $this->session->data['token'], true),
+			'href' => $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => ' :: '
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('module/amazon_pay', 'token=' . $this->session->data['token'], true),
+			'href' => $this->url->link('module/amazon_pay', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => ' :: '
 		);
 
-		$data['action'] = $this->url->link('module/amazon_pay', 'token=' . $this->session->data['token'], true);
+		$data['action'] = $this->url->link('module/amazon_pay', 'token=' . $this->session->data['token'], 'SSL');
 
-		$data['cancel'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], true);
+		$data['cancel'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL');
 
 		$data['token'] = $this->session->data['token'];
 
@@ -118,7 +118,7 @@ class ControllerModuleAmazonPay extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('module/amazon_pay', $data));
+		$this->response->setOutput($this->load->view('module/amazon_pay.tpl', $data));
 	}
 
 	protected function validate() {
@@ -135,7 +135,7 @@ class ControllerModuleAmazonPay extends Controller {
 
 	public function install() {
 		$this->load->model('extension/event');
-		$this->model_extension_event->addEvent('amazon_pay', 'catalog/controller/account/logout/after', 'module/amazon_pay/logout');
+		$this->model_extension_event->addEvent('amazon_pay', 'post.customer.logout', 'module/amazon_pay/logout');
 	}
 
 	public function uninstall() {

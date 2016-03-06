@@ -88,12 +88,10 @@ div.required .control-label:before {
 #top .container {
 	padding: 0 20px;
 }
-#top #form-currency .currency-select,
-#top #form-language .language-select {
+#top #currency .currency-select {
 	text-align: left;
 }
-#top #form-currency .currency-select:hover,
-#top #form-language .language-select:hover {
+#top #currency .currency-select:hover {
 	text-shadow: none;
 	color: #ffffff;
 	background-color: #229ac8;

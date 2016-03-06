@@ -6,17 +6,17 @@ define('HTTP_SERVER', 'http://localhost:9999/');
 define('HTTPS_SERVER', 'http://localhost:9999/');
 
 // DIR
-define('DIR_APPLICATION', '/Users/novik/Documents/projects/glory_shop/upload/catalog/');
-define('DIR_SYSTEM', '/Users/novik/Documents/projects/glory_shop/upload/system/');
-define('DIR_IMAGE', '/Users/novik/Documents/projects/glory_shop/upload/image/');
-define('DIR_LANGUAGE', '/Users/novik/Documents/projects/glory_shop/upload/catalog/language/');
-define('DIR_TEMPLATE', '/Users/novik/Documents/projects/glory_shop/upload/catalog/view/theme/');
-define('DIR_CONFIG', '/Users/novik/Documents/projects/glory_shop/upload/system/config/');
-define('DIR_CACHE', '/Users/novik/Documents/projects/glory_shop/upload/system/storage/cache/');
-define('DIR_DOWNLOAD', '/Users/novik/Documents/projects/glory_shop/upload/system/storage/download/');
-define('DIR_LOGS', '/Users/novik/Documents/projects/glory_shop/upload/system/storage/logs/');
-define('DIR_MODIFICATION', '/Users/novik/Documents/projects/glory_shop/upload/system/storage/modification/');
-define('DIR_UPLOAD', '/Users/novik/Documents/projects/glory_shop/upload/system/storage/upload/');
+define('DIR_APPLICATION', '/Users/novik/Documents/projects/opencart_2_1/catalog/');
+define('DIR_SYSTEM', '/Users/novik/Documents/projects/opencart_2_1/system/');
+define('DIR_LANGUAGE', '/Users/novik/Documents/projects/opencart_2_1/catalog/language/');
+define('DIR_TEMPLATE', '/Users/novik/Documents/projects/opencart_2_1/catalog/view/theme/');
+define('DIR_CONFIG', '/Users/novik/Documents/projects/opencart_2_1/system/config/');
+define('DIR_IMAGE', '/Users/novik/Documents/projects/opencart_2_1/image/');
+define('DIR_CACHE', '/Users/novik/Documents/projects/opencart_2_1/system/storage/cache/');
+define('DIR_DOWNLOAD', '/Users/novik/Documents/projects/opencart_2_1/system/storage/download/');
+define('DIR_LOGS', '/Users/novik/Documents/projects/opencart_2_1/system/storage/logs/');
+define('DIR_MODIFICATION', '/Users/novik/Documents/projects/opencart_2_1/system/storage/modification/');
+define('DIR_UPLOAD', '/Users/novik/Documents/projects/opencart_2_1/system/storage/upload/');
 
 // DB
 define('DB_DRIVER', 'mysqli');

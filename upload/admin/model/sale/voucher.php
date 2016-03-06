@@ -2,8 +2,6 @@
 class ModelSaleVoucher extends Model {
 	public function addVoucher($data) {
 		$this->db->query("INSERT INTO " . DB_PREFIX . "voucher SET code = '" . $this->db->escape($data['code']) . "', from_name = '" . $this->db->escape($data['from_name']) . "', from_email = '" . $this->db->escape($data['from_email']) . "', to_name = '" . $this->db->escape($data['to_name']) . "', to_email = '" . $this->db->escape($data['to_email']) . "', voucher_theme_id = '" . (int)$data['voucher_theme_id'] . "', message = '" . $this->db->escape($data['message']) . "', amount = '" . (float)$data['amount'] . "', status = '" . (int)$data['status'] . "', date_added = NOW()");
-	
-		return $this->db->getLastId();
 	}
 
 	public function editVoucher($voucher_id, $data) {
@@ -28,7 +26,7 @@ class ModelSaleVoucher extends Model {
 	}
 
 	public function getVouchers($data = array()) {
-		$sql = "SELECT v.voucher_id, v.order_id, v.code, v.from_name, v.from_email, v.to_name, v.to_email, (SELECT vtd.name FROM " . DB_PREFIX . "voucher_theme_description vtd WHERE vtd.voucher_theme_id = v.voucher_theme_id AND vtd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS theme, v.amount, v.status, v.date_added FROM " . DB_PREFIX . "voucher v";
+		$sql = "SELECT v.voucher_id, v.code, v.from_name, v.from_email, v.to_name, v.to_email, (SELECT vtd.name FROM " . DB_PREFIX . "voucher_theme_description vtd WHERE vtd.voucher_theme_id = v.voucher_theme_id AND vtd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS theme, v.amount, v.status, v.date_added FROM " . DB_PREFIX . "voucher v";
 
 		$sort_data = array(
 			'v.code',
@@ -89,8 +87,8 @@ class ModelSaleVoucher extends Model {
 			if ($order_info) {
 				$this->load->model('localisation/language');
 
-				$language = new Language($order_info['language_code']);
-				$language->load($order_info['language_code']);
+				$language = new Language($order_info['language_directory']);
+				$language->load($order_info['language_directory']);
 				$language->load('mail/voucher');
 
 				// HTML Mail
@@ -131,7 +129,7 @@ class ModelSaleVoucher extends Model {
 				$mail->setFrom($this->config->get('config_email'));
 				$mail->setSender(html_entity_decode($order_info['store_name'], ENT_QUOTES, 'UTF-8'));
 				$mail->setSubject(sprintf($language->get('text_subject'), html_entity_decode($voucher_info['from_name'], ENT_QUOTES, 'UTF-8')));
-				$mail->setHtml($this->load->view('mail/voucher', $data));
+				$mail->setHtml($this->load->view('mail/voucher.tpl', $data));
 				$mail->send();
 
 			// If voucher does not belong to an order
@@ -175,7 +173,7 @@ class ModelSaleVoucher extends Model {
 				$mail->setFrom($this->config->get('config_email'));
 				$mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
 				$mail->setSubject(html_entity_decode(sprintf($this->language->get('text_subject'), $voucher_info['from_name']), ENT_QUOTES, 'UTF-8'));
-				$mail->setHtml($this->load->view('mail/voucher', $data));
+				$mail->setHtml($this->load->view('mail/voucher.tpl', $data));
 				$mail->send();
 			}
 		}

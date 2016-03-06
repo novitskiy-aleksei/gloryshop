@@ -205,6 +205,7 @@ class ModelOpenbayAmazonOrder extends Model {
 			return;
 		}
 
+		$this->load->library('log');
 		$logger = new Log('amazon_stocks.log');
 		$logger->write('addOrder() called with order id: ' . $order_id);
 

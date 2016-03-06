@@ -38,7 +38,7 @@ class ControllerLocalisationTaxClass extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getForm();
@@ -70,7 +70,7 @@ class ControllerLocalisationTaxClass extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getForm();
@@ -104,7 +104,7 @@ class ControllerLocalisationTaxClass extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getList();
@@ -147,16 +147,16 @@ class ControllerLocalisationTaxClass extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true)
+			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, true)
+			'href' => $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, 'SSL')
 		);
 
-		$data['add'] = $this->url->link('localisation/tax_class/add', 'token=' . $this->session->data['token'] . $url, true);
-		$data['delete'] = $this->url->link('localisation/tax_class/delete', 'token=' . $this->session->data['token'] . $url, true);
+		$data['add'] = $this->url->link('localisation/tax_class/add', 'token=' . $this->session->data['token'] . $url, 'SSL');
+		$data['delete'] = $this->url->link('localisation/tax_class/delete', 'token=' . $this->session->data['token'] . $url, 'SSL');
 
 		$data['tax_classes'] = array();
 
@@ -175,7 +175,7 @@ class ControllerLocalisationTaxClass extends Controller {
 			$data['tax_classes'][] = array(
 				'tax_class_id' => $result['tax_class_id'],
 				'title'        => $result['title'],
-				'edit'         => $this->url->link('localisation/tax_class/edit', 'token=' . $this->session->data['token'] . '&tax_class_id=' . $result['tax_class_id'] . $url, true)
+				'edit'         => $this->url->link('localisation/tax_class/edit', 'token=' . $this->session->data['token'] . '&tax_class_id=' . $result['tax_class_id'] . $url, 'SSL')
 			);
 		}
 
@@ -224,7 +224,7 @@ class ControllerLocalisationTaxClass extends Controller {
 			$url .= '&page=' . $this->request->get['page'];
 		}
 
-		$data['sort_title'] = $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . '&sort=title' . $url, true);
+		$data['sort_title'] = $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . '&sort=title' . $url, 'SSL');
 
 		$url = '';
 
@@ -240,7 +240,7 @@ class ControllerLocalisationTaxClass extends Controller {
 		$pagination->total = $tax_class_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_limit_admin');
-		$pagination->url = $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
+		$pagination->url = $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$data['pagination'] = $pagination->render();
 
@@ -253,7 +253,7 @@ class ControllerLocalisationTaxClass extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('localisation/tax_class_list', $data));
+		$this->response->setOutput($this->load->view('localisation/tax_class_list.tpl', $data));
 	}
 
 	protected function getForm() {
@@ -311,21 +311,21 @@ class ControllerLocalisationTaxClass extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true)
+			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, true)
+			'href' => $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, 'SSL')
 		);
 
 		if (!isset($this->request->get['tax_class_id'])) {
-			$data['action'] = $this->url->link('localisation/tax_class/add', 'token=' . $this->session->data['token'] . $url, true);
+			$data['action'] = $this->url->link('localisation/tax_class/add', 'token=' . $this->session->data['token'] . $url, 'SSL');
 		} else {
-			$data['action'] = $this->url->link('localisation/tax_class/edit', 'token=' . $this->session->data['token'] . '&tax_class_id=' . $this->request->get['tax_class_id'] . $url, true);
+			$data['action'] = $this->url->link('localisation/tax_class/edit', 'token=' . $this->session->data['token'] . '&tax_class_id=' . $this->request->get['tax_class_id'] . $url, 'SSL');
 		}
 
-		$data['cancel'] = $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, true);
+		$data['cancel'] = $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url, 'SSL');
 
 		if (isset($this->request->get['tax_class_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 			$tax_class_info = $this->model_localisation_tax_class->getTaxClass($this->request->get['tax_class_id']);
@@ -363,7 +363,7 @@ class ControllerLocalisationTaxClass extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('localisation/tax_class_form', $data));
+		$this->response->setOutput($this->load->view('localisation/tax_class_form.tpl', $data));
 	}
 
 	protected function validateForm() {

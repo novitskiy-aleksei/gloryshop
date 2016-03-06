@@ -18,7 +18,11 @@ class ControllerTotalVoucher extends Controller {
 				$data['voucher'] = '';
 			}
 
-			return $this->load->view('total/voucher', $data);
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/total/voucher.tpl')) {
+				return $this->load->view($this->config->get('config_template') . '/template/total/voucher.tpl', $data);
+			} else {
+				return $this->load->view('default/template/total/voucher.tpl', $data);
+			}
 		}
 	}
 
@@ -53,7 +57,7 @@ class ControllerTotalVoucher extends Controller {
 		$this->response->setOutput(json_encode($json));
 	}
 
-	public function send($route, $output, $order_id, $order_status_id) {
+	public function send($order_id) {
 		$this->load->model('checkout/order');
 
 		$order_info = $this->model_checkout_order->getOrder($order_id);
@@ -64,8 +68,8 @@ class ControllerTotalVoucher extends Controller {
 
 			if ($voucher_query->num_rows) {
 				// Send out any gift voucher mails
-				$language = new Language($order_info['language_code']);
-				$language->load($order_info['language_code']);
+				$language = new Language($order_info['language_directory']);
+				$language->load($order_info['language_directory']);
 				$language->load('mail/voucher');
 
 				foreach ($voucher_query->rows as $voucher) {
@@ -90,6 +94,12 @@ class ControllerTotalVoucher extends Controller {
 					$data['store_url'] = $order_info['store_url'];
 					$data['message'] = nl2br($voucher['message']);
 
+					if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/mail/voucher.tpl')) {
+						$html = $this->load->view($this->config->get('config_template') . '/template/mail/voucher.tpl', $data);
+					} else {
+						$html = $this->load->view('default/template/mail/voucher.tpl', $data);
+					}
+
 					$mail = new Mail();
 					$mail->protocol = $this->config->get('config_mail_protocol');
 					$mail->parameter = $this->config->get('config_mail_parameter');
@@ -103,7 +113,7 @@ class ControllerTotalVoucher extends Controller {
 					$mail->setFrom($this->config->get('config_email'));
 					$mail->setSender(html_entity_decode($order_info['store_name'], ENT_QUOTES, 'UTF-8'));
 					$mail->setSubject(html_entity_decode(sprintf($language->get('text_subject'), $voucher['from_name']), ENT_QUOTES, 'UTF-8'));
-					$mail->setHtml($this->load->view('mail/voucher', $data));
+					$mail->setHtml($html);
 					$mail->send();
 				}
 			}

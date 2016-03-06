@@ -33,7 +33,11 @@ class ControllerPaymentPaymate extends Controller {
 
 		$data['return'] = $this->url->link('payment/paymate/callback', 'hash=' . md5($order_info['order_id'] . $this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false) . $order_info['currency_code'] . $this->config->get('paymate_password')));
 
-		return $this->load->view('payment/paymate', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/paymate.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/payment/paymate.tpl', $data);
+		} else {
+			return $this->load->view('default/template/payment/paymate.tpl', $data);
+		}
 	}
 
 	public function callback() {
@@ -78,7 +82,7 @@ class ControllerPaymentPaymate extends Controller {
 
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('text_checkout'),
-				'href' => $this->url->link('checkout/checkout', '', true)
+				'href' => $this->url->link('checkout/checkout', '', 'SSL')
 			);
 
 			$data['breadcrumbs'][] = array(
@@ -101,7 +105,11 @@ class ControllerPaymentPaymate extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
-			$this->response->setOutput($this->load->view('common/success', $data));
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/success.tpl')) {
+				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/common/success.tpl', $data));
+			} else {
+				$this->response->setOutput($this->load->view('default/template/common/success.tpl', $data));
+			}
 		} else {
 			$this->model_checkout_order->addOrderHistory($order_id, $this->config->get('paymate_order_status_id'));
 

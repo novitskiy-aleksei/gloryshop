@@ -34,7 +34,11 @@ class ControllerPaymentWebPaymentSoftware extends Controller {
 			);
 		}
 
-		return $this->load->view('payment/web_payment_software', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/web_payment_software.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/payment/web_payment_software.tpl', $data);
+		} else {
+			return $this->load->view('default/template/payment/web_payment_software.tpl', $data);
+		}
 	}
 
 	public function send() {
@@ -134,7 +138,7 @@ class ControllerPaymentWebPaymentSoftware extends Controller {
 
 			$this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('web_payment_software_order_status_id'), $message, false);
 
-			$json['redirect'] = $this->url->link('checkout/success', '', true);
+			$json['redirect'] = $this->url->link('checkout/success', '', 'SSL');
 		} else {
 			$json['error'] = (string)$xml->response_text;
 		}

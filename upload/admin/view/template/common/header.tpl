@@ -61,17 +61,14 @@
         <li><a href="<?php echo $affiliate_approval; ?>"><span class="label label-danger pull-right"><?php echo $affiliate_total; ?></span><?php echo $text_approval; ?></a></li>
       </ul>
     </li>
-    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-home fa-lg"></i></a>
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-life-ring fa-lg"></i></a>
       <ul class="dropdown-menu dropdown-menu-right">
-        <li class="dropdown-header"><?php echo $text_store; ?></li>
+        <li class="dropdown-header"><?php echo $text_store; ?> <i class="fa fa-shopping-cart"></i></li>
         <?php foreach ($stores as $store) { ?>
         <li><a href="<?php echo $store['href']; ?>" target="_blank"><?php echo $store['name']; ?></a></li>
         <?php } ?>
-      </ul>
-    </li>
-    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-life-ring fa-lg"></i></a>
-      <ul class="dropdown-menu dropdown-menu-right">
-        <li class="dropdown-header"><?php echo $text_help; ?></li>
+        <li class="divider"></li>
+        <li class="dropdown-header"><?php echo $text_help; ?> <i class="fa fa-life-ring"></i></li>
         <li><a href="http://www.opencart.com" target="_blank"><?php echo $text_homepage; ?></a></li>
         <li><a href="http://docs.opencart.com" target="_blank"><?php echo $text_documentation; ?></a></li>
         <li><a href="http://forum.opencart.com" target="_blank"><?php echo $text_support; ?></a></li>

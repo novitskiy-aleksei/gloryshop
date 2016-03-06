@@ -18,7 +18,7 @@ class ControllerModuleFeatured extends Controller {
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
-			$this->response->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], true));
+			$this->response->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'));
 		}
 
 		$data['heading_title'] = $this->language->get('heading_title');
@@ -67,33 +67,33 @@ class ControllerModuleFeatured extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true)
+			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_module'),
-			'href' => $this->url->link('extension/module', 'token=' . $this->session->data['token'], true)
+			'href' => $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL')
 		);
 
 		if (!isset($this->request->get['module_id'])) {
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('heading_title'),
-				'href' => $this->url->link('module/featured', 'token=' . $this->session->data['token'], true)
+				'href' => $this->url->link('module/featured', 'token=' . $this->session->data['token'], 'SSL')
 			);
 		} else {
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('heading_title'),
-				'href' => $this->url->link('module/featured', 'token=' . $this->session->data['token'] . '&module_id=' . $this->request->get['module_id'], true)
+				'href' => $this->url->link('module/featured', 'token=' . $this->session->data['token'] . '&module_id=' . $this->request->get['module_id'], 'SSL')
 			);
 		}
 
 		if (!isset($this->request->get['module_id'])) {
-			$data['action'] = $this->url->link('module/featured', 'token=' . $this->session->data['token'], true);
+			$data['action'] = $this->url->link('module/featured', 'token=' . $this->session->data['token'], 'SSL');
 		} else {
-			$data['action'] = $this->url->link('module/featured', 'token=' . $this->session->data['token'] . '&module_id=' . $this->request->get['module_id'], true);
+			$data['action'] = $this->url->link('module/featured', 'token=' . $this->session->data['token'] . '&module_id=' . $this->request->get['module_id'], 'SSL');
 		}
 
-		$data['cancel'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], true);
+		$data['cancel'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL');
 
 		if (isset($this->request->get['module_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 			$module_info = $this->model_extension_module->getModule($this->request->get['module_id']);
@@ -113,9 +113,9 @@ class ControllerModuleFeatured extends Controller {
 
 		$data['products'] = array();
 
-		if (!empty($this->request->post['product'])) {
+		if (isset($this->request->post['product'])) {
 			$products = $this->request->post['product'];
-		} elseif (!empty($module_info['product'])) {
+		} elseif (!empty($module_info)) {
 			$products = $module_info['product'];
 		} else {
 			$products = array();
@@ -168,7 +168,7 @@ class ControllerModuleFeatured extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('module/featured', $data));
+		$this->response->setOutput($this->load->view('module/featured.tpl', $data));
 	}
 
 	protected function validate() {

@@ -1,24 +1,26 @@
 <?php
 namespace DB;
 final class mPDO {
-	private $connection = null;
+	private $pdo = null;
 	private $statement = null;
 
 	public function __construct($hostname, $username, $password, $database, $port = '3306') {
 		try {
-			$this->connection = new \PDO("mysql:host=" . $hostname . ";port=" . $port . ";dbname=" . $database, $username, $password, array(\PDO::ATTR_PERSISTENT => true));
+			$this->pdo = new \PDO("mysql:host=" . $hostname . ";port=" . $port . ";dbname=" . $database, $username, $password, array(\PDO::ATTR_PERSISTENT => true));
 		} catch(\PDOException $e) {
-			throw new \Exception('Failed to connect to database. Reason: \'' . $e->getMessage() . '\'');
+			throw new \Exception('Unknown database \'' . $database . '\'');
+			exit();
 		}
 
-		$this->connection->exec("SET NAMES 'utf8'");
-		$this->connection->exec("SET CHARACTER SET utf8");
-		$this->connection->exec("SET CHARACTER_SET_CONNECTION=utf8");
-		$this->connection->exec("SET SQL_MODE = ''");
+		$this->pdo->exec("SET NAMES 'utf8'");
+		$this->pdo->exec("SET CHARACTER SET utf8");
+		$this->pdo->exec("SET CHARACTER_SET_CONNECTION=utf8");
+		$this->pdo->exec("SET SQL_MODE = ''");
+
 	}
 
 	public function prepare($sql) {
-		$this->statement = $this->connection->prepare($sql);
+		$this->statement = $this->pdo->prepare($sql);
 	}
 
 	public function bindParam($parameter, $variable, $data_type = \PDO::PARAM_STR, $length = 0) {
@@ -44,13 +46,12 @@ final class mPDO {
 				$result->num_rows = $this->statement->rowCount();
 			}
 		} catch(\PDOException $e) {
-			throw new \Exception('Error: ' . $e->getMessage() . ' Error Code : ' . $e->getCode());
+			trigger_error('Error: ' . $e->getMessage() . ' Error Code : ' . $e->getCode());
 		}
 	}
 
 	public function query($sql, $params = array()) {
-		$this->statement = $this->connection->prepare($sql);
-		
+		$this->statement = $this->pdo->prepare($sql);
 		$result = false;
 
 		try {
@@ -67,7 +68,8 @@ final class mPDO {
 				$result->num_rows = $this->statement->rowCount();
 			}
 		} catch (\PDOException $e) {
-			throw new \Exception('Error: ' . $e->getMessage() . ' Error Code : ' . $e->getCode() . ' <br />' . $sql);
+			trigger_error('Error: ' . $e->getMessage() . ' Error Code : ' . $e->getCode() . ' <br />' . $sql);
+			exit();
 		}
 
 		if ($result) {
@@ -94,18 +96,10 @@ final class mPDO {
 	}
 
 	public function getLastId() {
-		return $this->connection->lastInsertId();
+		return $this->pdo->lastInsertId();
 	}
-	
-	public function isConnected() {
-		if ($this->connection) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
+
 	public function __destruct() {
-		$this->connection = null;
+		$this->pdo = null;
 	}
 }

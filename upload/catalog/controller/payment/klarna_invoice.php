@@ -78,9 +78,8 @@ class ControllerPaymentKlarnaInvoice extends Controller {
 					$this->load->model('total/' . $result['code']);
 
 					$taxes = array();
-					
-					// We have to put the totals in an array so that they pass by reference.
-					$this->{'model_total_' . $result['code']}->getTotal(array($total_data, $total, $taxes));
+
+					$this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
 
 					$amount = 0;
 
@@ -149,7 +148,11 @@ class ControllerPaymentKlarnaInvoice extends Controller {
 				$data['klarna_fee'] = '';
 			}
 
-			return $this->load->view('payment/klarna_invoice', $data);
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/klarna_invoice.tpl')) {
+				return $this->load->view($this->config->get('config_template') . '/template/payment/klarna_invoice.tpl', $data);
+			} else {
+				return $this->load->view('default/template/payment/klarna_invoice.tpl', $data);
+			}
 		}
 	}
 

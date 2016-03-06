@@ -69,7 +69,11 @@ class ControllerCheckoutShippingMethod extends Controller {
 			$data['comment'] = '';
 		}
 
-		$this->response->setOutput($this->load->view('checkout/shipping_method', $data));
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/shipping_method.tpl')) {
+			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/shipping_method.tpl', $data));
+		} else {
+			$this->response->setOutput($this->load->view('default/template/checkout/shipping_method.tpl', $data));
+		}
 	}
 
 	public function save() {
@@ -79,12 +83,12 @@ class ControllerCheckoutShippingMethod extends Controller {
 
 		// Validate if shipping is required. If not the customer should not have reached this page.
 		if (!$this->cart->hasShipping()) {
-			$json['redirect'] = $this->url->link('checkout/checkout', '', true);
+			$json['redirect'] = $this->url->link('checkout/checkout', '', 'SSL');
 		}
 
 		// Validate if shipping address has been set.
 		if (!isset($this->session->data['shipping_address'])) {
-			$json['redirect'] = $this->url->link('checkout/checkout', '', true);
+			$json['redirect'] = $this->url->link('checkout/checkout', '', 'SSL');
 		}
 
 		// Validate cart has products and has stock.

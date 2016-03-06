@@ -38,7 +38,7 @@ class ControllerDesignLayout extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getForm();
@@ -70,7 +70,7 @@ class ControllerDesignLayout extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getForm();
@@ -104,7 +104,7 @@ class ControllerDesignLayout extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getList();
@@ -147,16 +147,16 @@ class ControllerDesignLayout extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true)
+			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, true)
+			'href' => $this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, 'SSL')
 		);
 
-		$data['add'] = $this->url->link('design/layout/add', 'token=' . $this->session->data['token'] . $url, true);
-		$data['delete'] = $this->url->link('design/layout/delete', 'token=' . $this->session->data['token'] . $url, true);
+		$data['add'] = $this->url->link('design/layout/add', 'token=' . $this->session->data['token'] . $url, 'SSL');
+		$data['delete'] = $this->url->link('design/layout/delete', 'token=' . $this->session->data['token'] . $url, 'SSL');
 
 		$data['layouts'] = array();
 
@@ -175,7 +175,7 @@ class ControllerDesignLayout extends Controller {
 			$data['layouts'][] = array(
 				'layout_id' => $result['layout_id'],
 				'name'      => $result['name'],
-				'edit'      => $this->url->link('design/layout/edit', 'token=' . $this->session->data['token'] . '&layout_id=' . $result['layout_id'] . $url, true)
+				'edit'      => $this->url->link('design/layout/edit', 'token=' . $this->session->data['token'] . '&layout_id=' . $result['layout_id'] . $url, 'SSL')
 			);
 		}
 
@@ -224,7 +224,7 @@ class ControllerDesignLayout extends Controller {
 			$url .= '&page=' . $this->request->get['page'];
 		}
 
-		$data['sort_name'] = $this->url->link('design/layout', 'token=' . $this->session->data['token'] . '&sort=name' . $url, true);
+		$data['sort_name'] = $this->url->link('design/layout', 'token=' . $this->session->data['token'] . '&sort=name' . $url, 'SSL');
 
 		$url = '';
 
@@ -240,7 +240,7 @@ class ControllerDesignLayout extends Controller {
 		$pagination->total = $layout_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_limit_admin');
-		$pagination->url = $this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
+		$pagination->url = $this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$data['pagination'] = $pagination->render();
 
@@ -253,7 +253,7 @@ class ControllerDesignLayout extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('design/layout_list', $data));
+		$this->response->setOutput($this->load->view('design/layout_list.tpl', $data));
 	}
 
 	protected function getForm() {
@@ -311,21 +311,21 @@ class ControllerDesignLayout extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true)
+			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, true)
+			'href' => $this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, 'SSL')
 		);
 
 		if (!isset($this->request->get['layout_id'])) {
-			$data['action'] = $this->url->link('design/layout/add', 'token=' . $this->session->data['token'] . $url, true);
+			$data['action'] = $this->url->link('design/layout/add', 'token=' . $this->session->data['token'] . $url, 'SSL');
 		} else {
-			$data['action'] = $this->url->link('design/layout/edit', 'token=' . $this->session->data['token'] . '&layout_id=' . $this->request->get['layout_id'] . $url, true);
+			$data['action'] = $this->url->link('design/layout/edit', 'token=' . $this->session->data['token'] . '&layout_id=' . $this->request->get['layout_id'] . $url, 'SSL');
 		}
 
-		$data['cancel'] = $this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, true);
+		$data['cancel'] = $this->url->link('design/layout', 'token=' . $this->session->data['token'] . $url, 'SSL');
 
 		if (isset($this->request->get['layout_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 			$layout_info = $this->model_design_layout->getLayout($this->request->get['layout_id']);
@@ -396,7 +396,7 @@ class ControllerDesignLayout extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('design/layout_form', $data));
+		$this->response->setOutput($this->load->view('design/layout_form.tpl', $data));
 	}
 
 	protected function validateForm() {

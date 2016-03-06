@@ -7,7 +7,11 @@ class ControllerPaymentCod extends Controller {
 
 		$data['continue'] = $this->url->link('checkout/success');
 
-		return $this->load->view('payment/cod', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/cod.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/payment/cod.tpl', $data);
+		} else {
+			return $this->load->view('default/template/payment/cod.tpl', $data);
+		}
 	}
 
 	public function confirm() {

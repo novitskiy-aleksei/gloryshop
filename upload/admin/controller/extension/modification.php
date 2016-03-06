@@ -45,7 +45,7 @@ class ControllerExtensionModification extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getList();
@@ -134,9 +134,6 @@ class ControllerExtensionModification extends Controller {
 			$modification = array();
 
 			foreach ($xml as $xml) {
-				if(empty($xml)){
-					continue;
-				}
 				$dom = new DOMDocument('1.0', 'UTF-8');
 				$dom->preserveWhiteSpace = false;
 				$dom->loadXml($xml);
@@ -201,7 +198,7 @@ class ControllerExtensionModification extends Controller {
 										$original[$key] = preg_replace('~\r?\n~', "\n", $content);
 
 										// Log
-										$log[] = PHP_EOL . 'FILE: ' . $key;
+										$log[] = 'FILE: ' . $key;
 									}
 
 									foreach ($operations as $operation) {
@@ -359,24 +356,22 @@ class ControllerExtensionModification extends Controller {
 										}
 
 										if (!$status) {
+											// Log
+											$log[] = 'NOT FOUND!';
+
+											// Skip current operation
+											if ($error == 'skip') {
+												break;
+											}
+
 											// Abort applying this modification completely.
 											if ($error == 'abort') {
 												$modification = $recovery;
+
 												// Log
-												$log[] = 'NOT FOUND - ABORTING !';
+												$log[] = 'ABORTING!';
+
 												break 5;
-											}
-											// Skip current operation or break
-											elseif ($error == 'skip') {
-												// Log
-												$log[] = 'NOT FOUND - OPERATION SKIPPED !';
-												continue;
-											}
-											// Break current operations
-											else {
-												// Log
-												$log[] = 'NOT FOUND - OPERATIONS ABORTED !';
-											 	break;
 											}
 										}
 									}
@@ -437,7 +432,7 @@ class ControllerExtensionModification extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getList();
@@ -504,7 +499,7 @@ class ControllerExtensionModification extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getList();
@@ -536,7 +531,7 @@ class ControllerExtensionModification extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getList();
@@ -568,7 +563,7 @@ class ControllerExtensionModification extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getList();
@@ -598,7 +593,7 @@ class ControllerExtensionModification extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, true));
+			$this->response->redirect($this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getList();
@@ -641,17 +636,17 @@ class ControllerExtensionModification extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true)
+			'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('extension/modification', 'token=' . $this->session->data['token'], true)
+			'href' => $this->url->link('extension/modification', 'token=' . $this->session->data['token'], 'SSL')
 		);
 
-		$data['refresh'] = $this->url->link('extension/modification/refresh', 'token=' . $this->session->data['token'] . $url, true);
-		$data['clear'] = $this->url->link('extension/modification/clear', 'token=' . $this->session->data['token'] . $url, true);
-		$data['delete'] = $this->url->link('extension/modification/delete', 'token=' . $this->session->data['token'] . $url, true);
+		$data['refresh'] = $this->url->link('extension/modification/refresh', 'token=' . $this->session->data['token'] . $url, 'SSL');
+		$data['clear'] = $this->url->link('extension/modification/clear', 'token=' . $this->session->data['token'] . $url, 'SSL');
+		$data['delete'] = $this->url->link('extension/modification/delete', 'token=' . $this->session->data['token'] . $url, 'SSL');
 
 		$data['modifications'] = array();
 
@@ -675,8 +670,8 @@ class ControllerExtensionModification extends Controller {
 				'status'          => $result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
 				'date_added'      => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 				'link'            => $result['link'],
-				'enable'          => $this->url->link('extension/modification/enable', 'token=' . $this->session->data['token'] . '&modification_id=' . $result['modification_id'], true),
-				'disable'         => $this->url->link('extension/modification/disable', 'token=' . $this->session->data['token'] . '&modification_id=' . $result['modification_id'], true),
+				'enable'          => $this->url->link('extension/modification/enable', 'token=' . $this->session->data['token'] . '&modification_id=' . $result['modification_id'], 'SSL'),
+				'disable'         => $this->url->link('extension/modification/disable', 'token=' . $this->session->data['token'] . '&modification_id=' . $result['modification_id'], 'SSL'),
 				'enabled'         => $result['status'],
 			);
 		}
@@ -739,11 +734,11 @@ class ControllerExtensionModification extends Controller {
 			$url .= '&page=' . $this->request->get['page'];
 		}
 
-		$data['sort_name'] = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . '&sort=name' . $url, true);
-		$data['sort_author'] = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . '&sort=author' . $url, true);
-		$data['sort_version'] = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . '&sort=version' . $url, true);
-		$data['sort_status'] = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . '&sort=status' . $url, true);
-		$data['sort_date_added'] = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . '&sort=date_added' . $url, true);
+		$data['sort_name'] = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . '&sort=name' . $url, 'SSL');
+		$data['sort_author'] = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . '&sort=author' . $url, 'SSL');
+		$data['sort_version'] = $this->url->link('extension/version', 'token=' . $this->session->data['token'] . '&sort=author' . $url, 'SSL');
+		$data['sort_status'] = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . '&sort=status' . $url, 'SSL');
+		$data['sort_date_added'] = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . '&sort=date_added' . $url, 'SSL');
 
 		$url = '';
 
@@ -759,7 +754,7 @@ class ControllerExtensionModification extends Controller {
 		$pagination->total = $modification_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_limit_admin');
-		$pagination->url = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
+		$pagination->url = $this->url->link('extension/modification', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$data['pagination'] = $pagination->render();
 
@@ -777,13 +772,13 @@ class ControllerExtensionModification extends Controller {
 			$data['log'] = '';
 		}
 
-		$data['clear_log'] = $this->url->link('extension/modification/clearlog', 'token=' . $this->session->data['token'], true);
+		$data['clear_log'] = $this->url->link('extension/modification/clearlog', 'token=' . $this->session->data['token'], 'SSL');
 
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('extension/modification', $data));
+		$this->response->setOutput($this->load->view('extension/modification.tpl', $data));
 	}
 
 	protected function validate() {

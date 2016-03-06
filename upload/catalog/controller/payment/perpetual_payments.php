@@ -46,7 +46,11 @@ class ControllerPaymentPerpetualPayments extends Controller {
 			);
 		}
 
-		return $this->load->view('payment/perpetual_payments', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/perpetual_payments.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/payment/perpetual_payments.tpl', $data);
+		} else {
+			return $this->load->view('default/template/payment/perpetual_payments.tpl', $data);
+		}
 	}
 
 	public function send() {

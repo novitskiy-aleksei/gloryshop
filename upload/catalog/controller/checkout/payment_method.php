@@ -5,17 +5,10 @@ class ControllerCheckoutPaymentMethod extends Controller {
 
 		if (isset($this->session->data['payment_address'])) {
 			// Totals
-			$totals = array();
-			$taxes = $this->cart->getTaxes();
+			$total_data = array();
 			$total = 0;
+			$taxes = $this->cart->getTaxes();
 
-			// Because __call can not keep var references so we put them into an array.
-			$total_data = array(
-				'totals' => &$totals,
-				'taxes'  => &$taxes,
-				'total'  => &$total
-			);
-			
 			$this->load->model('extension/extension');
 
 			$sort_order = array();
@@ -31,9 +24,8 @@ class ControllerCheckoutPaymentMethod extends Controller {
 			foreach ($results as $result) {
 				if ($this->config->get($result['code'] . '_status')) {
 					$this->load->model('total/' . $result['code']);
-					
-					// We have to put the totals in an array so that they pass by reference.
-					$this->{'model_total_' . $result['code']}->getTotal($total_data);
+
+					$this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
 				}
 			}
 
@@ -54,7 +46,7 @@ class ControllerCheckoutPaymentMethod extends Controller {
 
 					if ($method) {
 						if ($recurring) {
-							if (property_exists($this->{'model_payment_' . $result['code']}, 'recurringPayments') && $this->{'model_payment_' . $result['code']}->recurringPayments()) {
+							if (method_exists($this->{'model_payment_' . $result['code']}, 'recurringPayments') && $this->{'model_payment_' . $result['code']}->recurringPayments()) {
 								$method_data[$result['code']] = $method;
 							}
 						} else {
@@ -113,7 +105,7 @@ class ControllerCheckoutPaymentMethod extends Controller {
 			$information_info = $this->model_catalog_information->getInformation($this->config->get('config_checkout_id'));
 
 			if ($information_info) {
-				$data['text_agree'] = sprintf($this->language->get('text_agree'), $this->url->link('information/information/agree', 'information_id=' . $this->config->get('config_checkout_id'), true), $information_info['title'], $information_info['title']);
+				$data['text_agree'] = sprintf($this->language->get('text_agree'), $this->url->link('information/information/agree', 'information_id=' . $this->config->get('config_checkout_id'), 'SSL'), $information_info['title'], $information_info['title']);
 			} else {
 				$data['text_agree'] = '';
 			}
@@ -127,7 +119,11 @@ class ControllerCheckoutPaymentMethod extends Controller {
 			$data['agree'] = '';
 		}
 
-		$this->response->setOutput($this->load->view('checkout/payment_method', $data));
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/payment_method.tpl')) {
+			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/payment_method.tpl', $data));
+		} else {
+			$this->response->setOutput($this->load->view('default/template/checkout/payment_method.tpl', $data));
+		}
 	}
 
 	public function save() {
@@ -137,7 +133,7 @@ class ControllerCheckoutPaymentMethod extends Controller {
 
 		// Validate if payment address has been set.
 		if (!isset($this->session->data['payment_address'])) {
-			$json['redirect'] = $this->url->link('checkout/checkout', '', true);
+			$json['redirect'] = $this->url->link('checkout/checkout', '', 'SSL');
 		}
 
 		// Validate cart has products and has stock.

@@ -33,8 +33,8 @@ class ModelOpenbayEbayProfile extends Model{
 
 		if ($qry->num_rows) {
 			$row                = $qry->row;
-			$row['link_edit']   = $this->url->link('openbay/ebay_profile/edit', 'token=' . $this->session->data['token'] . '&ebay_profile_id=' . $row['ebay_profile_id'], true);
-			$row['link_delete'] = $this->url->link('openbay/ebay_profile/delete', 'token=' . $this->session->data['token'] . '&ebay_profile_id=' . $row['ebay_profile_id'], true);
+			$row['link_edit']   = $this->url->link('openbay/ebay_profile/edit', 'token=' . $this->session->data['token'] . '&ebay_profile_id=' . $row['ebay_profile_id'], 'SSL');
+			$row['link_delete'] = $this->url->link('openbay/ebay_profile/delete', 'token=' . $this->session->data['token'] . '&ebay_profile_id=' . $row['ebay_profile_id'], 'SSL');
 			$row['data']        = unserialize($row['data']);
 
 			return $row;
@@ -55,8 +55,8 @@ class ModelOpenbayEbayProfile extends Model{
 		if($qry->num_rows) {
 			$profiles = array();
 			foreach ($qry->rows as $row) {
-				$row['link_edit']   = $this->url->link('openbay/ebay_profile/edit', 'token=' . $this->session->data['token'] . '&ebay_profile_id=' . $row['ebay_profile_id'], true);
-				$row['link_delete'] = $this->url->link('openbay/ebay_profile/delete', 'token=' . $this->session->data['token'] . '&ebay_profile_id=' . $row['ebay_profile_id'], true);
+				$row['link_edit']   = $this->url->link('openbay/ebay_profile/edit', 'token=' . $this->session->data['token'] . '&ebay_profile_id=' . $row['ebay_profile_id'], 'SSL');
+				$row['link_delete'] = $this->url->link('openbay/ebay_profile/delete', 'token=' . $this->session->data['token'] . '&ebay_profile_id=' . $row['ebay_profile_id'], 'SSL');
 				$row['data']        = !empty($row['data']) ? unserialize($row['data']) : array();
 				$profiles[]         = $row;
 			}
@@ -71,19 +71,19 @@ class ModelOpenbayEbayProfile extends Model{
 		$types = array(
 			0 => array(
 				'name'          => $this->language->get('text_type_shipping'),
-				'template'      => 'openbay/ebay_profile_form_shipping'
+				'template'      => 'openbay/ebay_profile_form_shipping.tpl'
 			),
 			1 => array(
 				'name'          => $this->language->get('text_type_returns'),
-				'template'      => 'openbay/ebay_profile_form_returns'
+				'template'      => 'openbay/ebay_profile_form_returns.tpl'
 			),
 			2 => array(
 				'name'          => $this->language->get('text_type_template'),
-				'template'      => 'openbay/ebay_profile_form_template'
+				'template'      => 'openbay/ebay_profile_form_template.tpl'
 			),
 			3 => array(
 				'name'          => $this->language->get('text_type_general'),
-				'template'      => 'openbay/ebay_profile_form_generic'
+				'template'      => 'openbay/ebay_profile_form_generic.tpl'
 			)
 		);
 

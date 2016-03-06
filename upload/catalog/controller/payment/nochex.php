@@ -61,12 +61,16 @@ class ControllerPaymentNochex extends Controller {
 		$data['email_address'] = $order_info['email'];
 		$data['customer_phone_number']= $order_info['telephone'];
 		$data['test'] = $this->config->get('nochex_test');
-		$data['success_url'] = $this->url->link('checkout/success', '', true);
-		$data['cancel_url'] = $this->url->link('checkout/payment', '', true);
-		$data['declined_url'] = $this->url->link('payment/nochex/callback', 'method=decline', true);
-		$data['callback_url'] = $this->url->link('payment/nochex/callback', 'order=' . $this->session->data['order_id'], true);
+		$data['success_url'] = $this->url->link('checkout/success', '', 'SSL');
+		$data['cancel_url'] = $this->url->link('checkout/payment', '', 'SSL');
+		$data['declined_url'] = $this->url->link('payment/nochex/callback', 'method=decline', 'SSL');
+		$data['callback_url'] = $this->url->link('payment/nochex/callback', 'order=' . $this->session->data['order_id'], 'SSL');
 
-		return $this->load->view('payment/nochex', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/nochex.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/payment/nochex.tpl', $data);
+		} else {
+			return $this->load->view('default/template/payment/nochex.tpl', $data);
+		}
 	}
 
 	public function callback() {
@@ -122,6 +126,6 @@ class ControllerPaymentNochex extends Controller {
 
 		// Since it returned, the customer should see success.
 		// It's up to the store owner to manually verify payment.
-		$this->response->redirect($this->url->link('checkout/success', '', true));
+		$this->response->redirect($this->url->link('checkout/success', '', 'SSL'));
 	}
 }

@@ -4,7 +4,7 @@ class ControllerAccountRegister extends Controller {
 
 	public function index() {
 		if ($this->customer->isLogged()) {
-			$this->response->redirect($this->url->link('account/account', '', true));
+			$this->response->redirect($this->url->link('account/account', '', 'SSL'));
 		}
 
 		$this->load->language('account/register');
@@ -49,17 +49,17 @@ class ControllerAccountRegister extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_account'),
-			'href' => $this->url->link('account/account', '', true)
+			'href' => $this->url->link('account/account', '', 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_register'),
-			'href' => $this->url->link('account/register', '', true)
+			'href' => $this->url->link('account/register', '', 'SSL')
 		);
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
-		$data['text_account_already'] = sprintf($this->language->get('text_account_already'), $this->url->link('account/login', '', true));
+		$data['text_account_already'] = sprintf($this->language->get('text_account_already'), $this->url->link('account/login', '', 'SSL'));
 		$data['text_your_details'] = $this->language->get('text_your_details');
 		$data['text_your_address'] = $this->language->get('text_your_address');
 		$data['text_your_password'] = $this->language->get('text_your_password');
@@ -168,7 +168,7 @@ class ControllerAccountRegister extends Controller {
 			$data['error_confirm'] = '';
 		}
 
-		$data['action'] = $this->url->link('account/register', '', true);
+		$data['action'] = $this->url->link('account/register', '', 'SSL');
 
 		$data['customer_groups'] = array();
 
@@ -326,7 +326,7 @@ class ControllerAccountRegister extends Controller {
 			$information_info = $this->model_catalog_information->getInformation($this->config->get('config_account_id'));
 
 			if ($information_info) {
-				$data['text_agree'] = sprintf($this->language->get('text_agree'), $this->url->link('information/information/agree', 'information_id=' . $this->config->get('config_account_id'), true), $information_info['title'], $information_info['title']);
+				$data['text_agree'] = sprintf($this->language->get('text_agree'), $this->url->link('information/information/agree', 'information_id=' . $this->config->get('config_account_id'), 'SSL'), $information_info['title'], $information_info['title']);
 			} else {
 				$data['text_agree'] = '';
 			}
@@ -347,7 +347,11 @@ class ControllerAccountRegister extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		$this->response->setOutput($this->load->view('account/register', $data));
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/register.tpl')) {
+			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/account/register.tpl', $data));
+		} else {
+			$this->response->setOutput($this->load->view('default/template/account/register.tpl', $data));
+		}
 	}
 
 	private function validate() {
@@ -359,7 +363,7 @@ class ControllerAccountRegister extends Controller {
 			$this->error['lastname'] = $this->language->get('error_lastname');
 		}
 
-		if ((utf8_strlen($this->request->post['email']) > 96) || !filter_var($this->request->post['email'], FILTER_VALIDATE_EMAIL)) {
+		if ((utf8_strlen($this->request->post['email']) > 96) || !preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $this->request->post['email'])) {
 			$this->error['email'] = $this->language->get('error_email');
 		}
 
@@ -408,11 +412,9 @@ class ControllerAccountRegister extends Controller {
 		$custom_fields = $this->model_account_custom_field->getCustomFields($customer_group_id);
 
 		foreach ($custom_fields as $custom_field) {
-            if ($custom_field['required'] && empty($this->request->post['custom_field'][$custom_field['location']][$custom_field['custom_field_id']])) {
+			if ($custom_field['required'] && empty($this->request->post['custom_field'][$custom_field['location']][$custom_field['custom_field_id']])) {
 				$this->error['custom_field'][$custom_field['custom_field_id']] = sprintf($this->language->get('error_custom_field'), $custom_field['name']);
-			} elseif (($custom_field['type'] == 'text' && !empty($custom_field['validation'])) && !filter_var($this->request->post['custom_field'][$custom_field['location']][$custom_field['custom_field_id']], FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => $custom_field['validation'])))) {
-            	$this->error['custom_field'][$custom_field['custom_field_id']] = sprintf($this->language->get('error_custom_field_validate'), $custom_field['name']);
-            }
+			}
 		}
 
 		if ((utf8_strlen($this->request->post['password']) < 4) || (utf8_strlen($this->request->post['password']) > 20)) {

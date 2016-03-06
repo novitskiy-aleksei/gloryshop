@@ -105,7 +105,6 @@
           _el.type = 'hidden';
           _el.name = 'token';
           document.getElementById('payment-new-form').appendChild(_el);
-		  document.getElementById('payment-new-form').submit();
         });
 
         //Submit form

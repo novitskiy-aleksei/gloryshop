@@ -75,19 +75,19 @@ class ControllerProductCompare extends Controller {
 
 			if ($product_info) {
 				if ($product_info['image']) {
-					$image = $this->model_tool_image->resize($product_info['image'], $this->config->get($this->config->get('config_theme') . '_image_compare_width'), $this->config->get($this->config->get('config_theme') . '_image_compare_height'));
+					$image = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_compare_width'), $this->config->get('config_image_compare_height'));
 				} else {
 					$image = false;
 				}
 
-				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
-					$price = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
+				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+					$price = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
 				} else {
 					$price = false;
 				}
 
 				if ((float)$product_info['special']) {
-					$special = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
+					$special = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
 				} else {
 					$special = false;
 				}
@@ -153,7 +153,11 @@ class ControllerProductCompare extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		$this->response->setOutput($this->load->view('product/compare', $data));
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/compare.tpl')) {
+			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/compare.tpl', $data));
+		} else {
+			$this->response->setOutput($this->load->view('default/template/product/compare.tpl', $data));
+		}
 	}
 
 	public function add() {

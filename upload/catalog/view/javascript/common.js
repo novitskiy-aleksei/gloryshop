@@ -33,26 +33,26 @@ $(document).ready(function() {
 	});
 
 	// Currency
-	$('#form-currency .currency-select').on('click', function(e) {
+	$('#currency .currency-select').on('click', function(e) {
 		e.preventDefault();
 
-		$('#form-currency input[name=\'code\']').attr('value', $(this).attr('name'));
+		$('#currency input[name=\'code\']').attr('value', $(this).attr('name'));
 
-		$('#form-currency').submit();
+		$('#currency').submit();
 	});
 
 	// Language
-	$('#form-language .language-select').on('click', function(e) {
+	$('#language a').on('click', function(e) {
 		e.preventDefault();
 
-		$('#form-language input[name=\'code\']').attr('value', $(this).attr('name'));
+		$('#language input[name=\'code\']').attr('value', $(this).attr('href'));
 
-		$('#form-language').submit();
-	})
+		$('#language').submit();
+	});
 
 	/* Search */
 	$('#search input[name=\'search\']').parent().find('button').on('click', function() {
-		var url = $('base').attr('href') + 'index.php?route=product/search';
+		url = $('base').attr('href') + 'index.php?route=product/search';
 
 		var value = $('header input[name=\'search\']').val();
 
@@ -85,6 +85,7 @@ $(document).ready(function() {
 	$('#list-view').click(function() {
 		$('#content .product-grid > .clearfix').remove();
 
+		//$('#content .product-layout').attr('class', 'product-layout product-list col-xs-12');
 		$('#content .row > .product-grid').attr('class', 'product-layout product-list col-xs-12');
 
 		localStorage.setItem('display', 'list');
@@ -93,7 +94,7 @@ $(document).ready(function() {
 	// Product Grid
 	$('#grid-view').click(function() {
 		// What a shame bootstrap does not take into account dynamically loaded columns
-		var cols = $('#column-right, #column-left').length;
+		cols = $('#column-right, #column-left').length;
 
 		if (cols == 2) {
 			$('#content .product-list').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-12');
@@ -103,7 +104,7 @@ $(document).ready(function() {
 			$('#content .product-list').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12');
 		}
 
-		localStorage.setItem('display', 'grid');
+		 localStorage.setItem('display', 'grid');
 	});
 
 	if (localStorage.getItem('display') == 'list') {
@@ -162,9 +163,9 @@ var cart = {
 					$('#cart > ul').load('index.php?route=common/cart/info ul li');
 				}
 			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
+	        error: function(xhr, ajaxOptions, thrownError) {
+	            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+	        }
 		});
 	},
 	'update': function(key, quantity) {
@@ -191,9 +192,9 @@ var cart = {
 					$('#cart > ul').load('index.php?route=common/cart/info ul li');
 				}
 			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
+	        error: function(xhr, ajaxOptions, thrownError) {
+	            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+	        }
 		});
 	},
 	'remove': function(key) {
@@ -220,9 +221,9 @@ var cart = {
 					$('#cart > ul').load('index.php?route=common/cart/info ul li');
 				}
 			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
+	        error: function(xhr, ajaxOptions, thrownError) {
+	            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+	        }
 		});
 	}
 }
@@ -255,9 +256,9 @@ var voucher = {
 					$('#cart > ul').load('index.php?route=common/cart/info ul li');
 				}
 			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
+	        error: function(xhr, ajaxOptions, thrownError) {
+	            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+	        }
 		});
 	}
 }
@@ -285,9 +286,9 @@ var wishlist = {
 
 				$('html, body').animate({ scrollTop: 0 }, 'slow');
 			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
+	        error: function(xhr, ajaxOptions, thrownError) {
+	            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+	        }
 		});
 	},
 	'remove': function() {
@@ -313,9 +314,9 @@ var compare = {
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
 				}
 			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
+	        error: function(xhr, ajaxOptions, thrownError) {
+	            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+	        }
 		});
 	},
 	'remove': function() {

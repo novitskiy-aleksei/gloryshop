@@ -13,7 +13,7 @@ class ControllerModuleAmazonLogin extends Controller {
 			$this->document->addScript($amazon_payment_js);
 
 			$data['amazon_login_pay_client_id'] = $this->config->get('amazon_login_pay_client_id');
-			$data['amazon_login_return_url'] = $this->url->link('module/amazon_login/login', '', true);
+			$data['amazon_login_return_url'] = $this->url->link('module/amazon_login/login', '', 'SSL');
 			if ($this->config->get('amazon_login_pay_test') == 'sandbox') {
 				$data['amazon_login_pay_test'] = true;
 			}
@@ -36,7 +36,11 @@ class ControllerModuleAmazonLogin extends Controller {
 				$data['amazon_login_button_size'] = 'medium';
 			}
 
-			return $this->load->view('module/amazon_login', $data);
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/amazon_login.tpl')) {
+				return $this->load->view($this->config->get('config_template') . '/template/module/amazon_login.tpl', $data);
+			} else {
+				return $this->load->view('default/template/module/amazon_login.tpl', $data);
+			}
 		}
 	}
 
@@ -58,7 +62,7 @@ class ControllerModuleAmazonLogin extends Controller {
 			if (isset($user->error)) {
 				$this->model_payment_amazon_login_pay->logger($user->error . ': ' . $user->error_description);
 				$this->session->data['lpa']['error'] = $this->language->get('error_login');
-				$this->response->redirect($this->url->link('payment/amazon_login_pay/loginFailure', '', true));
+				$this->response->redirect($this->url->link('payment/amazon_login_pay/loginFailure', '', 'SSL'));
 			}
 
 			$customer_info = $this->model_account_customer->getCustomerByEmail($user->email);
@@ -90,9 +94,9 @@ class ControllerModuleAmazonLogin extends Controller {
 				} else {
 					$this->model_payment_amazon_login_pay->logger('Could not login to - ID: ' . $customer_info['customer_id'] . ', Email: ' . $customer_info['email']);
 					$this->session->data['lpa']['error'] = $this->language->get('error_login');
-					$this->response->redirect($this->url->link('payment/amazon_login_pay/loginFailure', '', true));
+					$this->response->redirect($this->url->link('payment/amazon_login_pay/loginFailure', '', 'SSL'));
 				}
-				$this->response->redirect($this->url->link('account/account', '', true));
+				$this->response->redirect($this->url->link('account/account', '', 'SSL'));
 			} else {
 				$country_id = 0;
 				$zone_id = 0;
@@ -146,17 +150,17 @@ class ControllerModuleAmazonLogin extends Controller {
 
 					$this->model_payment_amazon_login_pay->logger('Customer logged in - ID: ' . $customer_id . ', Email: ' . $user->email);
 
-					$this->response->redirect($this->url->link('account/account', '', true));
+					$this->response->redirect($this->url->link('account/account', '', 'SSL'));
 				} else {
 					$this->model_payment_amazon_login_pay->logger('Could not login to - ID: ' . $customer_id . ', Email: ' . $user->email);
 
 					$this->session->data['lpa']['error'] = $this->language->get('error_login');
-					$this->response->redirect($this->url->link('payment/amazon_login_pay/loginFailure', '', true));
+					$this->response->redirect($this->url->link('payment/amazon_login_pay/loginFailure', '', 'SSL'));
 				}
 			}
 		} else {
 			$this->session->data['lpa']['error'] = $this->language->get('error_login');
-			$this->response->redirect($this->url->link('payment/amazon_login_pay/loginFailure', '', true));
+			$this->response->redirect($this->url->link('payment/amazon_login_pay/loginFailure', '', 'SSL'));
 		}
 	}
 

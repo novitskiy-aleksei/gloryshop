@@ -2,9 +2,9 @@
 class ControllerAffiliateTracking extends Controller {
 	public function index() {
 		if (!$this->affiliate->isLogged()) {
-			$this->session->data['redirect'] = $this->url->link('affiliate/tracking', '', true);
+			$this->session->data['redirect'] = $this->url->link('affiliate/tracking', '', 'SSL');
 
-			$this->response->redirect($this->url->link('affiliate/login', '', true));
+			$this->response->redirect($this->url->link('affiliate/login', '', 'SSL'));
 		}
 
 		$this->load->language('affiliate/tracking');
@@ -20,12 +20,12 @@ class ControllerAffiliateTracking extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_account'),
-			'href' => $this->url->link('affiliate/account', '', true)
+			'href' => $this->url->link('affiliate/account', '', 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('affiliate/tracking', '', true)
+			'href' => $this->url->link('affiliate/tracking', '', 'SSL')
 		);
 
 		$data['heading_title'] = $this->language->get('heading_title');
@@ -42,7 +42,7 @@ class ControllerAffiliateTracking extends Controller {
 
 		$data['code'] = $this->affiliate->getCode();
 
-		$data['continue'] = $this->url->link('affiliate/account', '', true);
+		$data['continue'] = $this->url->link('affiliate/account', '', 'SSL');
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
@@ -51,7 +51,11 @@ class ControllerAffiliateTracking extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		$this->response->setOutput($this->load->view('affiliate/tracking', $data));
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/affiliate/tracking.tpl')) {
+			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/affiliate/tracking.tpl', $data));
+		} else {
+			$this->response->setOutput($this->load->view('default/template/affiliate/tracking.tpl', $data));
+		}
 	}
 
 	public function autocomplete() {

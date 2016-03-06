@@ -33,7 +33,11 @@ class ControllerPaymentSagepayUS extends Controller {
 			);
 		}
 
-		return $this->load->view('payment/sagepay_us', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/sagepay_us.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/payment/sagepay_us.tpl', $data);
+		} else {
+			return $this->load->view('default/template/payment/sagepay_us.tpl', $data);
+		}
 	}
 
 	public function send() {

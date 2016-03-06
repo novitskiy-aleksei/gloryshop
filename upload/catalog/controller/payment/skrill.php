@@ -14,7 +14,7 @@ class ControllerPaymentSkrill extends Controller {
 		$data['description'] = $this->config->get('config_name');
 		$data['transaction_id'] = $this->session->data['order_id'];
 		$data['return_url'] = $this->url->link('checkout/success');
-		$data['cancel_url'] = $this->url->link('checkout/checkout', '', true);
+		$data['cancel_url'] = $this->url->link('checkout/checkout', '', 'SSL');
 		$data['status_url'] = $this->url->link('payment/skrill/callback');
 		$data['language'] = $this->session->data['language'];
 		$data['logo'] = $this->config->get('config_url') . 'image/' . $this->config->get('config_logo');
@@ -44,7 +44,11 @@ class ControllerPaymentSkrill extends Controller {
 
 		$data['order_id'] = $this->session->data['order_id'];
 
-		return $this->load->view('payment/skrill', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/skrill.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/payment/skrill.tpl', $data);
+		} else {
+			return $this->load->view('default/template/payment/skrill.tpl', $data);
+		}
 	}
 
 	public function callback() {

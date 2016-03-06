@@ -1,8 +1,6 @@
 <?php
 class ModelTotalKlarnaFee extends Model {
-	public function getTotal($totals) {
-		extract($totals);
-		
+	public function getTotal(&$total_data, &$total, &$taxes) {
 		$this->load->language('total/klarna_fee');
 
 		$status = true;
@@ -30,7 +28,7 @@ class ModelTotalKlarnaFee extends Model {
 		}
 
 		if ($status) {
-			$total['totals'][] = array(
+			$total_data[] = array(
 				'code'       => 'klarna_fee',
 				'title'      => $this->language->get('text_klarna_fee'),
 				'value'      => $klarna_fee[$address['iso_code_3']]['fee'],
@@ -40,14 +38,14 @@ class ModelTotalKlarnaFee extends Model {
 			$tax_rates = $this->tax->getRates($klarna_fee[$address['iso_code_3']]['fee'], $klarna_fee[$address['iso_code_3']]['tax_class_id']);
 
 			foreach ($tax_rates as $tax_rate) {
-				if (!isset($total['taxes'][$tax_rate['tax_rate_id']])) {
-					$total['taxes'][$tax_rate['tax_rate_id']] = $tax_rate['amount'];
+				if (!isset($taxes[$tax_rate['tax_rate_id']])) {
+					$taxes[$tax_rate['tax_rate_id']] = $tax_rate['amount'];
 				} else {
-					$total['taxes'][$tax_rate['tax_rate_id']] += $tax_rate['amount'];
+					$taxes[$tax_rate['tax_rate_id']] += $tax_rate['amount'];
 				}
 			}
 
-			$total['total'] += $klarna_fee[$address['iso_code_3']]['fee'];
+			$total += $klarna_fee[$address['iso_code_3']]['fee'];
 		}
 	}
 }

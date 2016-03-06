@@ -26,6 +26,10 @@ class ControllerModuleBanner extends Controller {
 
 		$data['module'] = $module++;
 
-		return $this->load->view('module/banner', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/banner.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/module/banner.tpl', $data);
+		} else {
+			return $this->load->view('default/template/module/banner.tpl', $data);
+		}
 	}
 }

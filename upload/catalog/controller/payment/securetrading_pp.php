@@ -74,7 +74,11 @@ class ControllerPaymentSecureTradingPp extends Controller {
 			$data['text_payment_details'] = $this->language->get('text_payment_details');
 			$data['entry_card_type'] = $this->language->get('entry_card_type');
 
-			return $this->load->view('payment/securetrading_pp', $data);
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/securetrading_pp.tpl')) {
+				return $this->load->view($this->config->get('config_template') . '/template/payment/securetrading_pp.tpl', $data);
+			} else {
+				return $this->load->view('default/template/payment/securetrading_pp.tpl', $data);
+			}
 		}
 	}
 
@@ -98,7 +102,7 @@ class ControllerPaymentSecureTradingPp extends Controller {
 
 		$string_to_hash .= $this->config->get('securetrading_pp_notification_password');
 
-		if (hash_equals(hash('sha256', $string_to_hash), $this->request->post['responsesitesecurity']) && $this->request->post['sitereference'] == $this->config->get('securetrading_pp_site_reference')) {
+		if (hash('sha256', $string_to_hash) == $this->request->post['responsesitesecurity'] && $this->request->post['sitereference'] == $this->config->get('securetrading_pp_site_reference')) {
 			$order_info = $this->model_checkout_order->getOrder($this->request->post['orderreference']);
 
 			if ($order_info) {

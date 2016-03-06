@@ -14,7 +14,7 @@ class ControllerAccountSuccess extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_account'),
-			'href' => $this->url->link('account/account', '', true)
+			'href' => $this->url->link('account/account', '', 'SSL')
 		);
 
 		$data['breadcrumbs'][] = array(
@@ -39,7 +39,7 @@ class ControllerAccountSuccess extends Controller {
 		if ($this->cart->hasProducts()) {
 			$data['continue'] = $this->url->link('checkout/cart');
 		} else {
-			$data['continue'] = $this->url->link('account/account', '', true);
+			$data['continue'] = $this->url->link('account/account', '', 'SSL');
 		}
 
 		$data['column_left'] = $this->load->controller('common/column_left');
@@ -49,6 +49,10 @@ class ControllerAccountSuccess extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		$this->response->setOutput($this->load->view('common/success', $data));
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/success.tpl')) {
+			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/common/success.tpl', $data));
+		} else {
+			$this->response->setOutput($this->load->view('default/template/common/success.tpl', $data));
+		}
 	}
 }
