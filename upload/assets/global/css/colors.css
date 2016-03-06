@@ -1,0 +1,2001 @@
+
+/*Color*/
+.blue-color-hover:hover,
+.blue-color{
+  color: #4b8df8 !important;
+}
+.blue-madison-color-hover:hover,
+.blue-madison-color{
+  color: #578ebe !important;
+}
+.blue-chambray-color-hover:hover,
+.blue-chambray-color{
+  color: #2c3e50 !important;
+}
+.blue-ebonyclay-color-hover:hover,
+.blue-ebonyclay-color{
+  color: #22313f !important;
+}
+.blue-hoki-color-hover:hover,
+.blue-hoki-color{
+  color: #67809f !important;
+}
+.blue-steel-color-hover:hover,
+.blue-steel-color{
+  color: #4b77be !important;
+}
+.green-color-hover:hover,
+.green-color{
+  color: #35aa47 !important;
+}
+.green-meadow--color-hover:hover,
+.green-meadow-color{
+  color: #0dc0c0 !important;
+}
+.green-seagreen-color-hover:hover,
+.green-seagreen-color{
+  color: #1ba39c !important;
+}
+.green-turquoise-color-hover:hover,
+.green-turquoise-color{
+  color: #36d7b7 !important;
+}
+.green-haze-color-hover:hover,
+.green-haze-color{
+  color: #44b6ae !important;
+}
+.green-jungle-color-hover:hover,
+.green-jungle-color{
+  color: #26c281 !important;
+}
+.grey-color-hover:hover,
+.grey-color{
+  color: #e5e5e5 !important;
+}
+.grey-steel-color-hover:hover,
+.grey-steel-color{
+  color: #e9edef !important;
+}
+.grey-cararra-color-hover:hover,
+.grey-cararra-color{
+  color: #fafafa !important;
+}
+.grey-dark--color-hover:hover,
+.grey-dark-color{
+  color: #555555 !important;
+}
+.grey-cascade-color-hover:hover,
+.grey-cascade-color{
+  color: #95a5a6 !important;
+}
+.grey-silver-color-hover:hover,
+.grey-silver-color{
+  color: #bfbfbf !important;
+}
+.red-color-hover:hover,
+.red-color{
+  color: #d84a38 !important;
+}
+.red-pink-color-hover:hover,
+.red-pink-color{
+  color: #e08283 !important;
+}
+.red-sunglo-color-hover:hover,
+.red-sunglo-color{
+  color: #e26a6a !important;
+}
+.red-intense-color-hover:hover,
+.red-intense-color{
+  color: #e35b5a !important;
+}
+.red-thunderbird-color-hover:hover,
+.red-thunderbird-color{
+  color: #d91e18 !important;
+}
+.red-flamingo-color-hover:hover,
+.red-flamingo-color{
+  color: #ef4836 !important;
+}
+.yellow-color-hover:hover,
+.yellow-color{
+  color: #ffb848 !important;
+}
+.yellow-gold-color-hover:hover,
+.yellow-gold-color{
+  color: #e87e04 !important;
+}
+.yellow-casablanca-color-hover:hover,
+.yellow-casablanca-color{
+  color: #f2784b !important;
+}
+.yellow-crusta-color-hover:hover,
+.yellow-crusta-color{
+  color: #f3c200 !important;
+}
+.yellow-lemon-color-hover:hover,
+.yellow-lemon-color{
+  color: #f7ca18 !important;
+}
+.yellow-saffron-color-hover:hover,
+.yellow-saffron-color{
+  color: #f4d03f !important;
+}
+.purple-color-hover:hover,
+.purple-color{
+  color: #8e44ad !important;
+}
+.purple-plum-color-hover:hover,
+.purple-plum-color{
+  color: #8775a7 !important;
+}
+.purple-medium-color-hover:hover,
+.purple-medium-color{
+  color: #bf55ec !important;
+}
+.purple-studio-color-hover:hover,
+.purple-studio-color{
+  color: #8e44ad !important;
+}
+.purple-wisteria-color-hover:hover,
+.purple-wisteria-color{
+  color: #9b59b6 !important;
+}
+.purple-seance-color-hover:hover,
+.purple-seance-color{
+  color: #9a12b3 !important;
+}
+.aqua-color-hover:hover,
+.aqua-color{
+  color: #00C78C !important;
+}
+.turquoise-color-hover:hover,
+.turquoise-color{
+  color: #44B2C1 !important;
+}
+.cyan-color-hover:hover,
+.cyan-color{
+  color: #00EEEE !important;
+}
+.crimson-color-hover:hover,
+.crimson-color{
+  color: #DC143C !important;
+}
+.violetred-color-hover:hover,
+.violetred-color{
+  color: #FF3E96 !important;
+}
+.blue-sky-color-hover:hover,
+.blue-sky-color{
+  color: #00BFFF !important;
+} 
+/*Background*/ 
+.btn.transparent-bg {
+  color: #fff;
+  white-space: nowrap;   
+  text-decoration: none;
+  border: solid 1px #fff;
+  background: none;
+}
+.btn.transparent-bg:hover {
+  background: #47D1FF;
+  color: #fff;
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;      
+}
+/*Button Hover*/ 
+
+/*BUTTON COLOR*/ 
+/**/ 
+/*Red Button*/ 
+.red-bg.btn:hover, .red-bg.btn:focus, .red-bg.btn:active, .red-bg.btn.active {
+  color: white;
+  background-color: #ca3a28 !important;
+}
+.crimson-bg.btn:hover, .crimson-bg.btn:focus, .crimson-bg.btn:active, .crimson-bg.btn.active {
+  color: white;
+  background-color: #AD0728 !important;
+}
+.red-sunglo-bg.btn:hover, .red-sunglo-bg.btn:focus, .red-sunglo-bg.btn:active, .red-sunglo-bg.btn.active {
+  color: white;
+  background-color: #dd5050 !important;
+}
+.red-intense-bg.btn:hover, .red-intense-bg.btn:focus, .red-intense-bg.btn:active, .red-intense-bg.btn.active {
+  color: white;
+  background-color: #df4140 !important;
+}
+/*Red-thunderbird Button*/ 
+.red-thunderbird-bg.btn:hover, .red-thunderbird-bg.btn:focus, .red-thunderbird-bg.btn:active, .red-thunderbird-bg.btn.active {
+  color: white;
+  background-color: #bd1a15 !important;
+}
+/* Red-flamingo Button */
+.red-flamingo-bg.btn:hover, .red-flamingo-bg.btn:focus, .red-flamingo-bg.btn:active, .red-flamingo-bg.btn.active {
+  color: white;
+  background-color: #ed2e1a !important;
+}
+.red-pink-bg.btn:hover, .red-pink-bg.btn:focus, .red-pink-bg.btn:active, .red-pink-bg.btn.active {
+  color: white;
+  background-color: #da696b !important;
+}
+/*Blue Button*/ 
+.blue-bg.btn:hover, .blue-bg.btn:focus, .blue-bg.btn:active, .blue-bg.btn.active {
+  color: white;
+  background-color: #2e7af7 !important;
+}
+/*Blue hoki Button*/ 
+.blue-hoki-bg.btn:hover, .blue-hoki-bg.btn:focus, .blue-hoki-bg.btn:active, .blue-hoki-bg.btn.active {
+  color: white;
+  background-color: #5a718e !important;
+}
+/*Blue steel Button*/ 
+.blue-steel-bg.btn:hover, .blue-steel-bg.btn:focus, .blue-steel-bg.btn:active, .blue-steel-bg.btn.active {
+  color: white;
+  background-color: #3e68ac !important;
+}
+/*Blue madison Button*/ 
+.blue-madison-bg.btn:hover, .blue-madison-bg.btn:focus, .blue-madison-bg.btn:active, .blue-madison-bg.btn.active {
+  color: white;
+  background-color: #457fb2 !important;
+}
+/*Blue chambray Button*/ 
+.blue-chambray-bg.btn:hover, .blue-chambray-bg.btn:focus, .blue-chambray-bg.btn:active, .blue-chambray-bg.btn.active {
+  color: white;
+  background-color: #212f3c !important;
+}
+/*Blue ebonyclay Button*/ 
+.blue-ebonyclay-bg.btn:hover, .blue-ebonyclay-bg.btn:focus, .blue-ebonyclay-bg.btn:active, .blue-ebonyclay-bg.btn.active {
+  color: white;
+  background-color: #17222b !important;
+}
+/*Green Button*/ 
+.green-bg.btn:hover, .green-bg.btn:focus, .green-bg.btn:active, .green-bg.btn.active {
+  color: white;
+  background-color: #2e933d !important;
+}
+/*Green meadow Button*/ 
+.green-meadow-bg.btn:hover, .green-meadow-bg.btn:focus, .green-meadow-bg.btn:active, .green-meadow-bg.btn.active {
+  color: white;
+  background-color: #17a185 !important;
+}
+/*Green seagreen Button*/ 
+.green-seagreen-bg.btn:hover, .green-seagreen-bg.btn:focus, .green-seagreen-bg.btn:active, .green-seagreen-bg.btn.active {
+  color: white;
+  background-color: #178983 !important;
+}
+/*Green turquoise Button*/ 
+.green-turquoise-bg.btn:hover, .green-turquoise-bg.btn:focus, .green-turquoise-bg.btn:active, .green-turquoise-bg.btn.active {
+  color: white;
+  background-color: #28c7a7 !important;
+}
+/*Button*/ 
+.green-haze-bg.btn:hover, .green-haze-bg.btn:focus, .green-haze-bg.btn:active, .green-haze-bg.btn.active {
+  color: white;
+  background-color: #3ca099 !important;
+}
+/*Green-jungle Button*/ 
+.green-jungle-bg.btn:hover, .green-jungle-bg.btn:focus, .green-jungle-bg.btn:active, .green-jungle-bg.btn.active {
+  color: white;
+  background-color: #21a870 !important;
+}
+/*Yellow Button*/ 
+.yellow-bg.btn:hover, .yellow-bg.btn:focus, .yellow-bg.btn:active, .yellow-bg.btn.active {
+  color: white;
+  background-color: #ffac29 !important;
+}
+/*Yellow Button*/ 
+.yellow-gold-bg.btn:hover, .yellow-gold-bg.btn:focus, .yellow-gold-bg.btn:active, .yellow-gold-bg.btn.active {
+  color: white;
+  background-color: #ca6e03 !important;
+}
+/*Yellow Button*/ 
+.yellow-casablanca-bg.btn:hover, .yellow-casablanca-bg.btn:focus, .yellow-casablanca-bg.btn:active, .yellow-casablanca-bg.btn.active {
+  color: white;
+  background-color: #f0632e !important;
+}
+/*Yellow Button*/ 
+.yellow-crusta-bg.btn:hover, .yellow-crusta-bg.btn:focus, .yellow-crusta-bg.btn:active, .yellow-crusta-bg.btn.active {
+  color: white;
+  background-color: #d4aa00 !important;
+}
+/*Yellow Button*/ 
+.yellow-lemon-bg.btn:hover, .yellow-lemon-bg.btn:focus, .yellow-lemon-bg.btn:active, .yellow-lemon-bg.btn.active {
+  color: white;
+  background-color: #e8bb08 !important;
+}
+/*Yellow Button*/ 
+.yellow-saffron-bg.btn:hover, .yellow-saffron-bg.btn:focus, .yellow-saffron-bg.btn:active, .yellow-saffron-bg.btn.active {
+  color: white;
+  background-color: #f2c922 !important;
+}
+/*Purple Button*/ 
+.purple-bg.btn:hover, .purple-bg.btn:focus, .purple-bg.btn:active, .purple-bg.btn.active {
+  color: white;
+  background-color: #7c3b97 !important;
+}
+/*Purple Button*/ 
+.purple-plum-bg.btn:hover, .purple-plum-bg.btn:focus, .purple-plum-bg.btn:active, .purple-plum-bg.btn.active {
+  color: white;
+  background-color: #77639b !important;
+}
+/*Purple Button*/ 
+.purple-medium-bg.btn:hover, .purple-medium-bg.btn:focus, .purple-medium-bg.btn:active, .purple-medium-bg.btn.active {
+  color: white;
+  background-color: #b539e9 !important;
+}
+/*Purple Button*/ 
+.purple-studio-bg.btn:hover, .purple-studio-bg.btn:focus, .purple-studio-bg.btn:active, .purple-studio-bg.btn.active {
+  color: white;
+  background-color: #7c3b97 !important;
+}
+/*Purple Button*/ 
+.purple-wisteria-bg.btn:hover, .purple-wisteria-bg.btn:focus, .purple-wisteria-bg.btn:active, .purple-wisteria-bg.btn.active {
+  color: white;
+  background-color: #8c49a7 !important;
+}
+/*Purple Button*/ 
+.purple-seance-bg.btn:hover, .purple-seance-bg.btn:focus, .purple-seance-bg.btn:active, .purple-seance-bg.btn.active {
+  color: white;
+  background-color: #820f97 !important;
+}
+/*Grey Button*/ 
+.grey-bg.btn:hover, .grey-bg.btn:focus, .grey-bg.btn:active, .grey-bg.btn.active {
+  color: #333333;
+  background-color: #d6d6d6 !important;
+}
+/*Grey Button*/ 
+.grey-cascade-bg.btn:hover, .grey-cascade-bg.btn:focus, .grey-cascade-bg.btn:active, .grey-cascade-bg.btn.active {
+  color: white;
+  background-color: #849798 !important;
+}
+/*Grey Button*/ 
+.grey-silver-bg.btn:hover, .grey-silver-bg.btn:focus, .grey-silver-bg.btn:active, .grey-silver-bg.btn.active {
+  color: white;
+  background-color: #b0b0b0 !important;
+}
+/*Grey Button*/ 
+.grey-steel-bg.btn:hover, .grey-steel-bg.btn:focus, .grey-steel-bg.btn:active, .grey-steel-bg.btn.active {
+  color: #666;/*#80898e;*/
+  background-color: #d7dfe2 !important;
+}
+/*Grey Button*/ 
+.grey-cararra-bg.btn:hover, .grey-cararra-bg.btn:focus, .grey-cararra-bg.btn:active, .grey-cararra-bg.btn.active {
+  color: #333333;
+  background-color: #ebebeb !important;
+}
+/*Grey Button*/ 
+.grey-dark-bg.btn:hover, .grey-dark-bg.btn:focus, .grey-dark-bg.btn:active, .grey-dark-bg.btn.active {
+  color: white;
+  background-color: #464646 !important;
+}
+.violetred-bg.btn:hover, .violetred-bg.btn:focus, .violetred-bg.btn:active, .violetred-bg.btn.active {
+  color: white;
+  background-color: #FF107D !important;
+}
+.cyan-bg.btn:hover, .cyan-bg.btn:focus, .cyan-bg.btn:active, .cyan-bg.btn.active {
+  color: white;
+  background-color: #00EAEA !important;
+}
+.aqua-bg.btn:hover, .aqua-bg.btn:focus, .aqua-bg.btn:active, .aqua-bg.btn.active {
+  color: white;
+  background-color: #009F6F !important;
+}
+.turquoise-bg.btn:hover, .turquoise-bg.btn:focus, .turquoise-bg.btn:active, .turquoise-bg.btn.active {
+  color: white;
+  background-color: #269BAB !important;
+}
+
+
+/* blue-bg */
+.blue-bg,
+.btn.blue-bg-hover:hover,
+.blue-bg-hover:hover{
+  border-color: #4b8df8 !important;
+  background-image: none;
+  background-color: #4b8df8 !important;
+  color: white !important;
+}
+.blue-bg.border-before:before,
+.blue-bg-hover:hover.border-before:before{	
+  border-color: #4b8df8;
+}
+.blue-bg.border-after:after,
+.blue-bg-hover:hover.border-after:after{	
+  border-color: #4b8df8;
+}
+.blue-sky-bg,
+.btn.blue-sky-bg-hover:hover,
+.blue-sky-bg-hover:hover{
+  border-color: #00BFFF !important;
+  background-image: none;
+  background-color: #00BFFF !important;
+  color: white !important;
+}
+.blue-sky-bg.border-before:before,
+.blue-sky-bg-hover:hover.border-before:before{	
+  border-color: #00BFFF;
+}
+.blue-sky-bg.border-after:after,
+.blue-sky-bg-hover:hover.border-after:after{	
+  border-color: #00BFFF;
+}
+/* blue-hoki-bg */
+.btn.blue-hoki-bg-hover:hover,
+.blue-hoki-bg-hover:hover,
+.blue-hoki-bg {
+  border-color: #67809f !important;
+  background-image: none;
+  background-color: #67809f !important;
+  color: white !important;
+}
+.blue-hoki-bg.border-before:before,
+.blue-hoki-bg-hover:hover.border-before:before{	
+  border-color: #67809f;
+}
+.blue-hoki-bg.border-after:after,
+.blue-hoki-bg-hover:hover.border-after:after{	
+  border-color: #67809f;
+}
+/* General Element */
+.btn.blue-steel-bg-hover:hover,
+.blue-steel-bg-hover:hover,
+.blue-steel-bg {
+  border-color: #4b77be !important;
+  background-image: none;
+  background-color: #4b77be !important;
+  color: white !important;
+}
+.blue-steel-bg.border-before:before,
+.blue-steel-bg-hover:hover.border-before:before{	
+  border-color: #4b77be;
+}
+.blue-steel-bg.border-after:after,
+.blue-steel-bg-hover:hover.border-after:after{	
+  border-color: #4b77be;
+}
+/* General Element */
+.btn.blue-madison-bg-hover:hover,
+.blue-madison-bg-hover:hover,
+.blue-madison-bg {
+  border-color: #578ebe !important;
+  background-image: none;
+  background-color: #578ebe !important;
+  color: white !important;
+}
+.blue-madison-bg.border-before:before,
+.blue-madison-bg-hover:hover.border-before:before{	
+  border-color: #578ebe !important;
+}
+.blue-madison-bg.border-after:after,
+.blue-madison-bg-hover:hover.border-after:after{	
+  border-color: #578ebe !important;
+}
+/* General Element */
+.btn.blue-chambray-bg-hover:hover,
+.blue-chambray-bg-hover:hover,
+.blue-chambray-bg {
+  border-color: #2c3e50 !important;
+  background-image: none;
+  background-color: #2c3e50 !important;
+  color: white !important;
+}
+.blue-chambray-bg.border-before:before,
+.blue-chambray-bg-hover:hover.border-before:before{	
+  border-color: #2c3e50;
+}
+.blue-chambray-bg.border-after:after,
+.blue-chambray-bg-hover:hover.border-after:after{	
+  border-color: #2c3e50;
+}
+/* General Element */
+.btn.blue-ebonyclay-bg-hover:hover,
+.blue-ebonyclay-bg-hover:hover,
+.blue-ebonyclay-bg {
+  border-color: #22313f !important;
+  background-image: none;
+  background-color: #22313f !important;
+  color: white !important;
+}
+.blue-ebonyclay-bg.border-before:before,
+.blue-ebonyclay-bg-hover:hover.border-before:before{	
+  border-color: #22313f;
+}
+.blue-ebonyclay-bg.border-after:after,
+.blue-ebonyclay-bg-hover:hover.border-after:after{	
+  border-color: #22313f;
+}
+.blue-ebonyclay-bg-hover:hover>a,
+.blue-chambray-bg-hover:hover>a,
+.blue-madison-bg-hover:hover>a,
+.blue-steel-bg-hover:hover>a,
+.blue-hoki-bg-hover:hover>a,
+.blue-sky-bg-hover:hover>a,
+.blue-bg-hover:hover>a{
+  color: white !important;
+}
+/* General Element */
+.btn.green-bg-hover:hover,
+.green-bg-hover:hover,
+.green-bg {
+  border-color: #35aa47 !important;
+  background-image: none;
+  background-color: #35aa47 !important;
+  color: white !important;
+}
+.green-bg.border-before:before,
+.green-bg-hover:hover.border-before:before{	
+  border-color: #35aa47;
+}
+.green-bg.border-after:after,
+.green-bg-hover:hover.border-after:after{	
+  border-color: #35aa47;
+}
+/* General Element */
+.btn.green-meadow-bg-hover:hover,
+.green-meadow-bg-hover:hover,
+.green-meadow-bg {
+  border-color: #0dc0c0 !important;
+  background-image: none;
+  background-color: #0dc0c0 !important;
+  color: white !important;
+}
+.green-meadow-bg.border-before:before,
+.green-meadow-bg-hover:hover.border-before:before{	
+  border-color: #0dc0c0;
+}
+.green-meadow-bg.border-after:after,
+.green-meadow-bg-hover:hover.border-after:after{	
+  border-color: #0dc0c0;
+}
+
+/* General Element */
+.btn.green-seagreen-bg-hover:hover,
+.green-seagreen-bg-hover:hover,
+.green-seagreen-bg {
+  border-color: #1ba39c !important;
+  background-image: none;
+  background-color: #1ba39c !important;
+  color: white !important;
+}
+.green-seagreen-bg.border-before:before,
+.green-seagreen-bg-hover:hover.border-before:before{	
+  border-color: #1ba39c;
+}
+.green-seagreen-bg.border-after:after,
+.green-seagreen-bg-hover:hover.border-after:after{	
+  border-color: #1ba39c;
+}
+
+/* General Element */
+.btn.green-turquoise-bg-hover:hover,
+.green-turquoise-bg-hover:hover,
+.green-turquoise-bg {
+  border-color: #36d7b7 !important;
+  background-image: none;
+  background-color: #36d7b7 !important;
+  color: white !important;
+}
+.green-turquoise-bg.border-before:before,
+.green-turquoise-bg-hover:hover.border-before:before{	
+  border-color: #36d7b7;
+}
+.green-turquoise-bg.border-after:after,
+.green-turquoise-bg-hover:hover.border-after:after{	
+  border-color: #36d7b7;
+}
+/* General Element */
+.btn.green-haze-bg-hover:hover,
+.green-haze-bg-hover:hover,
+.green-haze-bg {
+  border-color: #44b6ae !important;
+  background-image: none;
+  background-color: #44b6ae !important;
+  color: white !important;
+}
+.green-haze-bg.border-before:before,
+.green-haze-bg-hover:hover.border-before:before{	
+  border-color: #44b6ae;
+}
+.green-haze-bg.border-after:after,
+.green-haze-bg-hover:hover.border-after:after{	
+  border-color: #44b6ae;
+}
+/* General Element */
+.btn.green-jungle-bg-hover:hover,
+.green-jungle-bg-hover:hover,
+.green-jungle-bg {
+  border-color: #26c281 !important;
+  background-image: none;
+  background-color: #26c281 !important;
+  color: white !important;
+}
+.green-jungle-bg.border-before:before,
+.green-jungle-bg-hover:hover.border-before:before{	
+  border-color: #26c281;
+}
+.green-jungle-bg.border-after:after,
+.green-jungle-bg-hover:hover.border-after:after{	
+  border-color: #26c281;
+}
+.green-jungle-bg-hover:hover>a,
+.green-haze-bg-hover:hover>a,
+.green-turquoise-bg-hover:hover>a,
+.green-seagreen-bg-hover:hover>a,
+.green-meadow-bg-hover:hover>a,
+.green-bg-hover:hover>a{
+  color: white !important;
+}
+/*Red*/ 
+.red-bg,
+.btn.red-bg-hover:hover,
+.red-bg-hover:hover{
+  border-color: #d84a38 !important;
+  background-image: none;
+  background-color: #d84a38 !important;
+  color: white !important;
+}
+.red-bg.border-before:before,
+.red-bg-hover:hover.border-before:before{	
+  border-color: #d84a38;
+}
+.red-bg.border-after:after,
+.red-bg-hover:hover.border-after:after{	
+  border-color: #d84a38;
+}
+
+/* General Element */
+.btn.red-pink-bg-hover:hover,
+.red-pink-bg-hover:hover,
+.red-pink-bg {
+  border-color: #e08283 !important;
+  background-image: none;
+  background-color: #e08283 !important;
+  color: white !important;
+}
+
+.red-pink-bg.border-before:before,
+.red-pink-bg-hover:hover.border-before:before{	
+  border-color: #e08283;
+}
+.red-pink-bg.border-after:after,
+.red-pink-bg-hover:hover.border-after:after{	
+  border-color: #e08283;
+}
+/* General Element */
+.btn.red-sunglo-bg-hover:hover,
+.red-sunglo-bg-hover:hover,
+.red-sunglo-bg {
+  border-color: #e26a6a !important;
+  background-image: none;
+  background-color: #e26a6a !important;
+  color: white !important;
+}
+
+.red-sunglo-bg.border-before:before,
+.red-sunglo-bg-hover:hover.border-before:before{	
+  border-color: #e26a6a;
+}
+.red-sunglo-bg.border-after:after,
+.red-sunglo-bg-hover:hover.border-after:after{	
+  border-color: #e26a6a;
+}
+/* General Element */
+.btn.red-intense-bg-hover:hover,
+.red-intense-bg-hover:hover,
+.red-intense-bg {
+  border-color: #e35b5a !important;
+  background-image: none;
+  background-color: #e35b5a !important;
+  color: white !important;
+}
+.red-intense-bg.border-before:before,
+.red-intense-bg-hover:hover.border-before:before{	
+  border-color: #e35b5a !important;
+}
+.red-intense-bg.border-after:after,
+.red-intense-bg-hover:hover.border-after:after{	
+  border-color: #e35b5a !important;
+}
+/* General Element */
+.btn.red-thunderbird-bg-hover:hover,
+.red-thunderbird-bg-hover:hover,
+.red-thunderbird-bg {
+  border-color: #d91e18 !important;
+  background-image: none;
+  background-color: #d91e18 !important;
+  color: white !important;
+}
+.red-thunderbird-bg.border-before:before,
+.red-thunderbird-bg-hover:hover.border-before:before{	
+  border-color: #d91e18;
+}
+.red-thunderbird-bg.border-after:after,
+.red-thunderbird-bg-hover:hover.border-after:after{	
+  border-color: #d91e18;
+}
+/* General Element */
+.btn.red-flamingo-bg-hover:hover,
+.red-flamingo-bg-hover:hover,
+.red-flamingo-bg {
+  border-color: #ef4836 !important;
+  background-image: none;
+  background-color: #ef4836 !important;
+  color: white !important;
+}
+.red-flamingo-bg.border-before:before,
+.red-flamingo-bg-hover:hover.border-before:before{	
+  border-color: #ef4836;
+}
+.red-flamingo-bg.border-after:after,
+.red-flamingo-bg-hover:hover.border-after:after{	
+  border-color: #ef4836;
+}
+
+.red-flamingo-bg-hover:hover>a,
+.red-thunderbird-bg-hover:hover>a,
+.red-intense-bg-hover:hover>a,
+.red-sunglo-bg-hover:hover>a,
+.red-pink-bg-hover:hover>a,
+.red-bg-hover:hover>a{
+  color: white !important;
+}
+/* General Element */
+.btn.yellow-bg-hover:hover,
+.yellow-bg-hover:hover,
+.yellow-bg {
+  border-color: #ffb848 !important;
+  background-image: none;
+  background-color: #ffb848 !important;
+  color: white !important;
+}
+.yellow-bg.border-before:before,
+.yellow-bg-hover:hover.border-before:before{	
+  border-color: #ffb848;
+}
+.yellow-bg.border-after:after,
+.yellow-bg-hover:hover.border-after:after{	
+  border-color: #ffb848;
+}
+/* General Element */
+.btn.yellow-gold-bg-hover:hover,
+.yellow-gold-bg-hover:hover,
+.yellow-gold-bg {
+  border-color: #e87e04 !important;
+  background-image: none;
+  background-color: #e87e04 !important;
+  color: white !important;
+}
+
+.yellow-gold-bg.border-before:before,
+.yellow-gold-bg-hover:hover.border-before:before{	
+  border-color: #e87e04;
+}
+.yellow-gold-bg.border-after:after,
+.yellow-gold-bg-hover:hover.border-after:after{	
+  border-color: #e87e04;
+}
+/* General Element */
+.btn.yellow-casablanca-bg-hover:hover,
+.yellow-casablanca-bg-hover:hover,
+.yellow-casablanca-bg {
+  border-color: #f2784b !important;
+  background-image: none;
+  background-color: #f2784b !important;
+  color: white !important;
+}
+
+.yellow-casablanca-bg.border-before:before,
+.yellow-casablanca-bg-hover:hover.border-before:before{	
+  border-color: #f2784b;
+}
+.yellow-casablanca-bg.border-after:after,
+.yellow-casablanca-bg-hover:hover.border-after:after{	
+  border-color: #f2784b;
+}
+/* General Element */
+.btn.yellow-crusta-bg-hover:hover,
+.yellow-crusta-bg-hover:hover,
+.yellow-crusta-bg {
+  border-color: #f3c200 !important;
+  background-image: none;
+  background-color: #f3c200 !important;
+  color: white !important;
+}
+.yellow-crusta-bg.border-before:before,
+.yellow-crusta-bg-hover:hover.border-before:before{	
+  border-color: #f3c200;
+}
+.yellow-crusta-bg.border-after:after,
+.yellow-crusta-bg-hover:hover.border-after:after{	
+  border-color: #f3c200;
+}
+/* General Element */
+.btn.yellow-lemon-bg-hover:hover,
+.yellow-lemon-bg-hover:hover,
+.yellow-lemon-bg {
+  border-color: #f7ca18 !important;
+  background-image: none;
+  background-color: #f7ca18 !important;
+  color: white !important;
+}
+/* General Element */
+.btn.yellow-saffron-bg-hover:hover,
+.yellow-saffron-bg-hover:hover,
+.yellow-saffron-bg {
+  border-color: #f4d03f !important;
+  background-image: none;
+  background-color: #f4d03f !important;
+  color: white !important;
+}
+.yellow-saffron-bg.border-before:before,
+.yellow-saffron-bg-hover:hover.border-before:before{	
+  border-color: #f4d03f;
+}
+.yellow-saffron-bg.border-after:after,
+.yellow-saffron-bg-hover:hover.border-after:after{	
+  border-color: #f4d03f;
+}
+.yellow-saffron-bg-hover:hover>a,
+.yellow-lemon-bg-hover:hover>a,
+.yellow-crusta-bg-hover:hover>a,
+.yellow-casablanca-bg-hover:hover>a,
+.yellow-gold-bg-hover:hover>a,
+.yellow-bg-hover:hover>a{
+  color: white !important;
+}
+
+/* General Element */
+.btn.purple-bg-hover:hover,
+.purple-bg-hover:hover,
+.purple-bg {
+  border-color: #8e44ad !important;
+  background-image: none;
+  background-color: #8e44ad !important;
+  color: white !important;
+}
+.purple-bg.border-before:before,
+.purple-bg-hover:hover.border-before:before{	
+  border-color: #8e44ad;
+}
+.purple-bg.border-after:after,
+.purple-bg-hover:hover.border-after:after{	
+  border-color: #8e44ad;
+}
+
+/* General Element */
+.btn.purple-plum-bg-hover:hover,
+.purple-plum-bg-hover:hover,
+.purple-plum-bg {
+  border-color: #8775a7 !important;
+  background-image: none;
+  background-color: #8775a7 !important;
+  color: white !important;
+}
+.purple-plum-bg.border-before:before,
+.purple-plum-bg-hover:hover.border-before:before{	
+  border-color: #8775a7;
+}
+.purple-plum-bg.border-after:after,
+.purple-plum-bg-hover:hover.border-after:after{	
+  border-color: #8775a7
+}
+
+/* General Element */
+.btn.purple-medium-bg-hover:hover,
+.purple-medium-bg-hover:hover,
+.purple-medium-bg {
+  border-color: #bf55ec;
+  background-image: none;
+  background-color: #bf55ec !important;
+  color: white !important;
+}
+.purple-medium-bg.border-before:before,
+.purple-medium-bg-hover:hover.border-before:before{	
+  border-color: #bf55ec;
+}
+.purple-medium-bg.border-after:after,
+.purple-medium-bg-hover:hover.border-after:after{	
+  border-color: #bf55ec;
+}
+
+/* General Element */
+.btn.purple-studio-bg-hover:hover,
+.purple-studio-bg-hover:hover,
+.purple-studio-bg {
+  border-color: #8e44ad !important;
+  background-image: none;
+  background-color: #8e44ad !important;
+  color: white !important;
+}
+.purple-studio-bg.border-before:before,
+.purple-studio-bg-hover:hover.border-before:before{	
+  border-color: #8e44ad;
+}
+.purple-studio-bg.border-after:after,
+.purple-studio-bg-hover:hover.border-after:after{	
+  border-color: #8e44ad;
+}
+/* General Element */
+.btn.purple-wisteria-bg-hover:hover,
+.purple-wisteria-bg-hover:hover,
+.purple-wisteria-bg {
+  border-color: #9b59b6 !important;
+  background-image: none;
+  background-color: #9b59b6 !important;
+  color: white !important;
+}
+.purple-wisteria-bg.border-before:before,
+.purple-wisteria-bg-hover:hover.border-before:before{	
+  border-color: #9b59b6;
+}
+.purple-wisteria-bg.border-after:after,
+.purple-wisteria-bg-hover:hover.border-after:after{	
+  border-color: #9b59b6;
+}
+
+/* General Element */
+.btn.purple-seance-bg-hover:hover,
+.purple-seance-bg-hover:hover,
+.purple-seance-bg {
+  border-color: #9a12b3 !important;
+  background-image: none;
+  background-color: #9a12b3 !important;
+  color: white !important;
+}
+.purple-seance-bg.border-before:before,
+.purple-seance-bg-hover:hover.border-before:before{	
+  border-color: #9a12b3;
+}
+.purple-seance-bg.border-after:after,
+.purple-seance-bg-hover:hover.border-after:after{	
+  border-color: #9a12b3;
+}
+.purple-seance-bg-hover:hover>a,
+.purple-wisteria-bg-hover:hover>a,
+.purple-studio-bg-hover:hover>a,
+.purple-medium-bg-hover:hover>a,
+.purple-plum-bg-hover:hover>a,
+.purple-bg-hover:hover>a{
+  color: white !important;
+}
+
+/* General Element */
+.btn.grey-bg-hover:hover,
+.grey-bg-hover:hover,
+.grey-bg-hover:hover>a,
+.grey-bg {
+  border-color: #e5e5e5 !important;
+  background-image: none;
+  background-color: #e5e5e5 !important;
+  color: #333333 !important;
+}
+.grey-bg.border-before:before,
+.grey-bg-hover:hover.border-before:before{	
+  border-color: #e5e5e5;
+}
+.grey-bg.border-after:after,
+.grey-bg-hover:hover.border-after:after{	
+  border-color: #e5e5e5;
+}
+
+
+/* General Element */
+.btn.grey-cascade-bg-hover:hover,
+.grey-cascade-bg-hover:hover,
+.grey-cascade-bg-hover:hover>a,
+.grey-cascade-bg {
+  border-color: #95a5a6 !important;
+  background-image: none;
+  background-color: #95a5a6 !important;
+  color: white !important;
+}
+.grey-cascade-bg.border-before:before,
+.grey-cascade-bg-hover:hover.border-before:before{	
+  border-color: #95a5a6;
+}
+.grey-cascade-bg.border-after:after,
+.grey-cascade-bg-hover:hover.border-after:after{	
+  border-color: #95a5a6;
+}
+
+
+/* General Element */
+.btn.grey-silver-bg-hover:hover,
+.grey-silver-bg-hover:hover,
+.grey-silver-bg-hover:hover>a,
+.grey-silver-bg {
+  border-color: #bfbfbf !important;
+  background-image: none;
+  background-color: #bfbfbf !important;
+  color: white !important;
+}
+.grey-silver-bg.border-before:before,
+.grey-silver-bg-hover:hover.border-before:before{	
+  border-color: #bfbfbf;
+}
+.grey-silver-bg.border-after:after,
+.grey-silver-bg-hover:hover.border-after:after{	
+  border-color: #bfbfbf;
+}
+
+
+/* General Element */
+.btn.grey-steel-bg-hover:hover,
+.grey-steel-bg-hover:hover,
+.grey-steel-bg-hover:hover>a,
+.grey-steel-bg {
+  border-color: #e9edef !important;
+  background-image: none;
+  background-color: #e9edef !important;
+  color: #666  !important;/*#80898e !important;*/
+}
+.grey-steel-bg.border-before:before,
+.grey-steel-bg-hover:hover.border-before:before{	
+  border-color: #e9edef;
+}
+.grey-steel-bg.border-after:after,
+.grey-steel-bg-hover:hover.border-after:after{	
+  border-color: #e9edef;
+}
+
+/* General Element */
+.btn.grey-cararra-bg-hover:hover,
+.grey-cararra-bg-hover:hover,
+.grey-cararra-bg-hover:hover>a,
+.grey-cararra-bg {
+  border-color: #fafafa !important;
+  background-image: none;
+  background-color: #fafafa !important;
+  color: #333333 !important;
+}
+.grey-cararra-bg.border-before:before,
+.grey-cararra-bg-hover:hover.border-before:before{	
+  border-color: #fafafa;
+}
+.grey-cararra-bg.border-after:after,
+.grey-cararra-bg-hover:hover.border-after:after{	
+  border-color: #fafafa;
+}
+
+/* General Element */
+.btn.grey-dark-bg-hover:hover,
+.grey-dark-bg-hover:hover,
+.grey-dark-bg-hover:hover>a,
+.grey-dark-bg {
+  border-color: #555555 !important;
+  background-image: none;
+  background-color: #555555 !important;
+  color: white !important;
+}
+.grey-dark-bg.border-before:before,
+.grey-dark-bg-hover:hover.border-before:before{	
+  border-color: #555555;
+}
+.grey-dark-bg.border-after:after,
+.grey-dark-bg-hover:hover.border-after:after{	
+  border-color: #555555;
+}
+/**/ 
+.crimson-bg,
+.crimson-bg-hover:hover,
+.crimson-bg-hover:hover>a,
+.btn.crimson-bg-hover:hover{
+  border-color: #DC143C !important;
+  background-image: none;
+  background-color: #DC143C !important;
+  color: white !important;
+}
+.crimson-bg.border-before:before,
+.crimson-bg-hover:hover.border-before:before{	
+  border-color: #DC143C;
+}
+.crimson-bg.border-after:after,
+.crimson-bg-hover:hover.border-after:after{	
+  border-color: #DC143C;
+}
+.violetred-bg,
+.violetred-bg-hover:hover,
+.violetred-bg-hover:hover>a,
+.btn.violetred-bg-hover:hover{
+  border-color: #FF3E96 !important;
+  background-image: none;
+  background-color: #FF3E96 !important;
+  color: white !important;
+}
+.violetred-bg.border-before:before,
+.violetred-bg-hover:hover.border-before:before{	
+  border-color: #FF3E96;
+}
+.violetred-bg.border-after:after,
+.violetred-bg-hover:hover.border-after:after{	
+  border-color: #FF3E96;
+}
+.cyan-bg,
+.cyan-bg-hover:hover,
+.cyan-bg-hover:hover>a,
+.btn.cyan-bg-hover:hover{
+  border-color: #00EEEE !important;
+  background-image: none;
+  background-color: #00EEEE !important;
+  color: white !important;
+}
+.cyan-bg.border-before:before,
+.cyan-bg-hover:hover.border-before:before{	
+  border-color: #00EEEE;
+}
+.cyan-bg.border-after:after,
+.cyan-bg-hover:hover.border-after:after{	
+  border-color: #00EEEE;
+}
+.aqua-bg,
+.aqua-bg-hover:hover,
+.aqua-bg-hover:hover>a,
+.btn.aqua-bg-hover:hover{
+  border-color: #00C78C !important;
+  background-image: none;
+  background-color: #00C78C !important;
+  color: white !important;
+}
+.aqua-bg.border-before:before,
+.aqua-bg-hover:hover.border-before:before{	
+  border-color: #00C78C;
+}
+.aqua-bg.border-after:after,
+.aqua-bg-hover:hover.border-after:after{	
+  border-color: #00C78C;
+}
+.turquoise-bg,
+.turquoise-bg-hover:hover,
+.turquoise-bg-hover:hover>a,
+.btn.turquoise-bg-hover:hover{
+  border-color: #44B2C1 !important;
+  background-image: none;
+  background-color: #44B2C1 !important;
+  color: white !important;
+}
+.turquoise-bg.border-before:before,
+.turquoise-bg-hover:hover.border-before:before{	
+  border-color: #44B2C1;
+}
+.turquoise-bg.border-after:after,
+.turquoise-bg-hover:hover.border-after:after{	
+  border-color: #44B2C1;
+}
+
+/********************************************************/
+/*                  . Border Radius	                 */
+/********************************************************/
+.small-border-radius {
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+	border-radius: 3px !important;
+}
+.border-radius {
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	border-radius: 5px !important;
+}
+.large-border-radius {
+	-webkit-border-radius: 7px !important;
+	-moz-border-radius: 7px !important;
+	border-radius: 7px !important;
+}
+.huge-border-radius {
+	-webkit-border-radius: 10px !important;
+	-moz-border-radius: 10px !important;
+	border-radius: 10px !important;
+}
+/********************************************************/
+/*                  . Generic shadows                  */
+/********************************************************/
+.block-lite-shadow .with-shadow,
+.lite-shadow {
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35) !important;
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35) !important;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35) !important;
+}
+.block-small-shadow .with-shadow,
+.small-shadow{
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+.block-medium-shadow .with-shadow,
+.medium-shadow {
+	-webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5) !important;
+	-moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5) !important;
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5) !important;	
+}
+.block-large-shadow .with-shadow,
+.large-shadow {
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.65) !important;
+	-moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.65) !important;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.65) !important;
+}
+.block-no-shadow .with-shadow{
+	-webkit-box-shadow:none !important;
+	-moz-box-shadow:none !important;
+	box-shadow:none !important;
+}
+.lite-text-shadow {
+	-webkit-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+	-moz-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+}
+.text-shadow {
+	-webkit-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	-moz-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.strong-text-shadow {
+	-webkit-text-shadow: 0 1px 2px black;
+	-moz-text-shadow: 0 1px 2px black;
+	text-shadow: 0 1px 2px black;
+}
+
+/* Button */
+.btn.default {
+  color: #333333;
+  background-color: #e5e5e5;
+  border-color: transparent;
+}
+.btn.default:hover, .btn.default:focus, .btn.default:active, .btn.default.active {
+  color: #333333;
+  background-color: #d6d6d6;
+}
+.open .btn.default.dropdown-toggle {
+  color: #333333;
+  background-color: #d6d6d6;
+}
+.btn.default:active, .btn.default.active {
+  background-image: none;
+}
+.open .btn.default.dropdown-toggle {
+  background-image: none;
+}
+.btn.default.disabled, .btn.default.disabled:hover, .btn.default.disabled:focus, .btn.default.disabled:active, .btn.default.disabled.active, .btn.default[disabled], .btn.default[disabled]:hover, .btn.default[disabled]:focus, .btn.default[disabled]:active, .btn.default[disabled].active, fieldset[disabled] .btn.default, fieldset[disabled] .btn.default:hover, fieldset[disabled] .btn.default:focus, fieldset[disabled] .btn.default:active, fieldset[disabled] .btn.default.active {
+  background-color: #e5e5e5;
+}
+.btn.default .badge {
+  color: #e5e5e5;
+  background-color: #333333;
+}
+/***
+Blue Default
+***/
+.blue {
+  color: #4b8df8;
+}
+.blue-hover:hover{
+  color: #4b8df8 !important;
+}
+.open .blue-bg.btn.dropdown-toggle {
+  color: white;
+  background-color: #2e7af7;
+}
+.blue-bg.btn:active, .blue-bg.btn.active {
+  background-image: none;
+}
+.open .blue-bg.btn.dropdown-toggle {
+  background-image: none;
+}
+.blue-bg.btn.disabled, .blue-bg.btn.disabled:hover, .blue-bg.btn.disabled:focus, .blue-bg.btn.disabled:active, .blue-bg.btn.disabled.active, .blue-bg.btn[disabled], .blue-bg.btn[disabled]:hover, .blue-bg.btn[disabled]:focus, .blue-bg.btn[disabled]:active, .blue-bg.btn[disabled].active, fieldset[disabled] .blue-bg.btn, fieldset[disabled] .blue-bg.btn:hover, fieldset[disabled] .blue-bg.btn:focus, fieldset[disabled] .blue-bg.btn:active, fieldset[disabled] .blue-bg.btn.active {
+  background-color: #4b8df8;
+}
+/***
+Blue Madison
+***/
+.open .blue-madison.btn.dropdown-toggle {
+  color: white;
+  background-color: #457fb2;
+}
+.blue-madison.btn:active, .blue-madison.btn.active {
+  background-image: none;
+}
+.open .blue-madison.btn.dropdown-toggle {
+  background-image: none;
+}
+.blue-madison.btn.disabled, .blue-madison.btn.disabled:hover, .blue-madison.btn.disabled:focus, .blue-madison.btn.disabled:active, .blue-madison.btn.disabled.active, .blue-madison.btn[disabled], .blue-madison.btn[disabled]:hover, .blue-madison.btn[disabled]:focus, .blue-madison.btn[disabled]:active, .blue-madison.btn[disabled].active, fieldset[disabled] .blue-madison.btn, fieldset[disabled] .blue-madison.btn:hover, fieldset[disabled] .blue-madison.btn:focus, fieldset[disabled] .blue-madison.btn:active, fieldset[disabled] .blue-madison.btn.active {
+  background-color: #578ebe;
+}
+/***
+Blue Chambray
+***/
+.open .blue-chambray.btn.dropdown-toggle {
+  color: white;
+  background-color: #212f3c;
+}
+.blue-chambray.btn:active, .blue-chambray.btn.active {
+  background-image: none;
+}
+.open .blue-chambray.btn.dropdown-toggle {
+  background-image: none;
+}
+.blue-chambray.btn.disabled, .blue-chambray.btn.disabled:hover, .blue-chambray.btn.disabled:focus, .blue-chambray.btn.disabled:active, .blue-chambray.btn.disabled.active, .blue-chambray.btn[disabled], .blue-chambray.btn[disabled]:hover, .blue-chambray.btn[disabled]:focus, .blue-chambray.btn[disabled]:active, .blue-chambray.btn[disabled].active, fieldset[disabled] .blue-chambray.btn, fieldset[disabled] .blue-chambray.btn:hover, fieldset[disabled] .blue-chambray.btn:focus, fieldset[disabled] .blue-chambray.btn:active, fieldset[disabled] .blue-chambray.btn.active {
+  background-color: #2c3e50;
+}
+/***
+Blue Ebonyclay
+***/
+.open .blue-ebonyclay.btn.dropdown-toggle {
+  color: white;
+  background-color: #17222b;
+}
+.blue-ebonyclay.btn:active, .blue-ebonyclay.btn.active {
+  background-image: none;
+}
+.open .blue-ebonyclay.btn.dropdown-toggle {
+  background-image: none;
+}
+.blue-ebonyclay.btn.disabled, .blue-ebonyclay.btn.disabled:hover, .blue-ebonyclay.btn.disabled:focus, .blue-ebonyclay.btn.disabled:active, .blue-ebonyclay.btn.disabled.active, .blue-ebonyclay.btn[disabled], .blue-ebonyclay.btn[disabled]:hover, .blue-ebonyclay.btn[disabled]:focus, .blue-ebonyclay.btn[disabled]:active, .blue-ebonyclay.btn[disabled].active, fieldset[disabled] .blue-ebonyclay.btn, fieldset[disabled] .blue-ebonyclay.btn:hover, fieldset[disabled] .blue-ebonyclay.btn:focus, fieldset[disabled] .blue-ebonyclay.btn:active, fieldset[disabled] .blue-ebonyclay.btn.active {
+  background-color: #22313f;
+}
+/***
+Blue Hoki
+***/
+.open .blue-hoki.btn.dropdown-toggle {
+  color: white;
+  background-color: #5a718e;
+}
+.blue-hoki.btn:active, .blue-hoki.btn.active {
+  background-image: none;
+}
+.open .blue-hoki.btn.dropdown-toggle {
+  background-image: none;
+}
+.blue-hoki.btn.disabled, .blue-hoki.btn.disabled:hover, .blue-hoki.btn.disabled:focus, .blue-hoki.btn.disabled:active, .blue-hoki.btn.disabled.active, .blue-hoki.btn[disabled], .blue-hoki.btn[disabled]:hover, .blue-hoki.btn[disabled]:focus, .blue-hoki.btn[disabled]:active, .blue-hoki.btn[disabled].active, fieldset[disabled] .blue-hoki.btn, fieldset[disabled] .blue-hoki.btn:hover, fieldset[disabled] .blue-hoki.btn:focus, fieldset[disabled] .blue-hoki.btn:active, fieldset[disabled] .blue-hoki.btn.active {
+  background-color: #67809f;
+}
+/***
+Blue Stell
+***/
+.open .blue-steel.btn.dropdown-toggle {
+  color: white;
+  background-color: #3e68ac;
+}
+.blue-steel.btn:active, .blue-steel.btn.active {
+  background-image: none;
+}
+.open .blue-steel.btn.dropdown-toggle {
+  background-image: none;
+}
+.blue-steel.btn.disabled, .blue-steel.btn.disabled:hover, .blue-steel.btn.disabled:focus, .blue-steel.btn.disabled:active, .blue-steel.btn.disabled.active, .blue-steel.btn[disabled], .blue-steel.btn[disabled]:hover, .blue-steel.btn[disabled]:focus, .blue-steel.btn[disabled]:active, .blue-steel.btn[disabled].active, fieldset[disabled] .blue-steel.btn, fieldset[disabled] .blue-steel.btn:hover, fieldset[disabled] .blue-steel.btn:focus, fieldset[disabled] .blue-steel.btn:active, fieldset[disabled] .blue-steel.btn.active {
+  background-color: #4b77be;
+}
+/***
+Green Default
+***/
+.green {
+  color: #35aa47;
+}
+.green-hover:hover{
+  color: #35aa47 !important;
+}
+.open .green.btn.dropdown-toggle {
+  color: white;
+  background-color: #2e933d;
+}
+.green.btn:active, .green.btn.active {
+  background-image: none;
+}
+.open .green.btn.dropdown-toggle {
+  background-image: none;
+}
+.green.btn.disabled, .green.btn.disabled:hover, .green.btn.disabled:focus, .green.btn.disabled:active, .green.btn.disabled.active, .green.btn[disabled], .green.btn[disabled]:hover, .green.btn[disabled]:focus, .green.btn[disabled]:active, .green.btn[disabled].active, fieldset[disabled] .green.btn, fieldset[disabled] .green.btn:hover, fieldset[disabled] .green.btn:focus, fieldset[disabled] .green.btn:active, fieldset[disabled] .green.btn.active {
+  background-color: #35aa47;
+}
+/***
+Green Meadow
+***/
+.open .green-meadow.btn.dropdown-toggle {
+  color: white;
+  background-color: #17a185;
+}
+.green-meadow.btn:active, .green-meadow.btn.active {
+  background-image: none;
+}
+.open .green-meadow.btn.dropdown-toggle {
+  background-image: none;
+}
+.green-meadow.btn.disabled, .green-meadow.btn.disabled:hover, .green-meadow.btn.disabled:focus, .green-meadow.btn.disabled:active, .green-meadow.btn.disabled.active, .green-meadow.btn[disabled], .green-meadow.btn[disabled]:hover, .green-meadow.btn[disabled]:focus, .green-meadow.btn[disabled]:active, .green-meadow.btn[disabled].active, fieldset[disabled] .green-meadow.btn, fieldset[disabled] .green-meadow.btn:hover, fieldset[disabled] .green-meadow.btn:focus, fieldset[disabled] .green-meadow.btn:active, fieldset[disabled] .green-meadow.btn.active {
+  background-color: #0dc0c0;
+}
+/***
+Green Seagreen
+***/
+.open .green-seagreen.btn.dropdown-toggle {
+  color: white;
+  background-color: #178983;
+}
+.green-seagreen.btn:active, .green-seagreen.btn.active {
+  background-image: none;
+}
+.open .green-seagreen.btn.dropdown-toggle {
+  background-image: none;
+}
+.green-seagreen.btn.disabled, .green-seagreen.btn.disabled:hover, .green-seagreen.btn.disabled:focus, .green-seagreen.btn.disabled:active, .green-seagreen.btn.disabled.active, .green-seagreen.btn[disabled], .green-seagreen.btn[disabled]:hover, .green-seagreen.btn[disabled]:focus, .green-seagreen.btn[disabled]:active, .green-seagreen.btn[disabled].active, fieldset[disabled] .green-seagreen.btn, fieldset[disabled] .green-seagreen.btn:hover, fieldset[disabled] .green-seagreen.btn:focus, fieldset[disabled] .green-seagreen.btn:active, fieldset[disabled] .green-seagreen.btn.active {
+  background-color: #1ba39c;
+}
+/***
+Green Turquoise
+***/
+.open .green-turquoise.btn.dropdown-toggle {
+  color: white;
+  background-color: #28c7a7;
+}
+.green-turquoise.btn:active, .green-turquoise.btn.active {
+  background-image: none;
+}
+.open .green-turquoise.btn.dropdown-toggle {
+  background-image: none;
+}
+.green-turquoise.btn.disabled, .green-turquoise.btn.disabled:hover, .green-turquoise.btn.disabled:focus, .green-turquoise.btn.disabled:active, .green-turquoise.btn.disabled.active, .green-turquoise.btn[disabled], .green-turquoise.btn[disabled]:hover, .green-turquoise.btn[disabled]:focus, .green-turquoise.btn[disabled]:active, .green-turquoise.btn[disabled].active, fieldset[disabled] .green-turquoise.btn, fieldset[disabled] .green-turquoise.btn:hover, fieldset[disabled] .green-turquoise.btn:focus, fieldset[disabled] .green-turquoise.btn:active, fieldset[disabled] .green-turquoise.btn.active {
+  background-color: #36d7b7;
+}
+/***
+Green Haze
+***/
+.open .green-haze.btn.dropdown-toggle {
+  color: white;
+  background-color: #3ca099;
+}
+.green-haze.btn:active, .green-haze.btn.active {
+  background-image: none;
+}
+.open .green-haze.btn.dropdown-toggle {
+  background-image: none;
+}
+.green-haze.btn.disabled, .green-haze.btn.disabled:hover, .green-haze.btn.disabled:focus, .green-haze.btn.disabled:active, .green-haze.btn.disabled.active, .green-haze.btn[disabled], .green-haze.btn[disabled]:hover, .green-haze.btn[disabled]:focus, .green-haze.btn[disabled]:active, .green-haze.btn[disabled].active, fieldset[disabled] .green-haze.btn, fieldset[disabled] .green-haze.btn:hover, fieldset[disabled] .green-haze.btn:focus, fieldset[disabled] .green-haze.btn:active, fieldset[disabled] .green-haze.btn.active {
+  background-color: #44b6ae;
+}
+/***
+Green Jungle
+***/
+.open .green-jungle.btn.dropdown-toggle {
+  color: white;
+  background-color: #21a870;
+}
+.green-jungle.btn:active, .green-jungle.btn.active {
+  background-image: none;
+}
+.open .green-jungle.btn.dropdown-toggle {
+  background-image: none;
+}
+.green-jungle.btn.disabled, .green-jungle.btn.disabled:hover, .green-jungle.btn.disabled:focus, .green-jungle.btn.disabled:active, .green-jungle.btn.disabled.active, .green-jungle.btn[disabled], .green-jungle.btn[disabled]:hover, .green-jungle.btn[disabled]:focus, .green-jungle.btn[disabled]:active, .green-jungle.btn[disabled].active, fieldset[disabled] .green-jungle.btn, fieldset[disabled] .green-jungle.btn:hover, fieldset[disabled] .green-jungle.btn:focus, fieldset[disabled] .green-jungle.btn:active, fieldset[disabled] .green-jungle.btn.active {
+  background-color: #26c281;
+}
+/***
+Grey Default
+***/
+.grey {
+  color: #e5e5e5;
+}
+.grey-hover:hover{
+  color: #e5e5e5 !important;
+}
+.open .grey.btn.dropdown-toggle {
+  color: #333333;
+  background-color: #d6d6d6;
+}
+.grey.btn:active, .grey.btn.active {
+  background-image: none;
+}
+.open .grey.btn.dropdown-toggle {
+  background-image: none;
+}
+.grey.btn.disabled, .grey.btn.disabled:hover, .grey.btn.disabled:focus, .grey.btn.disabled:active, .grey.btn.disabled.active, .grey.btn[disabled], .grey.btn[disabled]:hover, .grey.btn[disabled]:focus, .grey.btn[disabled]:active, .grey.btn[disabled].active, fieldset[disabled] .grey.btn, fieldset[disabled] .grey.btn:hover, fieldset[disabled] .grey.btn:focus, fieldset[disabled] .grey.btn:active, fieldset[disabled] .grey.btn.active {
+  background-color: #e5e5e5;
+}
+/***
+Grey Steel
+***/
+.open .grey-steel.btn.dropdown-toggle {
+  color: #80898e;
+  background-color: #d7dfe2;
+}
+.grey-steel.btn:active, .grey-steel.btn.active {
+  background-image: none;
+}
+.open .grey-steel.btn.dropdown-toggle {
+  background-image: none;
+}
+.grey-steel.btn.disabled, .grey-steel.btn.disabled:hover, .grey-steel.btn.disabled:focus, .grey-steel.btn.disabled:active, .grey-steel.btn.disabled.active, .grey-steel.btn[disabled], .grey-steel.btn[disabled]:hover, .grey-steel.btn[disabled]:focus, .grey-steel.btn[disabled]:active, .grey-steel.btn[disabled].active, fieldset[disabled] .grey-steel.btn, fieldset[disabled] .grey-steel.btn:hover, fieldset[disabled] .grey-steel.btn:focus, fieldset[disabled] .grey-steel.btn:active, fieldset[disabled] .grey-steel.btn.active {
+  background-color: #e9edef;
+}
+/***
+Grey Cararra
+***/
+.open .grey-cararra.btn.dropdown-toggle {
+  color: #333333;
+  background-color: #ebebeb;
+}
+.grey-cararra.btn:active, .grey-cararra.btn.active {
+  background-image: none;
+}
+.open .grey-cararra.btn.dropdown-toggle {
+  background-image: none;
+}
+.grey-cararra.btn.disabled, .grey-cararra.btn.disabled:hover, .grey-cararra.btn.disabled:focus, .grey-cararra.btn.disabled:active, .grey-cararra.btn.disabled.active, .grey-cararra.btn[disabled], .grey-cararra.btn[disabled]:hover, .grey-cararra.btn[disabled]:focus, .grey-cararra.btn[disabled]:active, .grey-cararra.btn[disabled].active, fieldset[disabled] .grey-cararra.btn, fieldset[disabled] .grey-cararra.btn:hover, fieldset[disabled] .grey-cararra.btn:focus, fieldset[disabled] .grey-cararra.btn:active, fieldset[disabled] .grey-cararra.btn.active {
+  background-color: #fafafa;
+}
+/***
+Grey Gallery
+***/
+.open .grey-dark.btn.dropdown-toggle {
+  color: white;
+  background-color: #464646;
+}
+.grey-dark.btn:active, .grey-dark.btn.active {
+  background-image: none;
+}
+.open .grey-dark.btn.dropdown-toggle {
+  background-image: none;
+}
+.grey-dark.btn.disabled, .grey-dark.btn.disabled:hover, .grey-dark.btn.disabled:focus, .grey-dark.btn.disabled:active, .grey-dark.btn.disabled.active, .grey-dark.btn[disabled], .grey-dark.btn[disabled]:hover, .grey-dark.btn[disabled]:focus, .grey-dark.btn[disabled]:active, .grey-dark.btn[disabled].active, fieldset[disabled] .grey-dark.btn, fieldset[disabled] .grey-dark.btn:hover, fieldset[disabled] .grey-dark.btn:focus, fieldset[disabled] .grey-dark.btn:active, fieldset[disabled] .grey-dark.btn.active {
+  background-color: #555555;
+}
+/***
+Grey Cascade
+***/
+.open .grey-cascade.btn.dropdown-toggle {
+  color: white;
+  background-color: #849798;
+}
+.grey-cascade.btn:active, .grey-cascade.btn.active {
+  background-image: none;
+}
+.open .grey-cascade.btn.dropdown-toggle {
+  background-image: none;
+}
+.grey-cascade.btn.disabled, .grey-cascade.btn.disabled:hover, .grey-cascade.btn.disabled:focus, .grey-cascade.btn.disabled:active, .grey-cascade.btn.disabled.active, .grey-cascade.btn[disabled], .grey-cascade.btn[disabled]:hover, .grey-cascade.btn[disabled]:focus, .grey-cascade.btn[disabled]:active, .grey-cascade.btn[disabled].active, fieldset[disabled] .grey-cascade.btn, fieldset[disabled] .grey-cascade.btn:hover, fieldset[disabled] .grey-cascade.btn:focus, fieldset[disabled] .grey-cascade.btn:active, fieldset[disabled] .grey-cascade.btn.active {
+  background-color: #95a5a6;
+}
+/***
+Grey Silver
+***/
+.open .grey-silver.btn.dropdown-toggle {
+  color: white;
+  background-color: #b0b0b0;
+}
+.grey-silver.btn:active, .grey-silver.btn.active {
+  background-image: none;
+}
+.open .grey-silver.btn.dropdown-toggle {
+  background-image: none;
+}
+.grey-silver.btn.disabled, .grey-silver.btn.disabled:hover, .grey-silver.btn.disabled:focus, .grey-silver.btn.disabled:active, .grey-silver.btn.disabled.active, .grey-silver.btn[disabled], .grey-silver.btn[disabled]:hover, .grey-silver.btn[disabled]:focus, .grey-silver.btn[disabled]:active, .grey-silver.btn[disabled].active, fieldset[disabled] .grey-silver.btn, fieldset[disabled] .grey-silver.btn:hover, fieldset[disabled] .grey-silver.btn:focus, fieldset[disabled] .grey-silver.btn:active, fieldset[disabled] .grey-silver.btn.active {
+  background-color: #bfbfbf;
+}
+/***
+Red Default
+***/
+.red {
+  color: #d84a38;
+}
+.red-hover:hover{
+  color: #d84a38 !important;
+}
+.open .red.btn.dropdown-toggle {
+  color: white;
+  background-color: #ca3a28;
+}
+.red.btn:active, .red.btn.active {
+  background-image: none;
+}
+.open .red.btn.dropdown-toggle {
+  background-image: none;
+}
+.red.btn.disabled, .red.btn.disabled:hover, .red.btn.disabled:focus, .red.btn.disabled:active, .red.btn.disabled.active, .red.btn[disabled], .red.btn[disabled]:hover, .red.btn[disabled]:focus, .red.btn[disabled]:active, .red.btn[disabled].active, fieldset[disabled] .red.btn, fieldset[disabled] .red.btn:hover, fieldset[disabled] .red.btn:focus, fieldset[disabled] .red.btn:active, fieldset[disabled] .red.btn.active {
+  background-color: #d84a38;
+}
+/***
+Red Pink
+***/
+.open .red-pink.btn.dropdown-toggle {
+  color: white;
+  background-color: #da696b;
+}
+.red-pink.btn:active, .red-pink.btn.active {
+  background-image: none;
+}
+.open .red-pink.btn.dropdown-toggle {
+  background-image: none;
+}
+.red-pink.btn.disabled, .red-pink.btn.disabled:hover, .red-pink.btn.disabled:focus, .red-pink.btn.disabled:active, .red-pink.btn.disabled.active, .red-pink.btn[disabled], .red-pink.btn[disabled]:hover, .red-pink.btn[disabled]:focus, .red-pink.btn[disabled]:active, .red-pink.btn[disabled].active, fieldset[disabled] .red-pink.btn, fieldset[disabled] .red-pink.btn:hover, fieldset[disabled] .red-pink.btn:focus, fieldset[disabled] .red-pink.btn:active, fieldset[disabled] .red-pink.btn.active {
+  background-color: #e08283;
+}
+/***
+Red Sunglo
+***/
+.open .red-sunglo.btn.dropdown-toggle {
+  color: white;
+  background-color: #dd5050;
+}
+.red-sunglo.btn:active, .red-sunglo.btn.active {
+  background-image: none;
+}
+.open .red-sunglo.btn.dropdown-toggle {
+  background-image: none;
+}
+.red-sunglo.btn.disabled, .red-sunglo.btn.disabled:hover, .red-sunglo.btn.disabled:focus, .red-sunglo.btn.disabled:active, .red-sunglo.btn.disabled.active, .red-sunglo.btn[disabled], .red-sunglo.btn[disabled]:hover, .red-sunglo.btn[disabled]:focus, .red-sunglo.btn[disabled]:active, .red-sunglo.btn[disabled].active, fieldset[disabled] .red-sunglo.btn, fieldset[disabled] .red-sunglo.btn:hover, fieldset[disabled] .red-sunglo.btn:focus, fieldset[disabled] .red-sunglo.btn:active, fieldset[disabled] .red-sunglo.btn.active {
+  background-color: #e26a6a;
+}
+/***
+Red Intense
+***/
+.open .red-intense.btn.dropdown-toggle {
+  color: white;
+  background-color: #df4140;
+}
+.red-intense.btn:active, .red-intense.btn.active {
+  background-image: none;
+}
+.open .red-intense.btn.dropdown-toggle {
+  background-image: none;
+}
+.red-intense.btn.disabled, .red-intense.btn.disabled:hover, .red-intense.btn.disabled:focus, .red-intense.btn.disabled:active, .red-intense.btn.disabled.active, .red-intense.btn[disabled], .red-intense.btn[disabled]:hover, .red-intense.btn[disabled]:focus, .red-intense.btn[disabled]:active, .red-intense.btn[disabled].active, fieldset[disabled] .red-intense.btn, fieldset[disabled] .red-intense.btn:hover, fieldset[disabled] .red-intense.btn:focus, fieldset[disabled] .red-intense.btn:active, fieldset[disabled] .red-intense.btn.active {
+  background-color: #e35b5a;
+}
+/***
+Red Thunderbird
+***/
+.open .red-thunderbird.btn.dropdown-toggle {
+  color: white;
+  background-color: #bd1a15;
+}
+.red-thunderbird.btn:active, .red-thunderbird.btn.active {
+  background-image: none;
+}
+.open .red-thunderbird.btn.dropdown-toggle {
+  background-image: none;
+}
+.red-thunderbird.btn.disabled, .red-thunderbird.btn.disabled:hover, .red-thunderbird.btn.disabled:focus, .red-thunderbird.btn.disabled:active, .red-thunderbird.btn.disabled.active, .red-thunderbird.btn[disabled], .red-thunderbird.btn[disabled]:hover, .red-thunderbird.btn[disabled]:focus, .red-thunderbird.btn[disabled]:active, .red-thunderbird.btn[disabled].active, fieldset[disabled] .red-thunderbird.btn, fieldset[disabled] .red-thunderbird.btn:hover, fieldset[disabled] .red-thunderbird.btn:focus, fieldset[disabled] .red-thunderbird.btn:active, fieldset[disabled] .red-thunderbird.btn.active {
+  background-color: #d91e18;
+}
+/***
+Red Flamingo
+***/
+.open .red-flamingo.btn.dropdown-toggle {
+  color: white;
+  background-color: #ed2e1a;
+}
+.red-flamingo.btn:active, .red-flamingo.btn.active {
+  background-image: none;
+}
+.open .red-flamingo.btn.dropdown-toggle {
+  background-image: none;
+}
+.red-flamingo.btn.disabled, .red-flamingo.btn.disabled:hover, .red-flamingo.btn.disabled:focus, .red-flamingo.btn.disabled:active, .red-flamingo.btn.disabled.active, .red-flamingo.btn[disabled], .red-flamingo.btn[disabled]:hover, .red-flamingo.btn[disabled]:focus, .red-flamingo.btn[disabled]:active, .red-flamingo.btn[disabled].active, fieldset[disabled] .red-flamingo.btn, fieldset[disabled] .red-flamingo.btn:hover, fieldset[disabled] .red-flamingo.btn:focus, fieldset[disabled] .red-flamingo.btn:active, fieldset[disabled] .red-flamingo.btn.active {
+  background-color: #ef4836;
+}
+/***
+Yellow Default
+***/
+.yellow {
+  color: #ffb848;
+}
+.yellow-hover:hover{
+  color: #ffb848 !important;
+}
+.open .yellow.btn.dropdown-toggle {
+  color: white;
+  background-color: #ffac29;
+}
+.yellow.btn:active, .yellow.btn.active {
+  background-image: none;
+}
+.open .yellow.btn.dropdown-toggle {
+  background-image: none;
+}
+.yellow.btn.disabled, .yellow.btn.disabled:hover, .yellow.btn.disabled:focus, .yellow.btn.disabled:active, .yellow.btn.disabled.active, .yellow.btn[disabled], .yellow.btn[disabled]:hover, .yellow.btn[disabled]:focus, .yellow.btn[disabled]:active, .yellow.btn[disabled].active, fieldset[disabled] .yellow.btn, fieldset[disabled] .yellow.btn:hover, fieldset[disabled] .yellow.btn:focus, fieldset[disabled] .yellow.btn:active, fieldset[disabled] .yellow.btn.active {
+  background-color: #ffb848;
+}
+/***
+Yellow Gold
+***/
+.open .yellow-gold.btn.dropdown-toggle {
+  color: white;
+  background-color: #ca6e03;
+}
+.yellow-gold.btn:active, .yellow-gold.btn.active {
+  background-image: none;
+}
+.open .yellow-gold.btn.dropdown-toggle {
+  background-image: none;
+}
+.yellow-gold.btn.disabled, .yellow-gold.btn.disabled:hover, .yellow-gold.btn.disabled:focus, .yellow-gold.btn.disabled:active, .yellow-gold.btn.disabled.active, .yellow-gold.btn[disabled], .yellow-gold.btn[disabled]:hover, .yellow-gold.btn[disabled]:focus, .yellow-gold.btn[disabled]:active, .yellow-gold.btn[disabled].active, fieldset[disabled] .yellow-gold.btn, fieldset[disabled] .yellow-gold.btn:hover, fieldset[disabled] .yellow-gold.btn:focus, fieldset[disabled] .yellow-gold.btn:active, fieldset[disabled] .yellow-gold.btn.active {
+  background-color: #e87e04;
+}
+/***
+Yellow Casablanca
+***/
+.open .yellow-casablanca.btn.dropdown-toggle {
+  color: white;
+  background-color: #f0632e;
+}
+.yellow-casablanca.btn:active, .yellow-casablanca.btn.active {
+  background-image: none;
+}
+.open .yellow-casablanca.btn.dropdown-toggle {
+  background-image: none;
+}
+.yellow-casablanca.btn.disabled, .yellow-casablanca.btn.disabled:hover, .yellow-casablanca.btn.disabled:focus, .yellow-casablanca.btn.disabled:active, .yellow-casablanca.btn.disabled.active, .yellow-casablanca.btn[disabled], .yellow-casablanca.btn[disabled]:hover, .yellow-casablanca.btn[disabled]:focus, .yellow-casablanca.btn[disabled]:active, .yellow-casablanca.btn[disabled].active, fieldset[disabled] .yellow-casablanca.btn, fieldset[disabled] .yellow-casablanca.btn:hover, fieldset[disabled] .yellow-casablanca.btn:focus, fieldset[disabled] .yellow-casablanca.btn:active, fieldset[disabled] .yellow-casablanca.btn.active {
+  background-color: #f2784b;
+}
+/***
+Yellow Crusta
+***/
+.open .yellow-crusta.btn.dropdown-toggle {
+  color: white;
+  background-color: #d4aa00;
+}
+.yellow-crusta.btn:active, .yellow-crusta.btn.active {
+  background-image: none;
+}
+.open .yellow-crusta.btn.dropdown-toggle {
+  background-image: none;
+}
+.yellow-crusta.btn.disabled, .yellow-crusta.btn.disabled:hover, .yellow-crusta.btn.disabled:focus, .yellow-crusta.btn.disabled:active, .yellow-crusta.btn.disabled.active, .yellow-crusta.btn[disabled], .yellow-crusta.btn[disabled]:hover, .yellow-crusta.btn[disabled]:focus, .yellow-crusta.btn[disabled]:active, .yellow-crusta.btn[disabled].active, fieldset[disabled] .yellow-crusta.btn, fieldset[disabled] .yellow-crusta.btn:hover, fieldset[disabled] .yellow-crusta.btn:focus, fieldset[disabled] .yellow-crusta.btn:active, fieldset[disabled] .yellow-crusta.btn.active {
+  background-color: #f3c200;
+}
+/***
+Yellow Lemon
+***/
+.open .yellow-lemon.btn.dropdown-toggle {
+  color: white;
+  background-color: #e8bb08;
+}
+.yellow-lemon.btn:active, .yellow-lemon.btn.active {
+  background-image: none;
+}
+.open .yellow-lemon.btn.dropdown-toggle {
+  background-image: none;
+}
+.yellow-lemon.btn.disabled, .yellow-lemon.btn.disabled:hover, .yellow-lemon.btn.disabled:focus, .yellow-lemon.btn.disabled:active, .yellow-lemon.btn.disabled.active, .yellow-lemon.btn[disabled], .yellow-lemon.btn[disabled]:hover, .yellow-lemon.btn[disabled]:focus, .yellow-lemon.btn[disabled]:active, .yellow-lemon.btn[disabled].active, fieldset[disabled] .yellow-lemon.btn, fieldset[disabled] .yellow-lemon.btn:hover, fieldset[disabled] .yellow-lemon.btn:focus, fieldset[disabled] .yellow-lemon.btn:active, fieldset[disabled] .yellow-lemon.btn.active {
+  background-color: #f7ca18;
+}
+/***
+Yellow Saffron
+***/
+.open .yellow-saffron.btn.dropdown-toggle {
+  color: white;
+  background-color: #f2c922;
+}
+.yellow-saffron.btn:active, .yellow-saffron.btn.active {
+  background-image: none;
+}
+.open .yellow-saffron.btn.dropdown-toggle {
+  background-image: none;
+}
+.yellow-saffron.btn.disabled, .yellow-saffron.btn.disabled:hover, .yellow-saffron.btn.disabled:focus, .yellow-saffron.btn.disabled:active, .yellow-saffron.btn.disabled.active, .yellow-saffron.btn[disabled], .yellow-saffron.btn[disabled]:hover, .yellow-saffron.btn[disabled]:focus, .yellow-saffron.btn[disabled]:active, .yellow-saffron.btn[disabled].active, fieldset[disabled] .yellow-saffron.btn, fieldset[disabled] .yellow-saffron.btn:hover, fieldset[disabled] .yellow-saffron.btn:focus, fieldset[disabled] .yellow-saffron.btn:active, fieldset[disabled] .yellow-saffron.btn.active {
+  background-color: #f4d03f;
+}
+/***
+Purple Default
+***/
+.purple {
+  color: #8e44ad;
+}
+.purple-hover:hover{
+  color: #8e44ad !important;
+}
+.open .purple.btn.dropdown-toggle {
+  color: white;
+  background-color: #7c3b97;
+}
+.purple.btn:active, .purple.btn.active {
+  background-image: none;
+}
+.open .purple.btn.dropdown-toggle {
+  background-image: none;
+}
+.purple.btn.disabled, .purple.btn.disabled:hover, .purple.btn.disabled:focus, .purple.btn.disabled:active, .purple.btn.disabled.active, .purple.btn[disabled], .purple.btn[disabled]:hover, .purple.btn[disabled]:focus, .purple.btn[disabled]:active, .purple.btn[disabled].active, fieldset[disabled] .purple.btn, fieldset[disabled] .purple.btn:hover, fieldset[disabled] .purple.btn:focus, fieldset[disabled] .purple.btn:active, fieldset[disabled] .purple.btn.active {
+  background-color: #8e44ad;
+}
+/***
+Purple Plum
+***/
+.open .purple-plum.btn.dropdown-toggle {
+  color: white;
+  background-color: #77639b;
+}
+.purple-plum.btn:active, .purple-plum.btn.active {
+  background-image: none;
+}
+.open .purple-plum.btn.dropdown-toggle {
+  background-image: none;
+}
+.purple-plum.btn.disabled, .purple-plum.btn.disabled:hover, .purple-plum.btn.disabled:focus, .purple-plum.btn.disabled:active, .purple-plum.btn.disabled.active, .purple-plum.btn[disabled], .purple-plum.btn[disabled]:hover, .purple-plum.btn[disabled]:focus, .purple-plum.btn[disabled]:active, .purple-plum.btn[disabled].active, fieldset[disabled] .purple-plum.btn, fieldset[disabled] .purple-plum.btn:hover, fieldset[disabled] .purple-plum.btn:focus, fieldset[disabled] .purple-plum.btn:active, fieldset[disabled] .purple-plum.btn.active {
+  background-color: #8775a7;
+}
+/***
+Purple Medium
+***/
+.open .purple-medium.btn.dropdown-toggle {
+  color: white;
+  background-color: #b539e9;
+}
+.purple-medium.btn:active, .purple-medium.btn.active {
+  background-image: none;
+}
+.open .purple-medium.btn.dropdown-toggle {
+  background-image: none;
+}
+.purple-medium.btn.disabled, .purple-medium.btn.disabled:hover, .purple-medium.btn.disabled:focus, .purple-medium.btn.disabled:active, .purple-medium.btn.disabled.active, .purple-medium.btn[disabled], .purple-medium.btn[disabled]:hover, .purple-medium.btn[disabled]:focus, .purple-medium.btn[disabled]:active, .purple-medium.btn[disabled].active, fieldset[disabled] .purple-medium.btn, fieldset[disabled] .purple-medium.btn:hover, fieldset[disabled] .purple-medium.btn:focus, fieldset[disabled] .purple-medium.btn:active, fieldset[disabled] .purple-medium.btn.active {
+  background-color: #bf55ec;
+}
+/***
+Purple Studio
+***/
+.open .purple-studio.btn.dropdown-toggle {
+  color: white;
+  background-color: #7c3b97;
+}
+.purple-studio.btn:active, .purple-studio.btn.active {
+  background-image: none;
+}
+.open .purple-studio.btn.dropdown-toggle {
+  background-image: none;
+}
+.purple-studio.btn.disabled, .purple-studio.btn.disabled:hover, .purple-studio.btn.disabled:focus, .purple-studio.btn.disabled:active, .purple-studio.btn.disabled.active, .purple-studio.btn[disabled], .purple-studio.btn[disabled]:hover, .purple-studio.btn[disabled]:focus, .purple-studio.btn[disabled]:active, .purple-studio.btn[disabled].active, fieldset[disabled] .purple-studio.btn, fieldset[disabled] .purple-studio.btn:hover, fieldset[disabled] .purple-studio.btn:focus, fieldset[disabled] .purple-studio.btn:active, fieldset[disabled] .purple-studio.btn.active {
+  background-color: #8e44ad;
+}
+/***
+Purple Wisteria
+***/
+.open .purple-wisteria.btn.dropdown-toggle {
+  color: white;
+  background-color: #8c49a7;
+}
+.purple-wisteria.btn:active, .purple-wisteria.btn.active {
+  background-image: none;
+}
+.open .purple-wisteria.btn.dropdown-toggle {
+  background-image: none;
+}
+.purple-wisteria.btn.disabled, .purple-wisteria.btn.disabled:hover, .purple-wisteria.btn.disabled:focus, .purple-wisteria.btn.disabled:active, .purple-wisteria.btn.disabled.active, .purple-wisteria.btn[disabled], .purple-wisteria.btn[disabled]:hover, .purple-wisteria.btn[disabled]:focus, .purple-wisteria.btn[disabled]:active, .purple-wisteria.btn[disabled].active, fieldset[disabled] .purple-wisteria.btn, fieldset[disabled] .purple-wisteria.btn:hover, fieldset[disabled] .purple-wisteria.btn:focus, fieldset[disabled] .purple-wisteria.btn:active, fieldset[disabled] .purple-wisteria.btn.active {
+  background-color: #9b59b6;
+}
+/***
+Purple Seance
+***/
+.open .purple-seance.btn.dropdown-toggle {
+  color: white;
+  background-color: #820f97;
+}
+.purple-seance.btn:active, .purple-seance.btn.active {
+  background-image: none;
+}
+.open .purple-seance.btn.dropdown-toggle {
+  background-image: none;
+}
+.purple-seance.btn.disabled, .purple-seance.btn.disabled:hover, .purple-seance.btn.disabled:focus, .purple-seance.btn.disabled:active, .purple-seance.btn.disabled.active, .purple-seance.btn[disabled], .purple-seance.btn[disabled]:hover, .purple-seance.btn[disabled]:focus, .purple-seance.btn[disabled]:active, .purple-seance.btn[disabled].active, fieldset[disabled] .purple-seance.btn, fieldset[disabled] .purple-seance.btn:hover, fieldset[disabled] .purple-seance.btn:focus, fieldset[disabled] .purple-seance.btn:active, fieldset[disabled] .purple-seance.btn.active {
+  background-color: #9a12b3;
+}
+/***
+aqua Default
+***/
+.aqua {
+  color: #00C78C;
+}
+.aqua-hover:hover{
+  color: #00C78C !important;
+}
+.open .aqua.btn.dropdown-toggle {
+  color: white;
+  background-color: #009F6F;
+}
+.aqua.btn:active, .aqua.btn.active {
+  background-image: none;
+}
+.open .aqua.btn.dropdown-toggle {
+  background-image: none;
+}
+.aqua.btn.disabled, .aqua.btn.disabled:hover, .aqua.btn.disabled:focus, .aqua.btn.disabled:active, .aqua.btn.disabled.active, .aqua.btn[disabled], .aqua.btn[disabled]:hover, .aqua.btn[disabled]:focus, .aqua.btn[disabled]:active, .aqua.btn[disabled].active, fieldset[disabled] .aqua.btn, fieldset[disabled] .aqua.btn:hover, fieldset[disabled] .aqua.btn:focus, fieldset[disabled] .aqua.btn:active, fieldset[disabled] .aqua.btn.active {
+  background-color: #00C78C;
+}
+/***
+turquoise Default
+***/
+.turquoise-hover:hover{
+  color: #44B2C1 !important;
+}
+.open .turquoise.btn.dropdown-toggle {
+  color: white;
+  background-color: #269BAB;
+}
+.turquoise.btn:active, .turquoise.btn.active {
+  background-image: none;
+}
+.open .turquoise.btn.dropdown-toggle {
+  background-image: none;
+}
+.turquoise.btn.disabled, .turquoise.btn.disabled:hover, .turquoise.btn.disabled:focus, .turquoise.btn.disabled:active, .turquoise.btn.disabled.active, .turquoise.btn[disabled], .turquoise.btn[disabled]:hover, .turquoise.btn[disabled]:focus, .turquoise.btn[disabled]:active, .turquoise.btn[disabled].active, fieldset[disabled] .turquoise.btn, fieldset[disabled] .turquoise.btn:hover, fieldset[disabled] .turquoise.btn:focus, fieldset[disabled] .turquoise.btn:active, fieldset[disabled] .turquoise.btn.active {
+  background-color: #44B2C1;
+}
+/***
+cyan Default
+***/
+.cyan-hover:hover{
+  color: #00EEEE !important;
+}
+.open .cyan.btn.dropdown-toggle {
+  color: white;
+  background-color: #00EAEA;
+}
+.cyan.btn:active, .cyan.btn.active {
+  background-image: none;
+}
+.open .cyan.btn.dropdown-toggle {
+  background-image: none;
+}
+.cyan.btn.disabled, .cyan.btn.disabled:hover, .cyan.btn.disabled:focus, .cyan.btn.disabled:active, .cyan.btn.disabled.active, .cyan.btn[disabled], .cyan.btn[disabled]:hover, .cyan.btn[disabled]:focus, .cyan.btn[disabled]:active, .cyan.btn[disabled].active, fieldset[disabled] .cyan.btn, fieldset[disabled] .cyan.btn:hover, fieldset[disabled] .cyan.btn:focus, fieldset[disabled] .cyan.btn:active, fieldset[disabled] .cyan.btn.active {
+  background-color: #00EEEE;
+}
+/***
+crimson Default
+***/
+.crimson-hover:hover{
+  color: #DC143C !important;
+}
+.open .crimson.btn.dropdown-toggle {
+  color: white;
+  background-color: #AD0728;
+}
+.crimson.btn:active, .crimson.btn.active {
+  background-image: none;
+}
+.open .crimson.btn.dropdown-toggle {
+  background-image: none;
+}
+.crimson.btn.disabled, .crimson.btn.disabled:hover, .crimson.btn.disabled:focus, .crimson.btn.disabled:active, .crimson.btn.disabled.active, .crimson.btn[disabled], .crimson.btn[disabled]:hover, .crimson.btn[disabled]:focus, .crimson.btn[disabled]:active, .crimson.btn[disabled].active, fieldset[disabled] .crimson.btn, fieldset[disabled] .crimson.btn:hover, fieldset[disabled] .crimson.btn:focus, fieldset[disabled] .crimson.btn:active, fieldset[disabled] .crimson.btn.active {
+  background-color: #DC143C;
+}
+/***
+violetred Default
+***/
+.violetred-hover:hover{
+  color: #FF3E96 !important;
+}
+.open .violetred.btn.dropdown-toggle {
+  color: white;
+  background-color: #FF107D;
+}
+.violetred.btn:active, .violetred.btn.active {
+  background-image: none;
+}
+.open .violetred.btn.dropdown-toggle {
+  background-image: none;
+}
+.violetred.btn.disabled, .violetred.btn.disabled:hover, .violetred.btn.disabled:focus, .violetred.btn.disabled:active, .violetred.btn.disabled.active, .violetred.btn[disabled], .violetred.btn[disabled]:hover, .violetred.btn[disabled]:focus, .violetred.btn[disabled]:active, .violetred.btn[disabled].active, fieldset[disabled] .violetred.btn, fieldset[disabled] .violetred.btn:hover, fieldset[disabled] .violetred.btn:focus, fieldset[disabled] .violetred.btn:active, fieldset[disabled] .violetred.btn.active {
+  background-color: #FF3E96;
+}
+/***
+blue-sky Default
+***/
+.blue-sky-hover:hover{
+  color: #00BFFF !important;
+}
+.blue-sky.btn {
+  color: white;
+  background-color: #00BFFF;
+  border-color: transparent;
+}
+.blue-sky.btn:hover, .blue-sky.btn:focus, .blue-sky.btn:active, .blue-sky.btn.active {
+  color: white;
+  background-color: #006687;
+}
+.open .blue-sky.btn.dropdown-toggle {
+  color: white;
+  background-color: #006687;
+}
+.blue-sky.btn:active, .blue-sky.btn.active {
+  background-image: none;
+}
+.open .blue-sky.btn.dropdown-toggle {
+  background-image: none;
+}
+.blue-sky.btn.disabled, .blue-sky.btn.disabled:hover, .blue-sky.btn.disabled:focus, .blue-sky.btn.disabled:active, .blue-sky.btn.disabled.active, .blue-sky.btn[disabled], .blue-sky.btn[disabled]:hover, .blue-sky.btn[disabled]:focus, .blue-sky.btn[disabled]:active, .blue-sky.btn[disabled].active, fieldset[disabled] .blue-sky.btn, fieldset[disabled] .blue-sky.btn:hover, fieldset[disabled] .blue-sky.btn:focus, fieldset[disabled] .blue-sky.btn:active, fieldset[disabled] .blue-sky.btn.active {
+  background-color: #00BFFF;
+}

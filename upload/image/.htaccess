@@ -1,0 +1,13 @@
+<ifModule mod_headers.c>
+Header set Connection keep-alive	
+Header set Last-Modified "Sun, 27 Dec 2009 00:00:00 GMT"
+#Header set Cache-Control "max-age=2592000, public"
+Header unset Pragma
+Header unset ETag
+FileETag None
+</ifModule>
+# Prevent Direct Access to files
+<FilesMatch "\.(tpl|ini|log|php|js|sh)">
+ Order deny,allow
+ Deny from all
+</FilesMatch>

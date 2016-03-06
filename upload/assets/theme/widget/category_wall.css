@@ -1,0 +1,13 @@
+.category-wall{position:relative;margin-bottom:20px;}
+.category-wall img{width:100%;}
+.category-wall .category-wall-title{background-color:rgba(255,255,255,0.9);bottom:10px;padding:4px 0;position:absolute;text-align:center;width:100%;}
+.category-wall-title h6{
+	text-transform: uppercase;
+	font-family: "Oswald", "Open Sans", sans-serif;
+	line-height:30px;
+	margin-bottom:0;
+}
+.category-wall-title ul {
+	margin-bottom:10px;
+}
+.category-wall-title ul li a{color: #324545; line-height:20px;}

@@ -1,0 +1,332 @@
+/* Reset Styles */
+.open_gallery{
+	background: url('gallery.png') center center no-repeat;
+	width:32px;
+	height:32px;
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	z-index:1002;
+	display:none;
+}
+.direction-rtl .open_gallery{
+	right:auto;
+	left:20px;
+}
+.open_gallery.active{display:block}
+
+.lightbox-overlay, .lightbox-loader, .lightbox-loader *, .lightbox-holder, .lightbox-holder .lightbox-container, .lightbox-holder .lightbox-container img.lightbox-image, .lightbox-holder .lightbox-container .lightbox-caption, .lightbox-toolbar, .lightbox-toolbar *, .lightbox-thumbnails, .lightbox-thumbnails *, .lightbox-holder .lightbox-container .lightbox-social, .lightbox-holder .lightbox-container .lightbox-social * {
+    float:none;
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    line-height:100%;
+    vertical-align:baseline;
+    background:transparent;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	   -moz-user-select: -moz-none;
+	 -khtml-user-select: none;
+	     -o-user-select: none;
+	        user-select: none;
+}
+.lightbox-overlay, .lightbox-loader, .lightbox-loader *, .lightbox-holder .lightbox-container .lightbox-caption, .lightbox-toolbar, .lightbox-thumbnails, .lightbox-thumbnails *, .lightbox-holder .lightbox-container .lightbox-social {
+	-webkit-transform: translateZ(0);
+	   -moz-transform: translateZ(0);
+}
+
+/* Disable & Hide Scrollbar */
+.lightbox-noscroll {
+	overflow: hidden;
+}
+.lightbox-closedhand * {
+	cursor: url(closedhand.cur),default !important;
+}
+
+.lightbox-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+}
+
+.lightbox-loader {
+	position: fixed;
+	z-index: 100005;
+	top: 45%;
+	left: -192px;
+	padding-left: 30px;
+	opacity: 0.9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	filter: alpha(opacity=90);
+			
+	-webkit-border-radius: 0 100px 100px 0;
+	        border-radius: 0 100px 100px 0;
+}
+
+.lightbox-loader div {
+	width: 72px;
+	height: 72px;
+	
+	-webkit-border-radius: 0 100px 100px 0;
+	        border-radius: 0 100px 100px 0;
+}
+
+.lightbox-loader.horizontal {
+	left: 45%;
+	top: -192px;
+	padding: 0;
+	padding-top: 30px;
+			
+	-webkit-border-radius: 0 0 100px 100px;
+	        border-radius: 0 0 100px 100px;
+}
+
+.lightbox-loader.horizontal  div {
+	-webkit-border-radius: 0 0 100px 100px;
+	        border-radius: 0 0 100px 100px;
+}
+
+.lightbox-toolbar {
+	display: none;
+	position: fixed;
+	z-index: 100010;
+}
+
+.lightbox-toolbar a {
+	float: left;
+	cursor: pointer;
+}
+
+.lightbox-toolbar .lightbox-prev-button,
+.lightbox-toolbar .lightbox-next-button {
+	display: none;
+}
+
+.lightbox-thumbnails {
+	display: block;
+	position: fixed;
+	z-index: 100009;
+}
+
+.lightbox-thumbnails.lightbox-horizontal {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+}
+
+.lightbox-thumbnails.lightbox-vertical {
+	top: 0;
+	right: 0;
+	width: 140px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.lightbox-thumbnails .lightbox-thumbnails-container {
+	display: block;
+	position: relative;
+}
+
+.lightbox-thumbnails.lightbox-horizontal .lightbox-thumbnails-container {
+	width: 100%;
+	height: 100px;
+}
+
+.lightbox-thumbnails.lightbox-vertical .lightbox-thumbnails-container {
+	width: 140px;
+	height: 100%;
+}
+
+.lightbox-thumbnails .lightbox-thumbnails-grid {
+	display: block;
+	position: absolute;
+
+	-webkit-transform: translateZ(0);
+	   -moz-transform: translateZ(0);
+}
+
+.lightbox-thumbnails .lightbox-thumbnails-grid .lightbox-thumbnail {
+	display: block;
+	cursor: pointer;
+	padding: 10px;
+	position: relative;
+}
+
+.lightbox-thumbnails .lightbox-thumbnails-grid .lightbox-thumbnail img {
+	background:#fff;
+	width: 100%;
+	height: 100%;
+	-webkit-border-radius: 2px;
+	        border-radius: 2px;
+	
+	-ms-interpolation-mode: bicubic;
+}
+
+.lightbox-thumbnails .lightbox-thumbnails-grid .lightbox-thumbnail .lightbox-thumbnail-icon {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .7;
+}
+
+.lightbox-thumbnails .lightbox-thumbnails-grid .lightbox-thumbnail .lightbox-thumbnail-icon:hover {
+	opacity: 1;
+}
+
+.lightbox-holder {
+	display: none;
+	position: fixed;
+	z-index: 100003;
+
+	-webkit-transform: none;
+	   -moz-transform: none;
+}
+
+.lightbox-holder.lightbox-next, .lightbox-holder.lightbox-prev {
+	cursor: pointer;
+}
+
+.lightbox-holder div.lightbox-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background:#fff !important;
+}
+
+.lightbox-holder img.lightbox-image {
+	width: 100%;
+	height: 100%;
+}
+
+.lightbox-holder .lightbox-container .lightbox-caption {
+	display: none;
+	position: absolute;
+	left: 30px;
+	right: 30px;
+	bottom: 0;
+	max-width: 100%;
+	padding: 5px 10px;
+	margin: 0 auto;
+	font-size: 12px;
+    line-height: 150%;
+	word-wrap: break-word;
+	z-index: 20003;
+	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	
+	-webkit-border-radius: 3px 3px 0 0;
+	        border-radius: 3px 3px 0 0;
+}
+
+.lightbox-holder .lightbox-container .lightbox-social {
+	display: none;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	padding: 5px;
+	padding-left: 0;
+	z-index: 20003;
+	height: 16px;
+}
+
+.lightbox-holder .lightbox-container .lightbox-social ul {
+	float: left;
+	list-style: none;
+	height: 16px;
+}
+
+.lightbox-holder .lightbox-container .lightbox-social ul li {
+	display: inline;
+}
+
+.lightbox-holder .lightbox-container .lightbox-social ul li a {
+	float: left;
+	margin-left: 5px;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+.lightbox-holder .lightbox-container .lightbox-social ul li.facebook a {
+	background-image: url('../social_icons/facebook_16.png');
+}
+
+.lightbox-holder .lightbox-container .lightbox-social ul li.digg a {
+	background-image: url('../social_icons/digg_16.png');
+}
+
+.lightbox-holder .lightbox-container .lightbox-social ul li.twitter a {
+	background-image: url('../social_icons/twitter_16.png');
+}
+
+.lightbox-holder .lightbox-container .lightbox-social ul li.delicious a {
+	background-image: url('../social_icons/delicious_16.png');
+}
+
+.lightbox-holder .lightbox-container .lightbox-social ul li.reddit a {
+	background-image: url('../social_icons/reddit_16.png');
+}
+
+.lightbox-holder .lightbox-container .lightbox-social ul li.googleplus a {
+	background-image: url('../social_icons/google_plus_16.png');
+}
+
+.lightbox-holder .lightbox-alert {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+	padding-top: 100px;
+	margin: auto;
+	width: 300px;
+	height: 50px;
+}
+
+.lightbox-holder .lightbox-wrapper {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.lightbox-holder .lightbox-inner-toolbar {
+	position: relative;
+	z-index: 100;
+}
+
+.lightbox-holder .lightbox-inner-toolbar .lightbox-toolbar {
+	position: absolute;
+}
+
+/* Style arrow buttons */
+.lightbox-button {
+	position: fixed;
+	z-index: 100008;
+	cursor: pointer;
+}
+
+/* Style mobile devices */
+.isMobile .lightbox-button,
+.isMobile .lightbox-thumbnails {
+	display: none !important;
+}
+
+.isMobile .lightbox-toolbar .lightbox-prev-button,
+.isMobile .lightbox-toolbar .lightbox-next-button {
+	display: block;
+}

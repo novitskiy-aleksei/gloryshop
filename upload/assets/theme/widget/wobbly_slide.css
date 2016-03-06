@@ -1,0 +1,127 @@
+
+/*------------------------------------------[ Wobbly Slider ]------*/
+.wobbly_slide {
+	margin: 30px 0 0 0;
+	overflow: hidden;
+	padding: 0 0 25px;
+	position: relative;
+	top: 0;
+	padding: 0;
+	white-space: initial;
+	text-align: center;
+}
+.wobbly_slide ul li {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	float: left;
+	display: block;
+	margin: 0;
+	padding: 0 40px;
+	position: relative;
+}
+.wobbly_slide ul li > svg {
+	fill: #0072A5;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+}
+.wobbly_slide ul li:nth-child(2) > svg {
+	fill: #5F52B7;
+}
+.wobbly_slide ul li:nth-child(3) > svg {
+	fill: #F36A71;
+}
+.wobbly_slide ul li:nth-child(4) > svg {
+	fill: #9D9E94;
+}
+.wobbly_slide ul li:nth-child(5) > svg {
+	fill: #0CAEBF;
+}
+.wobbly_slide ul li:nth-child(6) > svg {
+	fill: #B853A3;
+}
+.wobbly_slide ul li:nth-child(7) > svg {
+	fill: #0dc0c0;
+}
+.wobbly_slide > nav span {
+	top: 50%;
+	margin-top: -25px;
+	background: #fff;
+	bottom: 0;
+	color: #0dc0c0;
+	cursor: pointer;
+	font-size: 32px;
+	font-weight: normal;
+	height: 50px;
+	opacity: 1;
+	position: absolute;
+	text-align: center;
+	width: 50px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.wobbly_slide > nav span i {
+	position: absolute;
+}
+.wobbly_slide > nav span:hover {
+	opacity: 1;
+}
+.wobbly_slide > nav span.next {
+	right: 20px;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+.wobbly_slide > nav span.prev {
+	left: 20px;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+.wobbly_slide .bordered_btn_white {
+	margin-bottom: 45px;
+}
+.wobbly_slide h1 {
+	margin-bottom: 30px;
+}
+.wobbly_slide .icon {
+	display: block;
+	padding-top: 3%;
+	position: relative;
+	margin: 0 auto 40px;
+	width: 50%;
+	max-width: 160px;
+}
+.wobbly_slide > nav span.disabled, .wobbly_slide > nav span.disabled:hover {
+	opacity: 0.2;
+	cursor: default;
+}
+.wobbly_slide h1, .wobbly_slide blockquote {
+	margin: 0;
+	font-weight: 400;
+	font-size: 3em;
+	font-size: 3vw;
+	padding-top: 3%;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	font-family: 'Flamenco', Arial, sans-serif;
+}
+.wobbly_title {
+	color: #fff;
+	font-family: "Oswald", "Open Sans", sans-serif;
+	margin-bottom: 20px;
+}
+.wobbly_desc {
+	font-family: "lato", sans-serif;
+	font-size: 200%;
+	max-width: 800px;
+	text-align: center;
+	font-weight: 300;
+	line-height: 1.4;
+	margin: 0 auto 1.2em;
+	color: #fff;
+}
+.wobbly_slide, .wobbly_slide ul, .wobbly_slide ul li, .wobbly_slide {
+	min-height: 480px;
+}

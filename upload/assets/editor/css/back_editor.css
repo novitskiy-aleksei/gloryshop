@@ -1,0 +1,24 @@
+html,body{overflow:hidden !important;}
+body{background-color: #515151;}
+#header{background: none !important;border-bottom: none !important;
+display: inline-block;}
+#header #button-menu{background:none !important; color:#c4c4c4;border-right: none !important;  padding: 5px 17px 5px 17px;}
+#header #button-menu:hover{color:#ddd;}
+#header ul.nav,
+#header .navbar-header .navbar-brand{display:none;}
+.back-btn{position:absolute; top:5px; right:5px;}
+#column-left{top:35px;padding-top: 0px;padding-bottom: 50px; overflow: auto; display:none;}
+#column-left.active #profile{display:none;}
+#preview_frame{background:#f7f7f7;
+	transition: all 0.3s;
+	position:fixed;
+	top:35px;
+	left:0;
+	right:0;
+	bottom:0;
+}
+#preview_frame iframe {
+  height: 100%;
+  width: 100%;
+  overflow:hidden !important;
+}

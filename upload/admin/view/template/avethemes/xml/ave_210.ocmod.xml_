@@ -1,0 +1,75 @@
+<modification>
+   <name>ThemeEditor v2.1x Package</name>
+   <code>ave_21_integrated</code>
+    <version>1.0</version>
+    <author>avethemes.com</author>
+    <link>http://www.avethemes.com</link>
+<file path="catalog/controller/common/{column_left,column_right,content_top,content_bottom}*.php">
+		<operation>
+			<search position="replace"><![CDATA[$layout_id = 0;]]></search>
+			<add><![CDATA[$layout_id = 0;
+		if(defined('ave_check')){
+    	$layout_id = $this->ave->getLayoutID();
+    }]]></add>
+		</operation>
+</file>
+<file path="catalog/controller/module/{bestseller,featured,latest,special}*.php">
+		<operation>
+			<search position="replace"><![CDATA[public function index($setting) {]]></search>
+			<add><![CDATA[public function index($setting) {
+			$data['carousel_limit'] = isset($setting['carousel_limit'])?$setting['carousel_limit']:'3';]]></add>
+		</operation>
+</file>
+<file path="catalog/controller/module/{banner,carousel,slideshow}*.php">
+		<operation>
+			<search position="replace"><![CDATA[$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');]]></search>
+			<add><![CDATA[
+if(defined('ave_check')){
+$this->document->addStyle('assets/plugins/owl-carousel/owl.carousel.min.css');
+}else{
+$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+}]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');]]></search>
+			<add><![CDATA[
+if(defined('ave_check')){
+$dir = $this->ave->layout('dir');
+$this->document->addScript('assets/plugins/owl-carousel/owl.carousel.min.js');	
+}else{
+$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
+}]]></add>
+		</operation>
+</file>
+<file path="admin/controller/module/{bestseller,featured,latest,special}*.php">
+		<operation>
+			<search position="replace"><![CDATA[$data['header'] = $this->load->controller('common/header');]]></search>
+			<add><![CDATA[if (isset($this->request->post['carousel_limit'])) {
+			$data['carousel_limit'] = $this->request->post['carousel_limit'];
+		} elseif (!empty($module_info)) {
+			$data['carousel_limit'] = isset($module_info['carousel_limit'])?$module_info['carousel_limit']:3;
+		} else {
+			$data['carousel_limit'] = '3';
+		}
+$data['header'] = $this->load->controller('common/header');]]></add>
+		</operation>
+</file>
+<file path="admin/view/template/module/{bestseller,featured,latest,special}*.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>]]></search>
+			<add><![CDATA[<label class="col-sm-2 control-label" for="input-status">Items shown (Carousel)</label>
+<div class="col-sm-10">
+  <select name="carousel_limit" id="input-status" class="form-control">
+    <option value="1" <?php if ($carousel_limit=='1') { ?>selected="selected" <?php } ?>>1</option>
+    <option value="2" <?php if ($carousel_limit=='2') { ?>selected="selected" <?php } ?>>2</option>
+    <option value="3" <?php if ($carousel_limit=='3') { ?>selected="selected" <?php } ?>>3</option>
+    <option value="4" <?php if ($carousel_limit=='4') { ?>selected="selected" <?php } ?>>4</option>
+    <option value="5" <?php if ($carousel_limit=='5') { ?>selected="selected" <?php } ?>>5</option>
+  </select>
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>]]></add>
+		</operation>
+</file>
+</modification>

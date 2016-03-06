@@ -1,0 +1,98 @@
+.lightbox-overlay.parade {
+	background: #333 url('pattern.png');
+}
+
+.lightbox-loader.parade {
+	-webkit-box-shadow: 0 0 35px hsla(0,0%,0%,.3);
+	        box-shadow: 0 0 35px hsla(0,0%,0%,.3);
+}
+.lightbox-loader.parade div {
+	background: white url('preloader.gif') no-repeat center;
+}
+
+.lightbox-holder.parade {
+	padding: 10px;
+	background: #333;
+	background: rgba(0,0,0,0.25);
+	
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+}
+
+.lightbox-holder.parade .lightbox-container  {
+	background: #FFF;
+}
+
+.lightbox-holder.parade .lightbox-container  .lightbox-caption {
+	background: url('caption-bg.png');
+	color: #FFF;
+	text-shadow: 0 1px black;
+}
+
+.lightbox-holder.parade .lightbox-container  .lightbox-social {
+	background: url('caption-bg.png');
+	
+	-webkit-border-radius: 2px;
+	        border-radius: 2px;
+}
+
+.lightbox-holder.parade .lightbox-alert {
+	background: url('alert.png') no-repeat center top;
+	color: #555;
+}
+
+.lightbox-toolbar.parade {
+	top: 11px;
+	left: 10px;
+	padding: 3px;
+	background: #333;
+	background: rgba(0,0,0,0.25);
+}
+
+.lightbox-toolbar.parade a {
+	width: 29px;
+	height: 25px;
+	background: #FFF url('buttons.png') no-repeat 8px 6px;
+}
+
+.lightbox-toolbar.parade a:hover {
+	background-color: #f5f5f5;
+}
+
+.lightbox-toolbar.parade a.lightbox-close:hover {
+	background-position: -29px 6px;
+}
+
+.lightbox-toolbar.parade a.lightbox-fullscreen {
+	background-position: 8px -33px;
+	right: 35px;
+}
+
+.lightbox-toolbar.parade a.lightbox-fullscreen:hover {
+	background-position: -29px -33px;
+}
+
+.lightbox-thumbnails.parade .lightbox-thumbnails-grid .lightbox-thumbnail img {
+	box-shadow: 0 0 6px rgba(0, 0, 0, .9);
+}
+
+.lightbox-thumbnails.parade .lightbox-thumbnails-grid .lightbox-thumbnail .lightbox-thumbnail-video {
+	background: url('thumb-overlay-play.png') no-repeat center;
+}
+
+.lightbox-holder.parade .lightbox-inner-toolbar .lightbox-title {
+	font-size: 18px;
+	padding: 10px 8px;
+	padding-right: 60px;
+	color: #FFF;
+}
+
+.lightbox-holder.parade .lightbox-inner-toolbar .lightbox-toolbar {
+	left: auto;
+	top: 5px;
+	right: 5px;
+}
+
+.lightbox-holder.parade .lightbox-inner-toolbar .lightbox-toolbar a {
+	float: right;
+}

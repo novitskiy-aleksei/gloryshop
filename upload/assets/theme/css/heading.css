@@ -1,0 +1,649 @@
+
+.centered {
+    text-align: center;
+}
+.title1 {
+	color: #0dc0c0;
+	font-size: 24px;
+	font-weight: 400;
+	margin: 0 0 13px;
+	font-family: "Oswald", "Open Sans", sans-serif;
+	line-height: 33px;
+}
+.title1.title_color1 {
+	color: #e74c3c;
+}
+.title1.title_color2 {
+	color: #324545;
+}
+
+/*-------------------------------------------------------------
+                    Small Title			
+-------------------------------------------------------------*/
+.large_spacer > .heading_title, .large_spacer_t > .heading_title, .large_spacer > .content > .heading_title, .icons_spacer > .heading_title {
+	margin-top: -25px;
+}
+.heading_title_c1 {
+	color: #0dc0c0;
+}
+.heading_title.no_line h3,
+.heading_title.no_line h2 {
+	padding-bottom: 0;
+	margin-bottom: 20px;
+}
+.heading_title.no_line .line {
+	display: none;
+}
+.heading_title h3 .icon,
+.heading_title h2 .icon {
+	color: #0dc0c0;
+	font-size: 24px;
+	margin-right: 15px;
+}
+.heading_title.medium h3,
+.heading_title.medium h3,
+.heading_title.medium h2,
+.heading_title.medium h2 {
+	font-size: 24px;
+}
+.heading_title.small h3,
+.heading_title.small h2 {
+	font-size: 22px;
+}
+.heading_title.small:not(.no_line) h3,
+.heading_title.small:not(.no_line) h2 {
+	margin-bottom: 35px;
+}
+.heading_title h3,
+.heading_title h2 {
+	color: #324545;
+	font-size: 30px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+	position: relative;
+	font-family: "Oswald", "Open Sans", sans-serif;
+	line-height: 40px;
+}
+.heading_title.small_space h3,
+.heading_title.small_space h2 {
+	margin-bottom: 25px;
+}
+.heading_title .line i {
+	background: #fff;
+	color: #0dc0c0;
+	display: block;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	text-align: center;
+	top: -20px;
+	width: 40px;
+}
+.heading_title.align_right .line i {
+	padding-left: 13px;
+	padding-right: 0;
+	right: 0;
+}
+.heading_title:not(.centered):not(.align_right) .line i {
+	padding-left: 13px;
+	padding-right: 13px;
+	width: auto;
+}
+.heading_title.side_line > h3,
+.heading_title.side_line > h2 {
+	margin-bottom: 23px;
+}
+.heading_title h3 .line,
+.heading_title h2 .line {
+	background: rgba(0, 0, 0, 0.07);
+	bottom: 0;
+	height: 1px;
+	position: absolute;
+	width: 33%;
+}
+.heading_title .line:before {
+	background: #1cc6df;
+	content: "";
+	display: block;
+	height: 1px;
+	position: absolute;
+	width: 100px;
+}
+.heading_title.align_right .line:before {
+	right: 0;
+}
+.heading_title.has_bg.align_right .line:before {
+	right: 20px;
+}
+.heading_title .dot {
+	background: #fff;
+	border: 1px solid #1cc6df;
+	height: 10px;
+	position: absolute;
+	top: -5px;
+	width: 10px;
+}
+.heading_title.align_right .dot {
+	right: 0;
+}
+.heading_title h3:hover .line:before,
+.heading_title h2:hover .line:before {
+	width: 75%;
+}
+.heading_title.side_line h3:after,
+.heading_title.side_line h2:after {
+	left: -65px;
+}
+.heading_title.side_line h3:before,
+.heading_title.side_line h2:before {
+	right: -65px;
+}
+.heading_title.side_line.align_right h3:before,
+.heading_title.side_line.align_right h2:before {
+	left: -65px;
+	right: auto;
+}
+.heading_title.lato h3,
+.heading_title.lato h2 {
+	font-weight: 300;
+	font-family: "lato", sans-serif;
+}
+.heading_title.short_line h3,
+.heading_title.short_line h2 {
+	display: inline-block;
+}
+.heading_title.side_line h3,
+.heading_title.side_line h2 {
+	display: inline-block;
+}
+.heading_title.side_line h3,
+.heading_title.side_line h2 {
+	padding-bottom: 5px;
+}
+.heading_title.side_line .line:before {
+	background: none;
+}
+.heading_title.side_line .line {
+	background: none;
+}
+.heading_title.short_line .line:before {
+	background: none;
+}
+.heading_title.has_bg > h3,
+.heading_title.has_bg > h2 {
+	padding: 16px 18px 18px;
+	display: inline-block;
+}
+.heading_title.has_bg .line {
+	background: none;
+}
+.heading_title.has_bg .line:before {
+	background: none;
+	border-style: solid;
+	border-width: 12px 50px 0;
+	border-color: transparent;
+}
+.heading_title.gray_bg > h3,
+.heading_title.gray_bg > h2 {
+	background: #eeeeee;
+}
+.heading_title.blue_bg > h3,
+.heading_title.blue_bg > h2 {
+	background: #0dc0c0;
+	color: #fff;
+}
+.heading_title.gray_bg .line:before {
+	border-color: #eeeeee transparent transparent;
+}
+.heading_title.blue_bg .line:before {
+	border-color: #0dc0c0 transparent transparent;
+}
+.centered .heading_title.side_line h3:after,
+.heading_title.side_line.centered h3:after,
+.heading_title.side_line h3:before,
+.centered .heading_title.side_line h2:after,
+.heading_title.side_line.centered h2:after,
+.heading_title.side_line h2:before {
+	background: #324545;
+	content: "";
+	display: block;
+	height: 1px;
+	position: absolute;
+	top: 15px;
+	width: 50px;
+}
+.white_section .heading_title h3,
+.white_section .heading_title h2 {
+	color: #fff;
+}
+.white_section .heading_title:not(.has_bg):not(.side_line) h3 .line,
+.white_section .heading_title:not(.has_bg):not(.side_line) h2 .line {
+	background: rgba(255, 255, 255, 0.1);
+}
+.white_section .centered .heading_title.side_line h3::after,
+.white_section .heading_title.side_line.centered h3::after,
+.white_section .heading_title.side_line h3::before,
+
+.white_section .centered .heading_title.side_line h2::after,
+.white_section .heading_title.side_line.centered h2::after,
+.white_section .heading_title.side_line h2::before {
+	background: rgba(255, 255, 255, 0.2);
+}
+.bg_gray .heading_title .line i {
+	background: #f9fafc;
+}
+.centered .heading_title .line i {
+	padding-right: 0px;
+	width: 40px;
+}
+.align_right h3 .line,
+.align_right h2 .line {
+	right: 0;
+}
+.bg_color7 .heading_title .line:before {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+/*-------------------------------------------------------------
+                    Small Title			
+-------------------------------------------------------------*/
+.small_title {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	position: relative;
+}
+.small_title:after {
+	background: #eee;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+}
+.small_title .small_title_con {
+	background: #fff;
+	display: inline-block;
+	padding-right: 15px;
+	position: relative;
+	z-index: 1;
+}
+.small_title.align_right .small_title_con {
+	padding-left: 15px;
+	padding-right: 0;
+	direction: rtl;
+}
+.small_title.align_right .s_icon {
+	direction: ltr;
+}
+.small_title.align_right .s_icon {
+	margin-left: 10px;
+	margin-right: 0;
+}
+.small_title .small_title_con .s_text {
+	color: #999;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+.small_title .s_icon {
+	color: #b5b5b5;
+	display: inline-block;
+	font-size: 15px;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	margin-right: 7px;
+}
+.internal_post_con .small_title .small_title_con .s_text {
+	color: #555555;
+}
+.centered .small_title_con {
+	padding-left: 15px;
+}
+.bg_gray .small_title .small_title_con {
+	background: #f9fafc;
+}
+.page_title + .bg_gray {
+	border-top: medium none;
+}
+
+
+/*-------------------------------------------------------------
+                    	Heading Style Way 2		
+-------------------------------------------------------------*/
+.heading_center .heading_title{
+	display:block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.heading_right .heading_title{
+    text-align: right;
+    margin-left: auto;
+}
+.section-default .heading_title{
+	color: #0dc0c0;
+	font-size: 24px;
+	font-weight: 400;
+	margin: 0 0 13px;
+	font-family:"Oswald", "Open Sans", sans-serif;
+	line-height: 33px;
+	text-transform:uppercase;
+}
+.heading_default .heading_title{
+	color: #0dc0c0;
+	font-size: 24px;
+	font-weight: 400;
+	margin: 0 0 13px;
+	font-family: "Oswald", "Open Sans", sans-serif;
+	line-height: 33px;
+}
+.heading_default.title_color1 .heading_title{
+	color: #e74c3c;
+}
+.heading_default.title_color2 .heading_title{
+	color: #324545;
+}
+
+/*-------------------------------------------------------------
+                    Small Title			
+-------------------------------------------------------------*/
+.large_spacer > .heading_title, 
+.large_spacer_t > .heading_title, 
+.large_spacer > .content > .heading_title, 
+.icons_spacer > .heading_title {
+	margin-top: -25px;
+}
+.heading_title_c1 {
+	color: #0dc0c0;
+}
+.no_line .heading_title {
+	padding-bottom: 0;
+	margin-bottom: 20px;
+}
+.no_line .heading_title .line {
+	display: none;
+}
+.heading_title .icon {
+	color: #0dc0c0;
+	font-size: 24px;
+	margin-right: 15px;
+}
+.medium .heading_title {
+	font-size: 24px;
+}
+.small .heading_title {
+	font-size: 22px;
+}
+.small:not(.no_line) .heading_title {
+	margin-bottom: 35px;
+}
+h3.heading_title,
+h2.heading_title {
+	color: #324545;
+	font-size: 30px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	font-family: "Oswald", "Open Sans", sans-serif;
+	line-height: 40px;
+}
+.small_space .heading_title {
+	margin-bottom: 25px;
+}
+.heading_title .line i {
+	background: #fff;
+	color: #0dc0c0;
+	display: block;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	text-align: center;
+	top: -20px;
+	width: 40px;
+}
+.heading_right .heading_title .line i {
+	padding-left: 13px;
+	padding-right: 0;
+	right: 0;
+}
+.heading_icon .heading_title .line i {
+	padding-right: 13px;
+	padding-left: 13px;
+	width: auto;
+}
+.heading_through > .heading_title {
+	margin-bottom: 23px;
+}
+.heading_title .line {
+	background: rgba(0, 0, 0, 0.07);
+	bottom: 0;
+	height: 1px;
+	position: absolute;
+	width: 33%;
+}
+.heading_title .line:before {
+	background: #1cc6df;
+	content: "";
+	display: block;
+	height: 1px;
+	position: absolute;
+	width: 100px;
+}
+.heading_right .heading_title .line:before {
+	right: 0;
+}
+.heading_right .heading_title .line:before {
+	right: 20px;
+}
+.heading_title .dot {
+	background: #fff;
+	border: 1px solid #1cc6df;
+	height: 10px;
+	position: absolute;
+	top: -5px;
+	width: 10px;
+}
+.heading_right .heading_title .dot {
+	right: 0;
+}
+.heading_title:hover .line:before {
+	width: 75%;
+}
+.heading_through .heading_title:after {
+	left: -65px;
+}
+.heading_through .heading_title:before {
+	right: -65px;
+}
+.heading_through.heading_right .heading_title:before {
+	left: -65px;
+	right: auto;
+}
+.lato .heading_title h3,
+.lato .heading_title h2 {
+	font-weight: 300;
+	font-family: "lato", sans-serif;
+}
+.short_line .heading_title h3,
+.short_line .heading_title h2 {
+	display: inline-block;
+}
+.heading_through .heading_title {
+	display: block;
+    max-width: 300px;
+}
+.heading_through .heading_title {
+	padding-bottom: 5px;
+}
+.heading_through .heading_title .line:before {
+	background: none;
+}
+.heading_through .heading_title .line {
+	background: none;
+}
+.short_line .heading_title .line:before {
+	background: none;
+}
+.heading_bg_colored .heading_title,
+.heading_bg_grey .heading_title,
+.has_bg .heading_title {
+	padding: 16px 18px 18px;
+	display: block;
+	max-width:300px;
+}
+.heading_bg_colored .heading_title .line ,
+.heading_bg_grey .heading_title .line ,
+.has_bg .heading_title .line {
+	background: none;
+}
+.heading_bg_colored .heading_title .line:before,
+.heading_bg_grey .heading_title .line:before ,
+.has_bg .heading_title .line:before {
+	background: none;
+	border-style: solid;
+	border-width: 12px 50px 0;
+	border-color: transparent;
+}
+.heading_bg_grey  .heading_title {
+	background: #eeeeee;
+}
+.heading_bg_colored .heading_title {
+	background: #0dc0c0;
+	color: #fff;
+}
+.heading_bg_grey .heading_title .line:before {
+	border-color: #eeeeee transparent transparent;
+}
+.heading_bg_colored .heading_title .line:before {
+	border-color: #0dc0c0 transparent transparent;
+}
+.heading_through.heading_center  .heading_title:after, 
+.heading_through .heading_title:before {
+	background: #324545;
+	content: "";
+	display: block;
+	height: 1px;
+	position: absolute;
+	top: 15px;
+	width: 50px;
+}
+.white_section .heading_title{
+	color: #fff;
+}
+.white_section .heading_title:not(.has_bg):not(.heading_through) h3 .line,
+.white_section .heading_title:not(.has_bg):not(.heading_through) h2 .line {
+	background: rgba(255, 255, 255, 0.1);
+}
+.white_section .heading_through.heading_center .heading_title::after, 
+.white_section .heading_through .heading_title::before {
+	background: rgba(255, 255, 255, 0.2);
+}
+.bg_gray .heading_title .line i {
+	background: #f9fafc;
+}
+.heading_center .heading_title .line i {
+	padding-right: 0px;
+	width: 40px;
+}
+.heading_right .heading_title .line {
+	right: 0;
+}
+.bg_color7 .heading_title .line:before {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+/*-------------------------------------------------------------
+                    Small Title			
+-------------------------------------------------------------*/
+.heading_small {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	position: relative;
+}
+.heading_small:after {
+	background: #eee;
+	content: "";
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+}
+.heading_small .heading_title {
+	background: #fff;
+	display: block;
+	padding-right: 15px;
+	position: relative;
+	z-index: 1;
+    color: #999;
+    font-size: 13px;
+    text-transform: uppercase;
+    max-width: 300px;
+}
+.heading_small.heading_right .heading_title {
+	padding-left: 15px;
+	padding-right: 0;
+	direction: rtl;
+}
+.heading_small .heading_title .line i{
+     left: 50%; 
+     -webkit-transform: none; 
+    -moz-transform:none;
+    -ms-transform:none;
+    -o-transform: none);
+     transform: none; 
+    background: none;
+    color:#b5b5b5;
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    top: auto;
+    width: auto;
+}
+.heading_small.heading_right .line {
+	direction: ltr;
+}
+.heading_small.heading_right .line {
+	margin-left: 10px;
+	margin-right: 0;
+}
+.heading_small .line {
+	color: #b5b5b5;
+	display: inline-block;
+	font-size: 15px;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	margin-right: 7px;
+	background:none;
+	position: static;
+	width:auto;
+	bottom:auto;
+}
+.heading_small .line:before{
+	display:none;
+}
+.internal_post_con .heading_small .heading_title .text {
+	color: #555555;
+}
+.heading_center .heading_title {
+	padding-left: 15px;
+}
+.bg_gray .heading_small .heading_title {
+	background: #f9fafc;
+}
+.page_title + .bg_gray {
+	border-top: medium none;
+}
