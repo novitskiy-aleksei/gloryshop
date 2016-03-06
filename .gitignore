@@ -1,5 +1,8 @@
 /vendor
 /.idea
+/upload/config.php
+/upload/admin/config.php
+/upload/system/storage/
 composer.phar
 .DS_Store
 Thumbs.db
