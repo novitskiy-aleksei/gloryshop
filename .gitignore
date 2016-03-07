@@ -7,7 +7,7 @@
 /upload/system/storage/logs
 /upload/system/storage/upload
 /upload/assets/cache/
-/upload/image/cache/
+#/upload/image/cache/
 /upload/install/
 composer.phar
 .DS_Store
