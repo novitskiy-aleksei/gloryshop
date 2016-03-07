@@ -2,7 +2,10 @@
 /.idea
 /upload/config.php
 /upload/admin/config.php
-/upload/system/storage/
+/upload/system/storage/cache
+/upload/system/storage/download
+/upload/system/storage/logs
+/upload/system/storage/upload
 /upload/assets/cache/
 /upload/image/cache/
 /upload/install/
