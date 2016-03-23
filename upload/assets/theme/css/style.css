@@ -9,7 +9,18 @@
 	Version: 1.0
 */
 /* Set default body */
-/**/ 
+/**/
+
+@font-face {
+    font-family: 'OswaldRegular';
+    src: url('/assets/theme/font/Oswald/oswald-regular-webfont.eot');
+    src: url('/assets/theme/font/Oswald/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/assets/theme/font/Oswald/oswald-regular-webfont.woff2') format('woff2'),
+    url('/assets/theme/font/Oswald/oswald-regular-webfont.woff') format('woff'),
+    url('/assets/theme/font/Oswald/oswald-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @media (min-width: 0) and (max-width: 767px) {
 	.col-xs-12 {
@@ -777,7 +788,7 @@ section.pre_footer{
 }
 .title_banner h2 {
 	color: #fff;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	font-size: 24px;
 	font-weight: 400;
 	margin: 0;
@@ -1550,7 +1561,7 @@ body:not(.header-fixed) #page_header+div.after_header{
 	letter-spacing: 1px;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 	text-transform: uppercase;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	font-size: 35px;
 	font-weight: 500;
 }
@@ -1659,7 +1670,7 @@ blockquote .quote_text {
 -------------------------------------------------------------*/
 .page404 {
 	color: #0dc0c0;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	font-size: 300px;
 	text-align: center;
 	position: relative;
@@ -3922,7 +3933,7 @@ a.img_popup:after {
 }
 .feature_icon .item h5 .title {
 	float: left;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	font-size: 20px;
 	font-weight: 300;
 	margin-top: 12px;
@@ -4091,7 +4102,7 @@ a.img_popup:after {
 }
 .tree_features_t {
 	display: block;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	font-size: 26px;
 	margin-bottom: 10px;
 	text-transform: uppercase;
@@ -4165,7 +4176,7 @@ a.img_popup:after {
 	font-size: 32px;
 	font-weight: 700;
 	margin-top: 30px;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 }
 .counter .title {
 	font-size: 22px;
@@ -7122,7 +7133,7 @@ a.img_popup:after {
 	padding: 20px 22px 19px;
 }
 .blog_grid_desc .title {
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	font-weight: 400;
 	letter-spacing: 1px;
 	margin-bottom: 0;
@@ -7257,7 +7268,7 @@ a.img_popup:after {
 	margin-right: 25px;
 }
 .elem_item_list .item_desc .title, .elem_item_full_width .item_desc .title, .post_title_con .title {
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	font-size: 22px;
 	font-weight: 400;
 	margin-bottom: 15px;
@@ -8967,7 +8978,7 @@ table.check_out_table {
 	font-size: 28px;
 	font-weight: 500;
 	margin: 0 0 10px;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 }
 .item-info-price {
 	margin: 15px 0;

@@ -1,3 +1,13 @@
+@font-face {
+	font-family: 'OswaldRegular';
+	src: url('/assets/theme/font/Oswald/oswald-regular-webfont.eot');
+	src: url('/assets/theme/font/Oswald/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('/assets/theme/font/Oswald/oswald-regular-webfont.woff2') format('woff2'),
+	url('/assets/theme/font/Oswald/oswald-regular-webfont.woff') format('woff'),
+	url('/assets/theme/font/Oswald/oswald-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 
 ::selection{ background: <?php echo $profile_color;?>;}
 ::-moz-selection{ background: <?php echo $profile_color;?>; }
@@ -62,7 +72,7 @@ h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 .modal-title,
 .heading_title,
 .heading_title h3, .heading_title h2 {
-    font-family: "<?php echo $heading_font;?>", "Open Sans", sans-serif;
+    font-family: OswaldRegular, "Open Sans", sans-serif;
 }
 .item-rating>span:before {
     color:<?php echo $rating_color;?>;

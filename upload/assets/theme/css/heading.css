@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'OswaldRegular';
+    src: url('/assets/theme/font/Oswald/oswald-regular-webfont.eot');
+    src: url('/assets/theme/font/Oswald/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/assets/theme/font/Oswald/oswald-regular-webfont.woff2') format('woff2'),
+    url('/assets/theme/font/Oswald/oswald-regular-webfont.woff') format('woff'),
+    url('/assets/theme/font/Oswald/oswald-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .centered {
     text-align: center;
@@ -7,7 +17,7 @@
 	font-size: 24px;
 	font-weight: 400;
 	margin: 0 0 13px;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	line-height: 33px;
 }
 .title1.title_color1 {
@@ -63,7 +73,7 @@
 	margin-bottom: 40px;
 	padding-bottom: 20px;
 	position: relative;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	line-height: 40px;
 }
 .heading_title.small_space h3,
@@ -330,7 +340,7 @@
 	font-size: 24px;
 	font-weight: 400;
 	margin: 0 0 13px;
-	font-family:"Oswald", "Open Sans", sans-serif;
+	font-family:"OswaldRegular", "Open Sans", sans-serif;
 	line-height: 33px;
 	text-transform:uppercase;
 }
@@ -339,7 +349,7 @@
 	font-size: 24px;
 	font-weight: 400;
 	margin: 0 0 13px;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	line-height: 33px;
 }
 .heading_default.title_color1 .heading_title{
@@ -391,7 +401,7 @@ h2.heading_title {
 	margin-bottom: 20px;
 	padding-bottom: 20px;
 	position: relative;
-	font-family: "Oswald", "Open Sans", sans-serif;
+	font-family: "OswaldRegular", "Open Sans", sans-serif;
 	line-height: 40px;
 }
 .small_space .heading_title {
