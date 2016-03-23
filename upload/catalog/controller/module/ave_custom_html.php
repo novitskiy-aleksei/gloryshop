@@ -18,8 +18,12 @@ class ControllerModuleAveCustomHtml extends Controller {
 			$data['position'] = $position = isset($setting['layout_position'])?$setting['layout_position']:'content_top';
 			$data['side_position'] = $side_position = $this->ave->sidePosition();
 			$language_id 	= $this->config->get('config_language_id');
-			
-			$description = html_entity_decode($setting['module_description'][$language_id]['description'], ENT_QUOTES, 'UTF-8');
+
+			if (!empty($setting['module_description'][$language_id]['description'])) {
+				$description = html_entity_decode($setting['module_description'][$language_id]['description'], ENT_QUOTES, 'UTF-8');
+			} else {
+				$description = '';
+			}
 			$description = str_replace('../assets/','assets/',$description);
 			$description = str_replace('../image/','image/',$description);
 			$data['description'] = $description;

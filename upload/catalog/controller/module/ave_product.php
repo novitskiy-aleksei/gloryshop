@@ -86,8 +86,8 @@ class ControllerModuleAveProduct extends Controller {
 		}else{
 			$carousel_limit='2';
 		}
-		
-		if (!empty($setting['custom_description'])) {	
+
+		if (!empty($setting['custom_description'][$this->config->get('config_language_id')])) {
 			$description = html_entity_decode($setting['custom_description'][$this->config->get('config_language_id')], ENT_QUOTES, 'UTF-8');
 		}else{
 			$description='';

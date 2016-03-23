@@ -6,8 +6,6 @@
  * @copyright	Copyright (C) 2013 PavoThemes.com <@emai:pavothemes@gmail.com>.All rights reserved.
  * @license		GNU General Public License version 2
 *******************************************************/
-error_reporting(-1);
-ini_set('display_errors', 'On');
 class ControllerAvethemesSliderRevolution extends Controller { 
 	public function index( $setting ) { 
 	if(defined('ave_check')){
