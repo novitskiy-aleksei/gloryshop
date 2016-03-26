@@ -535,6 +535,9 @@ html[xmlns] .slides {
 	color: #0dc0c0;
 	font-weight: 400;
 }
+.flex_in_color1 a {
+	text-decoration: underline;
+}
 .container #flex_carousel.flexslider {
 	margin-top: 30px;
 	border: 1px solid #E5E5E5;
