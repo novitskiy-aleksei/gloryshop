@@ -67,11 +67,6 @@
             
 		<div id="navigation_bar">
 			<div class="content clearfix">
-				<div id="logo">
-					<a href="<?php echo $home;?>">
-  <?php if ($custom_logo==1) { ?><img class="logo_img" src="<?php echo $config_custom_logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"/>  <?php }else{ ?><?php if ($logo) { ?><img class="logo_img" src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"/><?php } ?><?php } ?>
-					</a>
-				</div>
 				
         <?php if($cart_status==1){ ?>
 				<!-- Top Card -->
@@ -97,7 +92,19 @@
             <?php } ?>
 				<!-- End Top Search -->
 				<?php echo $main_menu;?>
-				
+
+                <div id="logo">
+                    <a href="<?php echo $home;?>">
+                        <?php if ($custom_logo==1) { ?>
+                            <img class="logo_img" src="<?php echo $config_custom_logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"/>
+                        <?php }else{ ?>
+                            <?php if ($logo) { ?>
+                                <span><img class="logo_img" src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"/></span>
+                            <?php } ?>
+                        <?php } ?>
+                    </a>
+                </div>
+
 				<div class="clear"></div>
 			</div>
 		</div>

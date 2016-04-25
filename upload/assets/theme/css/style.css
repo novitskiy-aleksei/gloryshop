@@ -729,10 +729,13 @@ section.pre_footer{
                     Logo
 -------------------------------------------------------------*/
 #logo {
-	float: left;
-	margin-right: 40px;
-	position: relative;
+	position: absolute;
 	z-index: 4;
+	text-align: center;
+	left: 0;
+	right: 0;
+    margin: 0 auto;
+    width: 108px;
 }
 #logo > a {
 	display: block;
@@ -743,8 +746,23 @@ section.pre_footer{
 #logo > a img {
 	display: inline-block;
 	position: relative;
-	top: 0;
-	max-height: 100%;
+    top: 3px;
+    height: 116px;
+    width: 116px;
+    max-width: none;
+}
+#logo > a > span {
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    display: block;
+    width: 124px;
+    height: 124px;
+    margin-left: -8px;
 }
 .full_logo {
 	display: inline-block;
